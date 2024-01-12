@@ -1,6 +1,6 @@
 import "./App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { ROUTERS } from "./constants/routes";
+import { ROUTES } from "./constants/routes";
 
 function App() {
 
@@ -9,7 +9,7 @@ function App() {
             <Routes>
                 {/* We will create our pages later it's just an example */}
                 <Route 
-                    path={ROUTERS.HOME} 
+                    path={ROUTES.HOME} 
                     element={<h1>Our main page</h1>} 
                 />
 
@@ -20,7 +20,7 @@ function App() {
                 
                 <Route 
                     path="*" 
-                    element={<h1>!Undefined Page! please return on main page</h1>} 
+                    element={<h1>!Undefined Page! please come back at main page</h1>} 
                 /> 
             </Routes>  
         </BrowserRouter>
