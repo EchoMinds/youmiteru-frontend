@@ -1,4 +1,4 @@
-import './App.scss'
+import "./App.scss";
 
 function App() {
 
@@ -6,7 +6,7 @@ function App() {
     <>
       Start Working!
     </>
-  )
+  );
 }
 
-export default App
+export default App;
