@@ -10,7 +10,8 @@ module.exports = {
 	parserOptions: {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
-		project: './tsconfig.json',
+		project: ['./tsconfig.json', './tsconfig.node.json'],
+		tsconfigRootDir: __dirname,
 	},
 	settings: { react: { version: '18.2' } },
 	parser: '@typescript-eslint/parser',
@@ -18,9 +19,10 @@ module.exports = {
 	rules: {
 		'react-refresh/only-export-components': 'warn',
 		'react/prop-types': 0, // It means we can write any function/component without PropTypes. (A good practice is to use PropTypes)
-		'indent': ['error', 4], // It rule makes the indentation of 4 spaces, for more readability of the code.
+		"indent": ['error', 2], // It rule makes the indentation of 4 spaces, for more readability of the code.
 		'linebreak-style': 1, // It rule makes the linebreaks consistent across operating systems.
-		'quotes': ['error', 'double'], // This rule enforces the use of double quotes for string literals.
+		"quotes": ['error', 'double'], // This rule enforces the use of double quotes for string literals.
+		"semi": ["error", "always"],
 		'react/jsx-max-props-per-line': [
 			'error',
 			{ maximum: 1, when: 'multiline' }, // This rule limits the number of props per line in JSX elements
