@@ -1,0 +1,38 @@
+.watch-trailer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 3.3px solid #f7be5d;
+  background: rgba(247, 190, 93, 0.35);
+  height: 57px;
+  width: 187px;
+  box-shadow: 0 0 14px rgba(247, 190, 93, 0.7),
+    inset 0 0 40px rgba(247, 190, 93, 0.7);
+}
+.text-wrapper {
+  color: var(--white, #fff);
+  font-family: "Montserrat-ExtraBold", Helvetica;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -1.275px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.watch-now {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(75, 168, 179, 0.35);
+  border: 3.3px solid #4ba8b3;
+  border-radius: 10px;
+  height: 57px;
+  width: 187px;
+  box-shadow: 0 0 14px rgba(75, 168, 179, 0.7),
+    inset 0 0 40px rgba(75, 168, 179, 0.7);
+}
