@@ -1,8 +1,8 @@
 import "./SliderBanner.scss";
 import Slider from "react-slick";
 import { useState } from "react";
-import SampleNextArrow from "../SliderButtons/SampleNextArrow";
-import SamplePrevArrow from "../SliderButtons/SamplePrevArrow";
+import NextArrow from "../SliderButtons/NextArrow";
+import PrevArrow from "../SliderButtons/PrevArrow";
 
 
 interface SliderBannerProps {
@@ -58,8 +58,8 @@ function SliderBanner({ bannerPhotos }: SliderBannerProps): JSX.Element {
         centerMode: true,
         centerPadding: "0",
         beforeChange: (current, next) => setSlideIndex(next),
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
         responsive: [
             {
                 breakpoint: 800,
@@ -68,11 +68,11 @@ function SliderBanner({ bannerPhotos }: SliderBannerProps): JSX.Element {
     };
 
     return (
-        <div className="SliderBanner">
+        <div className="slider-banner">
             <Slider {...settings}>
                 {
                     bannerPhotos.map((img, index) => (
-                        <div className={index === slideIndex ? "SliderBanner__slide SliderBanner__slide-active" : "SliderBanner__slide"} key={index}>
+                        <div className={index === slideIndex ? "slider-banner__slide slider-banner__slide-active" : "slider-banner__slide"} key={index}>
                             <img src={img} alt="" />
                         </div>
                     ))

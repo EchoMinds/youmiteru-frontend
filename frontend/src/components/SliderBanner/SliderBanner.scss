@@ -1,7 +1,7 @@
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
-.SliderBanner {
+.slider-banner {
   max-width: 1200px;
   height: 400px;
 
@@ -27,7 +27,7 @@
 }
 
 @media screen and (max-width: 900px) {
-  .SliderBanner {
+  .slider-banner {
     max-width: 800px;
   }
 }
