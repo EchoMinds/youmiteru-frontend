@@ -1,0 +1,15 @@
+.Slider-arrow {
+  font-size: 30px;
+  padding: 5px 5px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  position: absolute;
+  top: 100px;
+  cursor: pointer;
+}
+.Slider-arrow-right {
+  right: -20px;
+}
+.Slider-arrow-left {
+  left: -20px;
+}

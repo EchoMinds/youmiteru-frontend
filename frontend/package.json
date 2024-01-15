@@ -10,12 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/react-slick": "^0.23.13",
+    "classnames": "^2.3.2",
+    "eslint-plugin-react": "^7.33.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.19.0",
-    "classnames": "^2.3.2",
-    "eslint-plugin-react": "^7.33.2",
-    "sass": "^1.69.5"
+    "react-slick": "^0.29.0",
+    "sass": "^1.69.5",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
