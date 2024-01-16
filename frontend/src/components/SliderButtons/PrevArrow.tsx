@@ -1,5 +1,6 @@
 import "./SliderButton.scss";
 import leftArrow from "../../assets/images/left-arrow.svg";
+
 interface PrevArrowProps {
     onClick?: React.MouseEventHandler<HTMLDivElement>;
 }

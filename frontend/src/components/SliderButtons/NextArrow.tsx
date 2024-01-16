@@ -1,5 +1,6 @@
 import "./SliderButton.scss";
 import rightArrow from "../../assets/images/right-arrow.svg";
+
 interface NextArrowProps {
     onClick?: React.MouseEventHandler<HTMLDivElement>;
 }

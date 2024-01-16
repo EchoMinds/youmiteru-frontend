@@ -4,7 +4,6 @@ import { useState } from "react";
 import NextArrow from "../SliderButtons/NextArrow";
 import PrevArrow from "../SliderButtons/PrevArrow";
 
-
 interface SliderBannerProps {
     bannerPhotos: string[];
 }
