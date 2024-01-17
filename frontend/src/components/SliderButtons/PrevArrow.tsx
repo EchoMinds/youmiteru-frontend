@@ -9,7 +9,7 @@ function PrevArrow({ onClick }: PrevArrowProps) {
 
     return (
         <div className="slider-arrow slider-arrow-left" onClick={onClick}>
-            <img src={leftArrow} />
+            <img src={leftArrow} alt="left arrow" />
         </div>
     );
 }

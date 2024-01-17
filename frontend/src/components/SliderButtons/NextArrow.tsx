@@ -9,7 +9,7 @@ function NextArrow({ onClick }: NextArrowProps) {
 
     return (
         <div onClick={onClick} className="slider-arrow slider-arrow-right">
-            <img src={rightArrow} />
+            <img src={rightArrow} alt="right arrow"/>
         </div>
     );
 }

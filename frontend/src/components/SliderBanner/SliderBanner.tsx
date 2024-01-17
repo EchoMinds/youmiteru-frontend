@@ -72,7 +72,7 @@ function SliderBanner({ bannerData }: SliderBannerProps): JSX.Element {
                 {
                     bannerData.map((img, index) => (
                         <div className={index === slideIndex ? "slider-banner__slide slider-banner__slide-active" : "slider-banner__slide"} key={index}>
-                            <img src={img.season_image_url} alt="" />
+                            <img src={img.season_image_url} alt="slider picture" />
                         </div>
                     ))
                 }
