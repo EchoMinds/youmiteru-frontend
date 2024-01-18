@@ -10,8 +10,7 @@ interface SliderBannerProps {
 }
 
 interface ResponsiveSliderSettings {
-    slidesToShow: number,
-    slidesToScroll: number,
+    focusOnSelect: boolean,
     nextArrow: JSX.Element,
     prevArrow: JSX.Element,
 }
@@ -41,11 +40,9 @@ function EmptyArrow() {
 }
 
 function SliderBanner({ bannerData }: SliderBannerProps): JSX.Element {
-
     const [slideIndex, setSlideIndex] = useState(0);
     const ResponsiveSliderSettings: ResponsiveSliderSettings = {
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        focusOnSelect: true,
         nextArrow: <EmptyArrow />,
         prevArrow: <EmptyArrow />,
     };
@@ -64,8 +61,10 @@ function SliderBanner({ bannerData }: SliderBannerProps): JSX.Element {
             {
                 breakpoint: 800,
                 settings: ResponsiveSliderSettings
-            }]
+            },
+        ]
     };
+    
     return (
         <div className="slider-banner">
             <Slider {...settings}>
