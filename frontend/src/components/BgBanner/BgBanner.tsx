@@ -1,12 +1,14 @@
-import { useState } from "react";
-import { useDashBoardQuery } from "../../hooks/useDashBoardQuery";
-import SliderBanner from "../SliderBanner/SliderBanner";
 import "./BgBanner.scss";
+import { useState } from "react";
 import WatchButton from "../WatchButton/WatchButton";
+import SliderBanner from "../SliderBanner/SliderBanner";
+import { Banner } from "../../types/Banner";
 
-function BgBanner(): JSX.Element {
-    const DashBoardQuery = useDashBoardQuery();
-    const banners = DashBoardQuery.data?.banners;
+interface BgBannerProps {
+    bannerData: Banner[];
+}
+
+function BgBanner({ bannerData }: BgBannerProps): JSX.Element {
 
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
@@ -14,7 +16,7 @@ function BgBanner(): JSX.Element {
         setCurrentSlideIndex(index);
     };
 
-    const currentBanner = banners?.[currentSlideIndex];
+    const currentBanner = bannerData?.[currentSlideIndex];
 
     const bgBannerStyles = {
         backgroundImage: `url(${currentBanner?.season_image_url})`,
@@ -26,9 +28,14 @@ function BgBanner(): JSX.Element {
 
     return (
         <div className="bg-banner" style={bgBannerStyles}>
+            <h1>{currentBanner?.season_name}</h1>
+            <p>{currentBanner?.season_description}</p>
             <WatchButton />
             {currentBanner && (
-                <SliderBanner bannerData={banners} onSlideChange={handleSlideChange} />
+                <SliderBanner
+                    bannerData={bannerData}
+                    onSlideChange={handleSlideChange}
+                />
             )}
         </div>
     );
