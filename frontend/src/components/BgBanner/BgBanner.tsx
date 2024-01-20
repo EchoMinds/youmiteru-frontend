@@ -1,9 +1,10 @@
+import { Banner } from "../../types/Banner";
 import "./BgBanner.scss";
 
-function BgBanner(): JSX.Element {
+function BgBanner({ bannerData }: Banner): JSX.Element {
 
     return (
-        <div>
+        <div className="bg-banner">
 
         </div>
     );
