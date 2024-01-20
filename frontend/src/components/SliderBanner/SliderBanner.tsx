@@ -64,7 +64,7 @@ function SliderBanner({ bannerData }: SliderBannerProps): JSX.Element {
             },
         ]
     };
-    
+
     return (
         <div className="slider-banner">
             <Slider {...settings}>

@@ -1,5 +1,4 @@
 import { useDashBoardQuery } from "../../hooks/useDashBoardQuery";
-import { Banner } from "../../types/Banner";
 import SliderBanner from "../SliderBanner/SliderBanner";
 import "./BgBanner.scss";
 
