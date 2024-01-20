@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDashBoardQuery } from "../../hooks/useDashBoardQuery";
 import SliderBanner from "../SliderBanner/SliderBanner";
 import "./BgBanner.scss";
+import WatchButton from "../WatchButton/WatchButton";
 
 function BgBanner(): JSX.Element {
     const DashBoardQuery = useDashBoardQuery();
@@ -25,6 +26,7 @@ function BgBanner(): JSX.Element {
 
     return (
         <div className="bg-banner" style={bgBannerStyles}>
+            <WatchButton />
             {currentBanner && (
                 <SliderBanner bannerData={banners} onSlideChange={handleSlideChange} />
             )}
