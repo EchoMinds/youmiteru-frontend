@@ -25,19 +25,26 @@ function BgBanner({ bannerData }: BgBannerProps): JSX.Element {
         backgroundPosition: "center"
     };
 
-
     return (
-        <div className="bg-banner" style={bgBannerStyles}>
-            <h1>{currentBanner?.season_name}</h1>
-            <p>{currentBanner?.season_description}</p>
-            <WatchButton />
+        <>
             {currentBanner && (
-                <SliderBanner
-                    bannerData={bannerData}
-                    onSlideChange={handleSlideChange}
-                />
+                <div className="bg-banner" style={bgBannerStyles}>
+                    <div className="bg-banner__season-text">
+                        <h1>{currentBanner?.season_name}</h1>
+                        <p>{currentBanner?.season_description}</p>
+                    </div>
+                    <div className="bg-banner__watch-buttons">
+                        <WatchButton />
+                    </div>
+                    <div className="bg-banner__slider">
+                        <SliderBanner
+                            bannerData={bannerData}
+                            onSlideChange={handleSlideChange}
+                        />
+                    </div>
+                </div>
             )}
-        </div>
+        </>
     );
 }
 
