@@ -2,14 +2,14 @@
 @import "slick-carousel/slick/slick-theme.css";
 
 .slider-banner {
-  max-width: 50svw;
-  height: 12svw;
+  max-width: 40svw;
+  height: 10svw;
 
   &__slide,
   &__slide img {
     cursor: pointer;
     width: 100%;
-    height: 12svw;
+    height: 10svw;
     border-radius: 15px;
     object-fit: cover;
     outline: none;
@@ -31,9 +31,10 @@
 
 @media screen and (max-width: 900px) {
   .slider-banner {
+    max-width: 80svw;
     &__slide,
     &__slide img {
-      height: 10svw;
+      height: 20svw;
       border-radius: 15px;
       object-fit: cover;
     }
