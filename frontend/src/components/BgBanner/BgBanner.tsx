@@ -36,8 +36,8 @@ function BgBanner({ bannerData }: BgBannerProps): JSX.Element {
                             существование и жить в халупе...</p>
                     </div>
                     <div className="bg-banner__watch-buttons">
-                        <WatchButton />
-                        <WatchButton />
+                        <WatchButton isWatchNow={true} />
+                        <WatchButton isWatchTrailer={true} />
                     </div>
                     <div className="bg-banner__slider">
                         <SliderBanner

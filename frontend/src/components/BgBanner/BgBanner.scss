@@ -16,18 +16,28 @@
   &__season-text:nth-child(1) {
     max-width: 30svw;
     height: auto;
+    margin-left: 3svw;
   }
 
   &__season-text p,
   &__season-text h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     color: #fff;
     font-family: "Comfortaa", sans-serif;
     font-style: normal;
     line-height: normal;
   }
 
+  &__watch-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    margin-left: 3svw;
+    margin-top: 20px;
+  }
+
   &__season-text p {
-    font-size: 24px;
+    font-size: 1.5vw;
     font-weight: 200;
     letter-spacing: -1.8px;
   }
@@ -41,5 +51,57 @@
   &__slider:nth-child(3) {
     -webkit-align-self: center;
     align-self: center;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .bg-banner {
+    &__season-text p {
+      font-size: 2vw;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .bg-banner {
+    &__season-text p {
+      font-size: 2.5vw;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .bg-banner {
+    &__season-text:nth-child(1) {
+      max-width: 40svw;
+    }
+
+    &__season-text p {
+      font-size: 3vw;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .bg-banner {
+    &__season-text:nth-child(1) {
+      max-width: 50svw;
+    }
+
+    &__season-text p {
+      font-size: 3.5vw;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .bg-banner {
+    &__season-text:nth-child(1) {
+      max-width: 60svw;
+    }
+
+    &__season-text p {
+      font-size: 4vw;
+    }
   }
 }
