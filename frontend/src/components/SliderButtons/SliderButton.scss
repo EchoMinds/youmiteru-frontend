@@ -1,0 +1,22 @@
+.slider-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    top: 100px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.15);;
+}
+
+.slider-arrow-right {
+    right: -40px;
+}
+
+.slider-arrow-left {
+    left: -40px;
+}
