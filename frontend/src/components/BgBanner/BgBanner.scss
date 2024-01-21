@@ -39,7 +39,7 @@
   &__season-text p {
     font-size: 1.5vw;
     font-weight: 200;
-    letter-spacing: -1.8px;
+    letter-spacing: -1px;
   }
 
   &__season-text h1 {
@@ -73,7 +73,12 @@
 @media screen and (max-width: 650px) {
   .bg-banner {
     &__season-text:nth-child(1) {
-      max-width: 40svw;
+      max-width: 70svw;
+      align-self: center;
+    }
+
+    &__watch-buttons:nth-child(2) {
+      align-self: center;
     }
 
     &__season-text p {
@@ -84,12 +89,13 @@
 
 @media screen and (max-width: 500px) {
   .bg-banner {
-    &__season-text:nth-child(1) {
-      max-width: 50svw;
-    }
-
     &__season-text p {
       font-size: 3.5vw;
+    }
+
+    &__watch-buttons:nth-child(2) {
+      flex-direction: column;
+      align-self: center;
     }
   }
 }
