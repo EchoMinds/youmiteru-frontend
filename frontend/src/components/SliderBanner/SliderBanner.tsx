@@ -44,6 +44,7 @@ function EmptyArrow() {
 
 function SliderBanner({ bannerData, onSlideChange }: SliderBannerProps): JSX.Element {
     const [slideIndex, setSlideIndex] = useState(0);
+    
     const ResponsiveSliderSettings: ResponsiveSliderSettings = {
         focusOnSelect: true,
         autoplay: true,
