@@ -1,44 +1,45 @@
 .watch-button-now {
-    font-family: "Montserrat-ExtraBold", Helvetica;
-    font-size: 17px;
-    font-weight: 800;
-    letter-spacing: -0.8px;
-    cursor: pointer;
-    border-radius: 10px;
-    background-color: rgba(23, 226, 237, 0.715);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 57px;
-    width: 187px;
-    box-shadow: 0 0 20px #55a5af; 
+  font-family: "Montserrat-ExtraBold", Helvetica;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: rgba(23, 226, 237, 0.715);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 57px;
+  width: 187px;
+  box-shadow: 0 0 20px #55a5af;
+  transition: 0.5s;
 
-    &:hover {
-        border: 3px solid #1fdf64;
-    }
+  &:hover {
+    box-shadow: 0 0 40px #55a5af;
+  }
 
-    &__text {
-        padding: 10px;
-    }
+  &__text {
+    padding: 10px;
+  }
 }
 
 .watch-button-trailer {
-    font-family: "Montserrat-ExtraBold", Helvetica;
-    font-size: 17px;
-    font-weight: 800;
-    letter-spacing: -0.8px;
-    cursor: pointer;
-    border-radius: 10px;
-    background-color: #f59c68;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 57px;
-    width: 187px;
-    box-shadow: 0 0 20px rgba(241, 166, 36, 0.5);
+  font-family: "Montserrat-ExtraBold", Helvetica;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #f59c68;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 57px;
+  width: 187px;
+  transition: 0.5s;
+  box-shadow: 0 0 20px rgba(241, 166, 36, 0.5);
 
-    &:hover {
-        border: 3px solid #1fdf64;
-    }
-
+  &:hover {
+    box-shadow: 0 0 40px rgba(241, 166, 36, 0.5);
+  }
 }
