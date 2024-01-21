@@ -31,9 +31,12 @@ function BgBanner({ bannerData }: BgBannerProps): JSX.Element {
                 <div className="bg-banner" style={bgBannerStyles}>
                     <div className="bg-banner__season-text">
                         <h1>{currentBanner?.season_name}</h1>
-                        <p>{currentBanner?.season_description}</p>
+                        <p>Подросток Дэндзи всего лишь хотел жить обычной жизнью и есть досыта,
+                            но оставшиеся после смерти отца долги вынуждают парня влачить полуголодное
+                            существование и жить в халупе...</p>
                     </div>
                     <div className="bg-banner__watch-buttons">
+                        <WatchButton />
                         <WatchButton />
                     </div>
                     <div className="bg-banner__slider">
