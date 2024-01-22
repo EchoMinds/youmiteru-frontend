@@ -48,7 +48,7 @@ function SliderBanner({ bannerData, onSlideChange }: SliderBannerProps): JSX.Ele
     const ResponsiveSliderSettings: ResponsiveSliderSettings = {
         focusOnSelect: true,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 4000,
         nextArrow: <EmptyArrow />,
         prevArrow: <EmptyArrow />,
     };
