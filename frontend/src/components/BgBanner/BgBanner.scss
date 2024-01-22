@@ -60,6 +60,10 @@
         &__season-text p {
         font-size: 2vw;
         }
+        
+        &__season-text h1 {
+        font-size: 3vw;
+        }
     }
 }
 
@@ -67,6 +71,10 @@
     .bg-banner {
         &__season-text p {
         font-size: 2.5vw;
+        }
+
+        &__season-text h1 {
+        font-size: 4vw;
         }
     }
 }
@@ -85,6 +93,10 @@
         &__season-text p {
         font-size: 3vw;
         }
+
+        &__season-text h1 {
+        font-size: 5vw;
+        }
     }
 }
 
@@ -92,6 +104,10 @@
     .bg-banner {
         &__season-text p {
         font-size: 3.5vw;
+        }
+
+        &__season-text h1 {
+        font-size: 6vw;
         }
 
         &__watch-buttons:nth-child(2) {
@@ -104,11 +120,15 @@
 @media screen and (max-width: 400px) {
     .bg-banner {
         &__season-text:nth-child(1) {
-        max-width: 60svw;
+        max-width: 70svw;
         }
 
         &__season-text p {
         font-size: 4vw;
+        }
+        
+        &__season-text h1 {
+        font-size: 7vw;
         }
     }
 }
