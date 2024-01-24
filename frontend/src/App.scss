@@ -5,6 +5,8 @@ body {
     min-height: 100svh;
     background-color: $theme-bg-color;
     color: $theme-text-color;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
 }
@@ -27,4 +29,8 @@ body {
 a {
     color: inherit;
     text-decoration: none;
+}
+
+ul {
+    list-style: none;
 }
