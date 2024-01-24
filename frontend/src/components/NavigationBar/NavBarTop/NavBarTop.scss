@@ -11,9 +11,12 @@
         gap: 20px;
     }
 
+    &__center-panel li {
+        transition: $nav-bar-transition-duration;
+    }
+
     &__center-panel li:hover {
         color: $nav-bar-text-color;
-        transition: $nav-bar-transition-duration;
         transform: scale(1.15);
     }
 
@@ -39,28 +42,31 @@
         padding-right: 5px;
         cursor: pointer;
         border: none;
+        transition: $nav-bar-transition-duration;
         background-color: transparent;
     }
 
     .search:hover {
         transform: scale(1.5);
-        transition: $nav-bar-transition-duration;
     }
 
     .user-profile {
         cursor: pointer;
         border: none;
         background-color: transparent;
+        transition: $nav-bar-transition-duration;
     }
 
     .user-profile:hover {
         transform: scale(1.5);
+    }
+
+    .login {
         transition: $nav-bar-transition-duration;
     }
 
     .login:hover {
         color: $nav-bar-text-color;
-        transition: $nav-bar-transition-duration;
         transform: scale(1.2);
     }
 }
