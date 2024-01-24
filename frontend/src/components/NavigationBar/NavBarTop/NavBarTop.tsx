@@ -6,7 +6,7 @@ import WebLogo from "@/assets/icons/website-logo.png";
 import SearchIcon from "@/assets/icons/search-icon.svg";
 import UserProfileIcon from "@/assets/icons/user_icon.svg";
 
-function NavBarTop() {
+function NavBarTop(): JSX.Element {
     return (
         <nav className="nav-bar-top">
             <div className="nav-bar-top__left-panel">

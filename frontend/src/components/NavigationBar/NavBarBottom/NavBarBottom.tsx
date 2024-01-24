@@ -5,7 +5,7 @@ import BookMarkIcon from "@/assets/icons/bookmark.svg";
 import HomeIcon from "@/assets/icons/home.svg";
 import CatalogIcon from "@/assets/icons/catalog.svg";
 
-function NavBarBottom() {
+function NavBarBottom(): JSX.Element {
     return (
         <nav className="nav-bar">
             <ul className="nav-bar__list">

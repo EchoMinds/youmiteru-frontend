@@ -5,7 +5,7 @@ interface NextArrowProps {
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-function NextArrow({ onClick }: NextArrowProps) {
+function NextArrow({ onClick }: NextArrowProps): JSX.Element {
 
     return (
         <button onClick={onClick} className="slider-arrow slider-arrow-right">

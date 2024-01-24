@@ -6,7 +6,7 @@ interface SectionTitleProps {
     type?: "primary" | "secondary",
 }
 
-function SectionTitle({ title, type="secondary" }: SectionTitleProps) {
+function SectionTitle({ title, type="secondary" }: SectionTitleProps): JSX.Element {
 
     return (
         <h2 
