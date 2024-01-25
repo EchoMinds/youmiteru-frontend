@@ -7,7 +7,6 @@ interface PrevArrowProps {
 }
 
 function PrevArrow({ className, onClick }: PrevArrowProps) {
-
     return (
         <button
             className={`slider-arrow ${className}`}

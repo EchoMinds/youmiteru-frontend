@@ -7,7 +7,6 @@ interface NextArrowProps {
 }
 
 function NextArrow({ className, onClick }: NextArrowProps): JSX.Element {
-
     return (
         <button
             className={`slider-arrow ${className}`}
