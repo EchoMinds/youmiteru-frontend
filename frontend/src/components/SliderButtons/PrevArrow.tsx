@@ -5,7 +5,7 @@ interface PrevArrowProps {
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-function PrevArrow({ onClick }: PrevArrowProps) {
+function PrevArrow({ onClick }: PrevArrowProps): JSX.Element {
 
     return (
         <button className="slider-arrow slider-arrow-left" onClick={onClick}>

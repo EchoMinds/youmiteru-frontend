@@ -26,12 +26,12 @@ function App() {
                 {/* We will create our pages later it's just an example */}
                 <Route 
                     path={ROUTES.HOME} 
-                    element={<h1>Our main page</h1>} 
+                    element={<h1>Our home page</h1>} 
                 />
 
                 <Route 
-                    path="/about" 
-                    element={<h1>Our first pagination</h1>} 
+                    path={ROUTES.HELP}
+                    element={<h1>Help Page</h1>} 
                 />
                 
                 <Route 
