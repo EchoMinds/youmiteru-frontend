@@ -2,9 +2,10 @@
 @import "slick-carousel/slick/slick-theme.css";
 
 .slider-banner {
-    max-width: 40svw;
-    height: 10svw;
-    margin-top: 60px;
+    max-width: 38svw;
+    height: 12svw;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
     &__slide,
     &__slide img {
@@ -30,26 +31,52 @@
     }
 }
 
+@media screen and (max-width: 1300px) {
+    .slider-banner {
+        max-width: 40svw;
+        
+        &__slide,
+        &__slide img {
+            height: 10svw;
+        }
+    }
+}
+
 @media screen and (max-width: 900px) {
     .slider-banner {
-        max-width: 80svw;
+        max-width: 55svw;
 
         &__slide,
         &__slide img {
-            height: 20svw;
+            height: 12svw;
             border-radius: 15px;
             object-fit: cover;
         }
     }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 750px) {
     .slider-banner {
-        max-width: 60svw;
-        
+        max-width: 55svw;
+
         &__slide,
         &__slide img {
-            height: 16svw;
+            height: 14svw;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .slider-banner {
+        max-width: 70svw;
+
+        &__slide,
+        &__slide img {
+            height: 14svw;
+            border-radius: 15px;
+            object-fit: cover;
         }
     }
 }
