@@ -5,7 +5,7 @@ import SliderBanner from "../SliderBanner/SliderBanner";
 import { Banner } from "../../types/Banner";
 
 interface BgBannerProps {
-    bannerData: Banner[];
+    bannerData: Banner[] | undefined;
 }
 
 function BgBanner({ bannerData }: BgBannerProps): JSX.Element {
@@ -20,7 +20,6 @@ function BgBanner({ bannerData }: BgBannerProps): JSX.Element {
     const bgBannerStyles = {
         backgroundImage: `url(${currentBanner?.season_image_url})`,
         backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
         backgroundPosition: "center"
     };
 
