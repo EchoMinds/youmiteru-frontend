@@ -1,24 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
 
 .bg-banner {
-    display: flex;
+    display: flex; 
     flex-direction: column;
+    background-size: cover;
     flex-wrap: nowrap;
     justify-content: flex-end;
     align-content: stretch;
     align-items: flex-start;
     width: 100svw;
-    height: 700px;
+    height: 650px;
     box-shadow: 
-    inset 0 140px 100px -10px #080808,
-    inset 0 -300px 200px -10px #080808, 
-    inset 0 100px 100px -10px #080808,
-    inset 0 -100px 100px -10px #080808;
+    inset 0 40px 30px -10px #000,
+    inset 0 -300px 200px -10px #000;
 
     &__season-text:nth-child(1) {
         max-width: 30svw;
         height: auto;
-        margin-left: 3svw;
+        margin-left: 5svw;
     }
 
     &__season-text p,
@@ -34,8 +33,9 @@
         display: flex;
         flex-direction: row;
         gap: 25px;
-        margin-left: 3svw;
-        margin-top: 20px;
+        margin-left: 5svw;
+        margin-top: 16px;
+        margin-bottom: 60px;
     }
 
     &__season-text p {
@@ -57,6 +57,7 @@
 
 @media screen and (max-width: 1300px) {
     .bg-banner {
+
         &__season-text p {
         font-size: 2vw;
         }
@@ -69,6 +70,7 @@
 
 @media screen and (max-width: 900px) {
     .bg-banner {
+
         &__season-text p {
         font-size: 2.5vw;
         }
@@ -81,13 +83,16 @@
 
 @media screen and (max-width: 650px) {
     .bg-banner {
+
         &__season-text:nth-child(1) {
         max-width: 70svw;
         align-self: center;
+        margin-left: 0;
         }
 
         &__watch-buttons:nth-child(2) {
         align-self: center;
+        margin-left: 0;
         }
 
         &__season-text p {
@@ -102,6 +107,7 @@
 
 @media screen and (max-width: 500px) {
     .bg-banner {
+
         &__season-text p {
         font-size: 3.5vw;
         }
@@ -117,8 +123,18 @@
     }
 }
 
+@media screen and (max-width: 480px) {
+    .bg-banner {
+
+        margin-bottom: 80px;
+        box-shadow: inset 0 40px 30px -10px #000,
+            inset 0 -40px 30px -10px #000;
+    }
+}
+
 @media screen and (max-width: 400px) {
     .bg-banner {
+
         &__season-text:nth-child(1) {
         max-width: 70svw;
         }
