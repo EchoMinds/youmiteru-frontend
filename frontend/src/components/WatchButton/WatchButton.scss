@@ -11,10 +11,11 @@
     justify-content: center;
     height: 57px;
     width: 187px;
-    box-shadow: 0 0 20px #55a5af; 
+    box-shadow: 0 0 20px #55a5af;
+    transition: 0.5s;
 
     &:hover {
-        border: 3px solid #1fdf64;
+        box-shadow: 0 0 40px #55a5af;
     }
 
     &__text {
@@ -35,10 +36,10 @@
     justify-content: center;
     height: 57px;
     width: 187px;
+    transition: 0.5s;
     box-shadow: 0 0 20px rgba(241, 166, 36, 0.5);
 
     &:hover {
-        border: 3px solid #1fdf64;
+        box-shadow: 0 0 40px rgba(241, 166, 36, 0.5);
     }
-
 }

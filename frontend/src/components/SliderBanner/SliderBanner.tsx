@@ -7,12 +7,15 @@ import { Banner } from "../../types/Banner";
 
 interface SliderBannerProps {
     bannerData: Banner[];
+    onSlideChange?: (index: number) => void;
 }
 
 interface ResponsiveSliderSettings {
-    focusOnSelect: boolean,
-    nextArrow: JSX.Element,
-    prevArrow: JSX.Element,
+    focusOnSelect: boolean;
+    autoplay: boolean;
+    autoplaySpeed: number;
+    nextArrow: JSX.Element;
+    prevArrow: JSX.Element;
 }
 
 interface ResponsiveSettings {
@@ -39,10 +42,13 @@ function EmptyArrow() {
     );
 }
 
-function SliderBanner({ bannerData }: SliderBannerProps): JSX.Element {
+function SliderBanner({ bannerData, onSlideChange }: SliderBannerProps): JSX.Element {
     const [slideIndex, setSlideIndex] = useState(0);
+    
     const ResponsiveSliderSettings: ResponsiveSliderSettings = {
         focusOnSelect: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
         nextArrow: <EmptyArrow />,
         prevArrow: <EmptyArrow />,
     };
@@ -54,7 +60,12 @@ function SliderBanner({ bannerData }: SliderBannerProps): JSX.Element {
         slidesToScroll: 1,
         centerMode: true,
         centerPadding: "0",
-        beforeChange: (_, next) => setSlideIndex(next),
+        beforeChange: (_, next) => {
+            setSlideIndex(next);
+            if (onSlideChange) {
+                onSlideChange(next);
+            }
+        },
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
         responsive: [
@@ -64,12 +75,12 @@ function SliderBanner({ bannerData }: SliderBannerProps): JSX.Element {
             },
         ]
     };
-    
+
     return (
         <div className="slider-banner">
             <Slider {...settings}>
                 {
-                    bannerData.map((img, index) => (
+                    bannerData && bannerData.map((img, index) => (
                         <div className={index === slideIndex ? "slider-banner__slide slider-banner__slide-active" : "slider-banner__slide"} key={index}>
                             <img src={img.season_image_url} alt="slider picture" />
                         </div>
