@@ -2,14 +2,17 @@ import "./SliderButton.scss";
 import rightArrow from "../../assets/images/right-arrow.svg";
 
 interface NextArrowProps {
+    className?: string;
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-function NextArrow({ onClick }: NextArrowProps) {
-
+function NextArrow({ className, onClick }: NextArrowProps): JSX.Element {
     return (
-        <button onClick={onClick} className="slider-arrow slider-arrow-right">
-            <img src={rightArrow} alt="right arrow"/>
+        <button
+            className={`slider-arrow ${className}`}
+            onClick={onClick}
+        >
+            <img src={rightArrow} alt="right arrow" />
         </button>
     );
 }

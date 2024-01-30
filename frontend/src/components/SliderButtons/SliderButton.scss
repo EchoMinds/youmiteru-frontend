@@ -8,15 +8,31 @@
     border-radius: 50%;
     border: none;
     position: absolute;
-    top: 100px;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.15);;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.15);
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    &:focus {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
 }
 
-.slider-arrow-right {
-    right: -40px;
+.slick-next:before {
+    content: "";
 }
 
-.slider-arrow-left {
-    left: -40px;
+.slick-prev:before {
+    content: "";
+}
+
+.slick-next {
+    right: -50px;
+}
+
+.slick-prev {
+    left: -50px;
 }
