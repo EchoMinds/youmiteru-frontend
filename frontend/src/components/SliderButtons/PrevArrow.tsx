@@ -1,5 +1,5 @@
 import "./SliderButton.scss";
-import leftArrow from "../../assets/images/left-arrow.svg";
+import leftArrow from "../../assets/icons/left-arrow.svg";
 
 interface PrevArrowProps {
     className?: string;

@@ -1,5 +1,5 @@
 import "./SliderButton.scss";
-import rightArrow from "../../assets/images/right-arrow.svg";
+import rightArrow from "../../assets/icons/right-arrow.svg";
 
 interface NextArrowProps {
     className?: string;
