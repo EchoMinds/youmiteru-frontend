@@ -14,8 +14,7 @@ interface ResponsiveSliderSettings {
     focusOnSelect: boolean;
     autoplay: boolean;
     autoplaySpeed: number;
-    nextArrow: JSX.Element;
-    prevArrow: JSX.Element;
+    arrows: boolean;
 }
 
 interface ResponsiveSettings {
@@ -36,10 +35,6 @@ interface SliderBannerSettings {
     responsive?: ResponsiveSettings[];
 }
 
-function EmptyArrow() {
-    return <div></div>;
-}
-
 function SliderBanner({
     bannerData,
     onSlideChange,
@@ -50,8 +45,7 @@ function SliderBanner({
         focusOnSelect: true,
         autoplay: true,
         autoplaySpeed: 10000,
-        nextArrow: <EmptyArrow />,
-        prevArrow: <EmptyArrow />,
+        arrows: false,
     };
 
     const settings: SliderBannerSettings = {
