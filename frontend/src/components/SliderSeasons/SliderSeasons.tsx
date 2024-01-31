@@ -4,10 +4,12 @@ import "./SliderSeasons.scss";
 import PrevArrow from "../SliderButtons/PrevArrow";
 import NextArrow from "../SliderButtons/NextArrow";
 import { Season } from "../../types/Season";
+import SectionTitle from "../SectionTitle/SectionTitle";
 
 interface SliderSeasonsProps {
     sliderData: Season[] | [];
     onSlideChange?: (index: number) => void;
+    title: string;
 }
 
 interface ResponsiveSettings {
@@ -28,7 +30,11 @@ interface SliderSeasonsSettings {
     arrows: boolean;
 }
 
-function SliderSeasons({ sliderData, onSlideChange }: SliderSeasonsProps) {
+function SliderSeasons({
+    sliderData,
+    onSlideChange,
+    title,
+}: SliderSeasonsProps) {
     const [slideIndex, setSlideIndex] = useState(0);
 
     const settings: SliderSeasonsSettings = {
@@ -46,34 +52,31 @@ function SliderSeasons({ sliderData, onSlideChange }: SliderSeasonsProps) {
         },
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
-        responsive: [
-        ]
+        responsive: [],
     };
 
     return (
-        <div className="slider-season">
-            <Slider {...settings}>
-                {sliderData && 
-                    sliderData.map((item, index) => (
-                        <div key={index} className="slider-season__card">
-                            <div className="slider-season__card__top">
+        <>
+            <SectionTitle title={title} />
+            <div className="slider-season">
+                <Slider {...settings}>
+                    {sliderData &&
+                        sliderData.map((item, index) => (
+                            <div key={index} className="slider-season__card">
                                 <img
                                     src={item.season_image_url}
                                     alt={item.season_name}
                                 />
                                 <h3>{item.season_name}</h3>
-                            </div>
 
-                            <div
-                                className="slider-season__card__description">
-                                {item.season_description}
+                                <div className="slider-season__card__description">
+                                    {item.season_description}
+                                </div>
                             </div>
-
-                        </div>
-                    ))
-                }
-            </Slider>
-        </div>
+                        ))}
+                </Slider>
+            </div>
+        </>
     );
 }
 
