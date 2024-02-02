@@ -5,6 +5,8 @@ import PrevArrow from "../SliderButtons/PrevArrow";
 import NextArrow from "../SliderButtons/NextArrow";
 import { Season } from "../../types/Season";
 import SectionTitle from "../SectionTitle/SectionTitle";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../constants/routes";
 
 interface SliderSeasonsProps {
     sliderData: Season[] | [];
@@ -62,17 +64,20 @@ function SliderSeasons({
                 <Slider {...settings}>
                     {sliderData &&
                         sliderData.map((item, index) => (
-                            <div key={index} className="slider-season__card">
-                                <img
-                                    src={item.season_image_url}
-                                    alt={item.season_name}
-                                />
-                                <h3>{item.season_name}</h3>
+                            <Link
+                                key={item.season_id}
+                                to={`${ROUTES.ANIME}/${item.season_id}`}
+                            >
+                                <div className="slider-season__card">
+                                    <img
+                                        src={item.season_image_url}
+                                        alt={item.season_name}
+                                    />
+                                    <div className="card_season_name">{item.season_name}</div>
 
-                                <div className="slider-season__card__description">
-                                    {item.season_description}
+                                    <div className="card_season_description">{item.season_description}</div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                 </Slider>
             </div>
