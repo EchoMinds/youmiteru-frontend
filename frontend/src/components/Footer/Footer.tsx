@@ -14,7 +14,7 @@ export function Footer(): JSX.Element {
                 <Link to="">
                     <img src={website} />
                 </Link>
-                <div>
+                <div className="footer__first-part__icons">
                     <Link to="">
                         <img src={discord} />
                     </Link>
