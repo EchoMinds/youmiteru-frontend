@@ -9,4 +9,11 @@ export const ROUTES = {
     PROFILE: "/profile",
     ANIME : "/anime",
     SETTINGS: "/settings",
+    FAQ: "/faq",
+    CONTACTS: "/contacts",
+    DONATION: "/donation",
+    ADVERTISMENT: "/advertisment",
+    USER_AGREEMENT: "/user-agreement",
+    PRIVACY_POLICY: "/privacy-policy",
+    COMPLAINT: "/complaint"
 };
