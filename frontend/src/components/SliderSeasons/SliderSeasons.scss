@@ -1,0 +1,139 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+@import "@/assets/styles/vars.scss";
+
+.slider-season {
+  margin-left: 50px;
+  margin-bottom: 70px;
+
+  &__card {
+    position: relative;
+
+    img {
+      width: 270px;
+      height: 175px;
+      border-radius: 15px;
+    }
+
+    .card_season_name,
+    .card_season_description {
+      display: none;
+    }
+  }
+
+  &__card:hover {
+    transform: scale(1.05);
+    z-index: 999;
+    transition: 0.3s ease;
+
+    img {
+      opacity: 0.2;
+    }
+
+    .card_season_name {
+      display: flex;
+      font-family: 'Times New Roman', Times, serif;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: left;
+      margin-left: 15px;
+      margin-bottom: 10px;
+      font-weight: $font-weight-bold;
+    }
+
+    .card_season_description {
+      display: flex;
+      position: absolute;
+      top: 10px;
+      white-space: normal;
+      word-break: break-word;
+      overflow-wrap: break-word;
+      padding-left: 7px;
+      width: 100%;
+      font-size: 14px;
+      font-weight: $font-weight-regular;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-align: left;
+    }
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .slider-season {
+    .slider-season__card {
+      img {
+        width: 450px;
+        height: 16em;
+      }
+
+      .card_season_description {
+        font-size: 15px;
+        width: 380px;
+      }
+
+      .card_season_name {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .slider-season {
+      .slider-season__card {
+        img {
+          width: 230px;
+          height: 9em;
+        }
+  
+        .card_season_description {
+          font-size: 11px;
+          width: 200px;
+        }
+  
+        .card_season_name {
+          font-size: 18px;
+        }
+      }
+    }
+}
+
+@media screen and (max-width: 768px) {
+  .slider-season {
+    .slider-season__card {
+      img {
+        width: 173px;
+        height: 7em;
+      }
+
+      .card_season_description {
+        font-size: 9px;
+        width: 170px;
+      }
+
+      .card_season_name {
+        font-size: 12px;
+        width: 140px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .slider-season {
+    .slider-season__card {
+      img {
+        width: 92px;
+        height: 78px;
+      }
+      .card_season_description {
+        font-size: 7px;
+        width: 90px;
+      }
+      .card_season_name {
+        font-size: 8px;
+      }
+    }
+  }
+}

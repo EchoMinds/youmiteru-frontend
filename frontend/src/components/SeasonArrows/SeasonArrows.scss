@@ -1,0 +1,28 @@
+.slider-arrow {
+    height: 13svw !important;
+    width: 2svw !important;
+    border-radius: 10% !important;
+    background: rgba(0, 8, 13, .5) !important;
+    opacity: 0;
+    z-index: 99;
+    display: none !important;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.slick-slider:hover {
+    .slider-arrow {
+        opacity: 1;
+        display: flex !important;
+
+        &:hover {
+            background-color: none !important;
+
+        }
+    }
+}
+
+.slick-next:before,
+.slick-prev:before {
+    content: "" !important;
+}

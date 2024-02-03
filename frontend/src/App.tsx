@@ -23,7 +23,6 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                {/* We will create our pages later it's just an example */}
                 <Route 
                     path={ROUTES.HOME} 
                     element={<h1>Our home page</h1>} 
