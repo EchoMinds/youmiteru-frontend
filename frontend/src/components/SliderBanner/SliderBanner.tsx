@@ -1,8 +1,8 @@
 import "./SliderBanner.scss";
 import Slider from "react-slick";
 import { useState } from "react";
-import NextArrow from "../SliderButtons/NextArrow";
-import PrevArrow from "../SliderButtons/PrevArrow";
+import NextArrow from "../BannerArrows/NextArrow";
+import PrevArrow from "../BannerArrows/PrevArrow";
 import { Banner } from "../../types/Banner";
 
 interface SliderBannerProps {
