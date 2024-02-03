@@ -1,31 +1,16 @@
 import "./App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ROUTES } from "./constants/routes";
-import { useDashBoardQuery } from "./hooks/useDashBoardQuery";
-
+import Home from "./pages/Home/Home";
 
 function App() {
-    const DashBoardQuery = useDashBoardQuery();
-
-    if (DashBoardQuery.isLoading) {
-        <h1> Loading ....</h1>;
-    }
-
-    if (DashBoardQuery.isError) {
-        <h1> Error ....</h1>;
-    }
-
-    const banners = DashBoardQuery.data?.banners;
-    const popular_seasons = DashBoardQuery.data?.popular_seasons;
-    const announced_seasons = DashBoardQuery.data?.announced_seasons;
-    const released_seasons = DashBoardQuery.data?.released_seasons;
 
     return (
         <BrowserRouter>
             <Routes>
                 <Route 
                     path={ROUTES.HOME} 
-                    element={<h1>Our home page</h1>} 
+                    element={<Home />} 
                 />
 
                 <Route 

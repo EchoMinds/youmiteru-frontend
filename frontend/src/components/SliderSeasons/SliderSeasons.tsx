@@ -66,7 +66,7 @@ function SliderSeasons({
                         sliderData.map((item, index) => (
                             <Link
                                 key={item.season_id}
-                                to={`${ROUTES.ANIME}/${item.season_id}`}
+                                to={`${ROUTES.SEASON}/${item.season_id}`}
                             >
                                 <div className="slider-season__card">
                                     <img
