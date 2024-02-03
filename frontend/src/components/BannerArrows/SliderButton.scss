@@ -1,13 +1,13 @@
-.slider-arrow {
-  align-items: center !important;
-  justify-content: center !important;
+.slider-banner .slider-arrow {
   height: 2.5svw !important;
   width: 2.5svw !important;
   border-radius: 50% !important;
-  position: absolute !important;
   cursor: pointer !important;
   transition: 0.5s !important;
-  background-color: rgba(255, 255, 255, 0.15)  !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  z-index: 99;
+  // margin-left: 13px;
+  // margin-right: 7px;
 
   & img {
     height: 1.5svw !important;
@@ -17,26 +17,7 @@
   &:hover {
     background-color: rgba(255, 255, 255, 0.4) !important;
   }
-
-  &:focus {
-    background-color: rgba(255, 255, 255, 0.4) !important;
-  }
-}
-
-.slick-next:before {
-  content: "" !important;
-}
-
-.slick-prev:before {
-  content: "" !important;
-}
-
-.slick-next {
-  right: -20px !important;
-}
-
-.slick-prev {
-  left: -20px !important;
+  
 }
 
 @media screen and (min-width: 1300px) {
