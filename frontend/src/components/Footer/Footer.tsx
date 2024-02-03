@@ -6,6 +6,8 @@ import vk from "./../../assets/icons/vk-logo.png";
 import discord from "./../../assets/icons/discord-logo.png";
 import telegram from "./../../assets/icons/telegram-logo.png";
 
+import { links } from "../../constants/misc";
+
 export function Footer(): JSX.Element {
     return (
         <footer className="footer">
@@ -14,13 +16,13 @@ export function Footer(): JSX.Element {
                     youmiteru
                 </Link>
                 <div className="footer__first-part__icons">
-                    <Link to="">
+                    <Link to={links.discord_link}>
                         <img src={discord} />
                     </Link>
-                    <Link to="">
+                    <Link to={links.vk_link}>
                         <img src={vk} />
                     </Link>
-                    <Link to="">
+                    <Link to={links.telegram_link}>
                         <img src={telegram} />
                     </Link>
                 </div>
