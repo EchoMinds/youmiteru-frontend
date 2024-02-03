@@ -5,14 +5,13 @@ import "./Footer.scss";
 import vk from "./../../assets/icons/vk-logo.png";
 import discord from "./../../assets/icons/discord-logo.png";
 import telegram from "./../../assets/icons/telegram-logo.png";
-import website from "./../../assets/icons/website-logo.png";
 
 export function Footer(): JSX.Element {
     return (
         <footer className="footer">
             <div className="footer__first-part">
                 <Link to="">
-                    <img src={website} />
+                    youmiteru
                 </Link>
                 <div className="footer__first-part__icons">
                     <Link to="">
