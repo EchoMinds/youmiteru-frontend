@@ -2,9 +2,7 @@ import "./App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ROUTES } from "./constants/routes";
 import { useDashBoardQuery } from "./hooks/useDashBoardQuery";
-import NavigationBar from "./components/NavigationBar/NavigationBar";
-import BgBanner from "./components/BgBanner/BgBanner";
-import SliderSeasons from "./components/SliderSeasons/SliderSeasons";
+
 
 function App() {
     const DashBoardQuery = useDashBoardQuery();
@@ -25,26 +23,9 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                {/* We will create our pages later it's just an example */}
                 <Route 
                     path={ROUTES.HOME} 
-                    element={<>
-                            <NavigationBar />
-                            <BgBanner 
-                                bannerData={banners || []} />
-
-                            <SliderSeasons 
-                                title="Popular" 
-                                sliderData={popular_seasons || []} />
-
-                            <SliderSeasons 
-                                title="Announced" 
-                                sliderData={announced_seasons || []} />
-
-                            <SliderSeasons 
-                                title="Released" 
-                                sliderData={released_seasons || []} />
-                        </>} 
+                    element={<h1>Our home page</h1>} 
                 />
 
                 <Route 
