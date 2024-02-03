@@ -10,7 +10,7 @@ export function Footer(): JSX.Element {
     return (
         <footer className="footer">
             <div className="footer__first-part">
-                <Link to="">
+                <Link className="footer__first-part__logo-text" to="">
                     youmiteru
                 </Link>
                 <div className="footer__first-part__icons">
@@ -40,40 +40,42 @@ export function Footer(): JSX.Element {
                     </li>
                 </ul>
             </div>
-            <div className="footer__third-part">
-                <h1>Помощь</h1>
-                <ul>
-                    <li>
-                        <Link className="footer-custom-link" to="">
-                            FAQ
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className="footer-custom-link" to="">
-                            Контакты
-                        </Link>
-                    </li>
-                </ul>
-            </div>
-            <div className="footer__four-part">
-                <h1>Другое</h1>
-                <ul>
-                    <li>
-                        <Link className="footer-custom-link" to="">
-                            Донат
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className="footer-custom-link" to="">
-                            Жалоба
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className="footer-custom-link" to="">
-                            Реклама
-                        </Link>
-                    </li>
-                </ul>
+            <div className="footer__block">
+                <div className="footer__block__third-part">
+                    <h1>Помощь</h1>
+                    <ul>
+                        <li>
+                            <Link className="footer-custom-link" to="">
+                                FAQ
+                            </Link>
+                        </li>
+                        <li>
+                            <Link className="footer-custom-link" to="">
+                                Контакты
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+                <div className="footer__block__four-part">
+                    <h1>Другое</h1>
+                    <ul>
+                        <li>
+                            <Link className="footer-custom-link" to="">
+                                Донат
+                            </Link>
+                        </li>
+                        <li>
+                            <Link className="footer-custom-link" to="">
+                                Жалоба
+                            </Link>
+                        </li>
+                        <li>
+                            <Link className="footer-custom-link" to="">
+                                Реклама
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </footer>
     );
