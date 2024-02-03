@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Slider from "react-slick";
 import "./SliderSeasons.scss";
-import PrevArrow from "../SliderButtons/PrevArrow";
-import NextArrow from "../SliderButtons/NextArrow";
+import PrevArrow from "../BannerArrows/PrevArrow";
+import NextArrow from "../BannerArrows/NextArrow";
 import { Season } from "../../types/Season";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import { Link } from "react-router-dom";
