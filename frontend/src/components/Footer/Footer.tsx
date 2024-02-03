@@ -7,12 +7,16 @@ import discord from "./../../assets/icons/discord-logo.png";
 import telegram from "./../../assets/icons/telegram-logo.png";
 
 import { links } from "../../constants/misc";
+import { ROUTES } from "../../constants/routes";
 
 export function Footer(): JSX.Element {
     return (
         <footer className="footer">
             <div className="footer__first-part">
-                <Link className="footer__first-part__logo-text" to="">
+                <Link
+                    className="footer__first-part__logo-text"
+                    to={ROUTES.HOME}
+                >
                     youmiteru
                 </Link>
                 <div className="footer__first-part__icons">
@@ -31,12 +35,18 @@ export function Footer(): JSX.Element {
                 <h1>О нас</h1>
                 <ul>
                     <li>
-                        <Link className="footer-custom-link" to="">
+                        <Link
+                            className="footer-custom-link"
+                            to={ROUTES.USER_AGREEMENT}
+                        >
                             Пользовательское соглашение
                         </Link>
                     </li>
                     <li>
-                        <Link className="footer-custom-link" to="">
+                        <Link
+                            className="footer-custom-link"
+                            to={ROUTES.PRIVACY_POLICY}
+                        >
                             Политика конфиденциальности
                         </Link>
                     </li>
@@ -47,12 +57,18 @@ export function Footer(): JSX.Element {
                     <h1>Помощь</h1>
                     <ul>
                         <li>
-                            <Link className="footer-custom-link" to="">
+                            <Link
+                                className="footer-custom-link"
+                                to={ROUTES.FAQ}
+                            >
                                 FAQ
                             </Link>
                         </li>
                         <li>
-                            <Link className="footer-custom-link" to="">
+                            <Link
+                                className="footer-custom-link"
+                                to={ROUTES.CONTACTS}
+                            >
                                 Контакты
                             </Link>
                         </li>
@@ -62,17 +78,26 @@ export function Footer(): JSX.Element {
                     <h1>Другое</h1>
                     <ul>
                         <li>
-                            <Link className="footer-custom-link" to="">
+                            <Link
+                                className="footer-custom-link"
+                                to={ROUTES.SPONSOR_PROJECT}
+                            >
                                 Донат
                             </Link>
                         </li>
                         <li>
-                            <Link className="footer-custom-link" to="">
+                            <Link
+                                className="footer-custom-link"
+                                to={ROUTES.COMPLAINT}
+                            >
                                 Жалоба
                             </Link>
                         </li>
                         <li>
-                            <Link className="footer-custom-link" to="">
+                            <Link
+                                className="footer-custom-link"
+                                to={ROUTES.ADVERTISMENT}
+                            >
                                 Реклама
                             </Link>
                         </li>
