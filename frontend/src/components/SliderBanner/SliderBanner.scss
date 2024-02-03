@@ -9,7 +9,6 @@
 
     &__slide,
     &__slide img {
-        cursor: pointer;
         width: 100%;
         height: 9svw;
         border-radius: 15px;
@@ -20,21 +19,18 @@
     &__slide {
         transform: scale(0.7);
         transition: 0.5s;
+        border: 2px solid rgba(255, 255, 255, 0.5);
     }
 
     &__slide-active {
         transform: scale(0.9);
-    }
-
-    &__slide {
-        border: 2px solid rgba(255, 255, 255, 0.5);
     }
 }
 
 @media screen and (max-width: 1300px) {
     .slider-banner {
         max-width: 40svw;
-        
+
         &__slide,
         &__slide img {
             height: 10svw;
