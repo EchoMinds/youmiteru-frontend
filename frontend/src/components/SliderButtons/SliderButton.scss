@@ -1,38 +1,111 @@
 .slider-arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    border: none;
-    position: absolute;
-    cursor: pointer;
-    transition: 0.5s;
-    background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  height: 2.5svw;
+  width: 2.5svw;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: rgba(255, 255, 255, 0.15);
 
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.4);
-    }
+  & img {
+    height: 1.5svw;
+    width: 1.5svw;
+  }
 
-    &:focus {
-        background-color: rgba(255, 255, 255, 0.4);
-    }
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
 }
 
 .slick-next:before {
-    content: "";
+  content: "";
 }
 
 .slick-prev:before {
-    content: "";
+  content: "";
 }
 
 .slick-next {
-    right: -50px;
+  right: -20px;
 }
 
 .slick-prev {
-    left: -50px;
+  left: -20px;
+}
+
+@media screen and (min-width: 1300px) {
+  .slider-arrow {
+    height: 3svw;
+    width: 3svw;
+
+    & img {
+      height: 1.5svw;
+      width: 1.5svw;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .slider-arrow {
+    height: 4svw;
+    width: 4svw;
+
+    & img {
+      height: 2svw;
+      width: 2svw;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .slider-arrow {
+    height: 5svw;
+    width: 5svw;
+
+    & img {
+      height: 2.5svw;
+      width: 2.5svw;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .slider-arrow {
+    height: 6svw;
+    width: 6svw;
+
+    & img {
+      height: 3svw;
+      width: 3svw;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .slider-arrow {
+    height: 7svw;
+    width: 7svw;
+
+    & img {
+      height: 3svw;
+      width: 3svw;
+    }
+  }
+
+  .slick-next {
+    right: -9svw;
+  }
+
+  .slick-prev {
+    left: -9svw;
+  }
 }
