@@ -30,10 +30,14 @@ export function Footer(): JSX.Element {
                 <h1>О нас</h1>
                 <ul>
                     <li>
-                        <Link to="">Ntrdfsa</Link>
+                        <Link className="footer-custom-link" to="">
+                            Пользовательское соглашение
+                        </Link>
                     </li>
                     <li>
-                        <Link to="">Ntrdfsa</Link>
+                        <Link className="footer-custom-link" to="">
+                            Политика конфиденциальности
+                        </Link>
                     </li>
                 </ul>
             </div>
@@ -41,10 +45,14 @@ export function Footer(): JSX.Element {
                 <h1>Помощь</h1>
                 <ul>
                     <li>
-                        <Link to="">Ntrdfsa</Link>
+                        <Link className="footer-custom-link" to="">
+                            FAQ
+                        </Link>
                     </li>
                     <li>
-                        <Link to="">Ntrdfsa</Link>
+                        <Link className="footer-custom-link" to="">
+                            Контакты
+                        </Link>
                     </li>
                 </ul>
             </div>
@@ -52,13 +60,19 @@ export function Footer(): JSX.Element {
                 <h1>Другое</h1>
                 <ul>
                     <li>
-                        <Link to="">Ntrdfsa</Link>
+                        <Link className="footer-custom-link" to="">
+                            Донат
+                        </Link>
                     </li>
                     <li>
-                        <Link to="">Ntrdfsa</Link>
+                        <Link className="footer-custom-link" to="">
+                            Жалоба
+                        </Link>
                     </li>
                     <li>
-                        <Link to="">Ntrdfsa</Link>
+                        <Link className="footer-custom-link" to="">
+                            Реклама
+                        </Link>
                     </li>
                 </ul>
             </div>
