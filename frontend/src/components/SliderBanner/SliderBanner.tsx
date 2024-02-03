@@ -14,8 +14,7 @@ interface ResponsiveSliderSettings {
     focusOnSelect: boolean;
     autoplay: boolean;
     autoplaySpeed: number;
-    nextArrow: JSX.Element;
-    prevArrow: JSX.Element;
+    arrows: boolean;
 }
 
 interface ResponsiveSettings {
@@ -36,21 +35,17 @@ interface SliderBannerSettings {
     responsive?: ResponsiveSettings[];
 }
 
-function EmptyArrow() {
-    return (
-        <div></div>
-    );
-}
-
-function SliderBanner({ bannerData, onSlideChange }: SliderBannerProps): JSX.Element {
+function SliderBanner({
+    bannerData,
+    onSlideChange,
+}: SliderBannerProps): JSX.Element {
     const [slideIndex, setSlideIndex] = useState(0);
-    
+
     const ResponsiveSliderSettings: ResponsiveSliderSettings = {
         focusOnSelect: true,
         autoplay: true,
-        autoplaySpeed: 4000,
-        nextArrow: <EmptyArrow />,
-        prevArrow: <EmptyArrow />,
+        autoplaySpeed: 10000,
+        arrows: false,
     };
 
     const settings: SliderBannerSettings = {
@@ -71,21 +66,30 @@ function SliderBanner({ bannerData, onSlideChange }: SliderBannerProps): JSX.Ele
         responsive: [
             {
                 breakpoint: 800,
-                settings: ResponsiveSliderSettings
+                settings: ResponsiveSliderSettings,
             },
-        ]
+        ],
     };
 
     return (
         <div className="slider-banner">
             <Slider {...settings}>
-                {
-                    bannerData && bannerData.map((img, index) => (
-                        <div className={index === slideIndex ? "slider-banner__slide slider-banner__slide-active" : "slider-banner__slide"} key={index}>
-                            <img src={img.season_image_url} alt="slider picture" />
+                {bannerData &&
+                    bannerData.map((img, index) => (
+                        <div
+                            className={
+                                index === slideIndex
+                                    ? "slider-banner__slide slider-banner__slide-active"
+                                    : "slider-banner__slide"
+                            }
+                            key={index}
+                        >
+                            <img
+                                src={img.season_image_url}
+                                alt="slider picture"
+                            />
                         </div>
-                    ))
-                }
+                    ))}
             </Slider>
         </div>
     );

@@ -5,7 +5,7 @@ import SliderBanner from "../SliderBanner/SliderBanner";
 import { Banner } from "../../types/Banner";
 
 interface BgBannerProps {
-    bannerData: Banner[] | undefined;
+    bannerData: Banner[] | [];
 }
 
 function BgBanner({ bannerData }: BgBannerProps): JSX.Element {

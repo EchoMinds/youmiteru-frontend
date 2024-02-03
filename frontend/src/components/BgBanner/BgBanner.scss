@@ -70,10 +70,14 @@
 
 @media screen and (max-width: 900px) {
     .bg-banner {
+        
+        &__season-text:nth-child(1) {
+            max-width: 50svw;
 
-        &__season-text p {
-        font-size: 2.5vw;
+            & p {
+            font-size: 2.5vw;
         }
+        } 
 
         &__season-text h1 {
         font-size: 4vw;
@@ -94,26 +98,19 @@
         align-self: center;
         margin-left: 0;
         }
-
-        &__season-text p {
-        font-size: 3vw;
-        }
-
-        &__season-text h1 {
-        font-size: 5vw;
-        }
     }
 }
 
 @media screen and (max-width: 500px) {
     .bg-banner {
+        &__season-text:nth-child(1) {
+            & p {
+                font-size: 5vw;
+            }
 
-        &__season-text p {
-        font-size: 3.5vw;
-        }
-
-        &__season-text h1 {
-        font-size: 6vw;
+            h1 {
+                font-size: 6vw;
+            }
         }
 
         &__watch-buttons:nth-child(2) {
@@ -137,14 +134,14 @@
 
         &__season-text:nth-child(1) {
         max-width: 70svw;
-        }
 
-        &__season-text p {
-        font-size: 4vw;
-        }
-        
-        &__season-text h1 {
-        font-size: 7vw;
+            & p {
+                font-size: 6vw;
+            }
+
+            h1 {
+                font-size: 7vw;
+            }
         }
     }
 }
