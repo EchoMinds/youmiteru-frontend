@@ -73,6 +73,7 @@
 
 @media only screen and (min-width: 2600px) {
     .nav-bar-top {
+        height: 4svw;
         &__center-panel {
             gap: 2svw;
         }
@@ -89,14 +90,14 @@
 
     .search img {
         object-fit: cover;
-        height: 2svw;
-        width: 2svw;
+        height: 3svw;
+        width: 3svw;
     }
 
     .user-profile img {
         object-fit: cover;
-        height: 2svw;
-        width: 2svw;
+        height: 3svw;
+        width: 3svw;
     }
 }
 
