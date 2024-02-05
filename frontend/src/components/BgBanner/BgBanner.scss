@@ -58,6 +58,11 @@
 @media screen and (min-width: 1900px) {
     .bg-banner {
         height: 40svw;
+
+        &__season-text h1 {
+            font-size: 4svw;
+        
+        }
     }
 }
 
