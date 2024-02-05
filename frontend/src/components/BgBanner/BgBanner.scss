@@ -55,6 +55,12 @@
     }
 }
 
+@media screen and (min-width: 1900px) {
+    .bg-banner {
+        height: 40svw;
+    }
+}
+
 @media screen and (max-width: 1300px) {
     .bg-banner {
 
