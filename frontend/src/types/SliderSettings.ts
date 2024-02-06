@@ -1,8 +1,8 @@
 export interface ResponsiveSliderSettings {
-    focusOnSelect: boolean;
-    autoplay: boolean;
-    autoplaySpeed: number;
-    arrows: boolean;
+    focusOnSelect?: boolean;
+    autoplay?: boolean;
+    autoplaySpeed?: number;
+    arrows?: boolean;
 }
 
 interface ResponsiveSettings {
@@ -10,13 +10,13 @@ interface ResponsiveSettings {
     settings: ResponsiveSliderSettings;
 }
 
-export interface SliderBannerSettings {
+export interface SliderSettings {
     infinite: boolean;
     speed: number;
     slidesToShow: number;
     slidesToScroll: number;
-    centerMode: boolean;
-    centerPadding: string;
+    centerMode?: boolean;
+    centerPadding?: string;
     beforeChange?: (current: number, next: number) => void;
     nextArrow?: JSX.Element;
     prevArrow?: JSX.Element;

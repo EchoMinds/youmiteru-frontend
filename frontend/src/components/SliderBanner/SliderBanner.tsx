@@ -6,7 +6,7 @@ import PrevArrow from "../BannerArrows/PrevArrow";
 import { Banner } from "../../types/Banner";
 import {
     ResponsiveSliderSettings,
-    SliderBannerSettings,
+    SliderSettings,
 } from "../../types/SliderSettings";
 
 interface SliderBannerProps {
@@ -27,7 +27,7 @@ function SliderBanner({
         arrows: false,
     };
 
-    const settings: SliderBannerSettings = {
+    const settings: SliderSettings = {
         infinite: true,
         speed: 500,
         slidesToShow: 3,
