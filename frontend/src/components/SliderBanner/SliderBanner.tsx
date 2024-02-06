@@ -4,35 +4,14 @@ import { useState } from "react";
 import NextArrow from "../BannerArrows/NextArrow";
 import PrevArrow from "../BannerArrows/PrevArrow";
 import { Banner } from "../../types/Banner";
+import {
+    ResponsiveSliderSettings,
+    SliderBannerSettings,
+} from "../../types/SliderSettings";
 
 interface SliderBannerProps {
     bannerData: Banner[];
     onSlideChange?: (index: number) => void;
-}
-
-interface ResponsiveSliderSettings {
-    focusOnSelect: boolean;
-    autoplay: boolean;
-    autoplaySpeed: number;
-    arrows: boolean;
-}
-
-interface ResponsiveSettings {
-    breakpoint: number;
-    settings: ResponsiveSliderSettings;
-}
-
-interface SliderBannerSettings {
-    infinite: boolean;
-    speed: number;
-    slidesToShow: number;
-    slidesToScroll: number;
-    centerMode: boolean;
-    centerPadding: string;
-    beforeChange?: (current: number, next: number) => void;
-    nextArrow?: JSX.Element;
-    prevArrow?: JSX.Element;
-    responsive?: ResponsiveSettings[];
 }
 
 function SliderBanner({
