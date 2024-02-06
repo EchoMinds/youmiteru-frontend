@@ -21,8 +21,8 @@ function WatchButton({
                     className="watch-button-now">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="22"
-                        height="21"
+                        width="30%"
+                        height="50%"
                         viewBox="0 0 22 21"
                         fill="none">
                         <path

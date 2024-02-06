@@ -11,7 +11,6 @@
     justify-content: center;
     height: 57px;
     width: 187px;
-    box-shadow: 0 0 20px #55a5af;
     transition: 0.5s;
 
     &:hover {
@@ -23,6 +22,10 @@
     }
 }
 
+.watch-button-now svg {
+    max-width: 100%;
+    max-height: 100%;
+}
 .watch-button-trailer {
     font-family: "Montserrat-ExtraBold", Helvetica;
     font-size: 17px;
@@ -37,9 +40,32 @@
     height: 57px;
     width: 187px;
     transition: 0.5s;
-    box-shadow: 0 0 20px rgba(241, 166, 36, 0.5);
 
     &:hover {
         box-shadow: 0 0 40px rgba(241, 166, 36, 0.5);
+    }
+}
+
+@media only screen and (min-width: 2200px) {
+    .watch-button-now {
+        font-size: 1svw;
+        height: 3svw;
+        width: 10svw;
+        border-radius: 1svw;
+
+        &:hover {
+            box-shadow: 0 0 3svw #55a5af;
+        }
+    }
+
+    .watch-button-trailer {
+        font-size: 1svw;
+        height: 3svw;
+        width: 10svw;
+        border-radius: 1svw;
+
+        &:hover {
+            box-shadow: 0 0 3svw rgba(241, 166, 36, 0.5);
+        }
     }
 }
