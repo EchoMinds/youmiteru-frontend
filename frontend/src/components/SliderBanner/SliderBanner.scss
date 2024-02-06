@@ -27,6 +27,16 @@
     }
 }
 
+@media screen and (min-width: 2700px) {
+    .slider-banner__slide {
+        border-radius: 10%;
+        
+        & img {
+            border-radius: 10%;
+        }
+    }
+}
+
 @media screen and (max-width: 1300px) {
     .slider-banner {
         max-width: 40svw;
