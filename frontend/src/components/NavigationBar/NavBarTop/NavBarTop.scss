@@ -85,23 +85,23 @@
     }
 
     .home {
-        font-size: 2svw;
+        font-size: 1.5svw;
     }
 
     .search img {
         object-fit: cover;
-        height: 3svw;
-        width: 3svw;
+        height: 1.5svw;
+        width: 1.5svw;
     }
 
     .user-profile img {
         object-fit: cover;
-        height: 3svw;
-        width: 3svw;
+        height: 1.5svw;
+        width: 1.5svw;
     }
 }
 
-@media only screen and (min-width: 1800px) {
+@media only screen and (min-width: 1800px) and (max-width: 2600px) {
     .home {
         font-size: 1svw;
     }
