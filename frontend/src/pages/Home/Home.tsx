@@ -21,8 +21,6 @@ function Home() {
         <h1> Error ....</h1>;
     }
 
-    console.log(popular_seasons)
-
     return (
         <div className="home">
             <NavigationBar />
