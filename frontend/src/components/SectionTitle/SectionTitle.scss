@@ -1,9 +1,30 @@
 @import "@/assets/styles/vars.scss";
 
 .section-title {
-    font-size: 24px;
+    font-size: 1.5svw;
     font-weight: $font-weight-bold;
     letter-spacing: -0.7px;
-    margin-left: 60px;
-    margin-bottom: 10px;
+    margin-left: 6svw;
+    margin-bottom: 1svw;
+    align-self: flex-start;
+}
+
+@media screen and (max-width: 1250px) {
+    .section-title {
+        font-size: 2svw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .section-title {
+        font-size: 3svw;
+        letter-spacing: 0;
+        margin-bottom: 2svw;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .section-title {
+        font-size: 4svw;
+    }
 }

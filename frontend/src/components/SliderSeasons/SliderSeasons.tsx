@@ -26,13 +26,14 @@ function SliderSeasons({ sliderData, title }: SliderSeasonsProps) {
     };
 
     return (
-        <>
+        <div className="slider-seasons">
             <SectionTitle title={title} />
             <div className="slider-season">
                 <Slider {...settings}>
                     {sliderData &&
                         sliderData.map((item) => (
                             <Link
+                                className="slider-season__link"
                                 key={item.season_id}
                                 to={`${ROUTES.SEASON}/${item.season_id}`}
                             >
@@ -53,7 +54,7 @@ function SliderSeasons({ sliderData, title }: SliderSeasonsProps) {
                         ))}
                 </Slider>
             </div>
-        </>
+        </div>
     );
 }
 
