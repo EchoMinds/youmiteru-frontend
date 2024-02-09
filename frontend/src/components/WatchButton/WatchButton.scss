@@ -17,15 +17,8 @@
         box-shadow: 0 0 40px #55a5af;
     }
 
-    &__text {
-        padding: 10px;
-    }
 }
 
-.watch-button-now svg {
-    max-width: 100%;
-    max-height: 100%;
-}
 .watch-button-trailer {
     font-family: "Montserrat-ExtraBold", Helvetica;
     font-size: 17px;
@@ -66,6 +59,30 @@
 
         &:hover {
             box-shadow: 0 0 3svw rgba(241, 166, 36, 0.5);
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .watch-button-now {
+        font-size: 10px;
+        height: 35px;
+        width: 85px;
+        border-radius: 5px;
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    .watch-button-trailer {
+        font-size: 10px;
+        height: 35px;
+        width: 85px;
+        border-radius: 5px;
+
+        &:hover {
+            box-shadow: none;
         }
     }
 }

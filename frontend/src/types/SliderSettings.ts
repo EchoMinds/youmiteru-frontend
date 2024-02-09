@@ -1,4 +1,6 @@
 export interface ResponsiveSliderSettings {
+    slidesToShow?: number;
+    slidesToScroll?: number;
     focusOnSelect?: boolean;
     autoplay?: boolean;
     autoplaySpeed?: number;
