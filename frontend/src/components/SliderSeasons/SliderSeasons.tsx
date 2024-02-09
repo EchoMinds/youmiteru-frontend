@@ -6,7 +6,7 @@ import { Season } from "../../types/Season";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import { Link } from "react-router-dom";
 import { ROUTES } from "../../constants/routes";
-import { SliderSettings } from "../../types/SliderSettings";
+import { SliderSettings, ResponsiveSliderSettings } from "../../types/SliderSettings";
 
 interface SliderSeasonsProps {
     sliderData: Season[] | [];
@@ -15,14 +15,26 @@ interface SliderSeasonsProps {
 }
 
 function SliderSeasons({ sliderData, title }: SliderSeasonsProps) {
+    const ResponsiveSliderSettings: ResponsiveSliderSettings = {
+        focusOnSelect: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: false,
+    };
+
     const settings: SliderSettings = {
         infinite: true,
         speed: 500,
         slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
-        responsive: [],
+        responsive: [
+            {
+                breakpoint: 600,
+                settings: ResponsiveSliderSettings
+            },
+        ],
     };
 
     return (

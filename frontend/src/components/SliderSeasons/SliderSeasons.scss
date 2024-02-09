@@ -11,14 +11,10 @@
 }
 
 .slider-season {
-    margin-bottom: 70px;
-    width: 90svw;
+    margin-bottom: 30px;
+    width: 100svw;
+    margin-left: 130px;
     height: 16svw;
-
-    &__link {
-        width: 20svw !important;
-        height: 14svw !important;
-    }
 
     &__card {
         width: 20svw;
@@ -29,8 +25,8 @@
         align-items: center;
 
         img {
-            width: 18svw;
-            height: 12svw;
+            width: 20svw;
+            height: 14svw;
             border-radius: 15px;
             object-fit: cover;
         }
@@ -92,8 +88,38 @@
 }
 
 @media screen and (max-width: 650px) {
-    .slider-season__card,
-    .slider-season__card img {
-        border-radius: 5px;
+    .slider-season {
+        width: 100svw;
+        margin-left: 0px;
+        margin-bottom: 70px;
+        
+        .slick-list {
+            padding-left: 55px;
+            margin-left: 10px;
+            
+        }
+
+        &__card {
+            height: auto;
+            img {
+                border-radius: 15px;
+                width: 45svw;
+                height: 28svw;
+            }
+        }
+
+        &__card:hover {
+            transform: scale(1.0);
+
+            img {
+                opacity: 1;
+            }
+
+            .card_season_description,
+            .card_season_name {
+                display: none;
+            }
+            
+        }
     }
 }
