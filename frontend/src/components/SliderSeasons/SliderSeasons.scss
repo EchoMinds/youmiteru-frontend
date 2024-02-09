@@ -11,12 +11,18 @@
 }
 
 .slider-season {
+
+    &__link {
+        cursor: default;
+    }
+
     margin-bottom: 30px;
     width: 100svw;
     margin-left: 130px;
     height: 16svw;
 
     &__card {
+        cursor: pointer;
         width: 20svw;
         height: 14svw;
         border-radius: 15px;
@@ -92,7 +98,7 @@
         width: 100svw;
         margin-left: 0px;
         margin-bottom: 70px;
-        
+
         .slick-list {
             padding-left: 55px;
             margin-left: 10px;
