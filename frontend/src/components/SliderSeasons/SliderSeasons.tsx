@@ -23,7 +23,7 @@ function SliderSeasons({ sliderData, title }: SliderSeasonsProps) {
     };
 
     const settings: SliderSettings = {
-        infinite: true,
+        infinite: false,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 2,
