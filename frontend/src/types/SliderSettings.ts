@@ -1,4 +1,5 @@
 export interface ResponsiveSliderSettings {
+    infinite?: boolean;
     slidesToShow?: number;
     slidesToScroll?: number;
     focusOnSelect?: boolean;

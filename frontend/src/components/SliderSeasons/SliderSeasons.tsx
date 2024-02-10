@@ -16,6 +16,7 @@ interface SliderSeasonsProps {
 
 function SliderSeasons({ sliderData, title }: SliderSeasonsProps) {
     const ResponsiveSliderSettings: ResponsiveSliderSettings = {
+        infinite: true,
         focusOnSelect: true,
         slidesToShow: 2,
         slidesToScroll: 1,
@@ -32,7 +33,7 @@ function SliderSeasons({ sliderData, title }: SliderSeasonsProps) {
         responsive: [
             {
                 breakpoint: 600,
-                settings: ResponsiveSliderSettings
+                settings: ResponsiveSliderSettings,
             },
         ],
     };
@@ -47,8 +48,7 @@ function SliderSeasons({ sliderData, title }: SliderSeasonsProps) {
                             <Link
                                 className="slider-season__link"
                                 key={item.season_id}
-                                to={`${ROUTES.SEASON}/${item.season_id}`}
-                            >
+                                to={`${ROUTES.SEASON}/${item.season_id}`}>
                                 <div className="slider-season__card">
                                     <img
                                         src={item.season_image_url}
