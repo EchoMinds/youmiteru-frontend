@@ -2,11 +2,11 @@
     height: 13svw !important;
     width: 2svw !important;
     border-radius: 10% !important;
-    background: rgba(0, 5, 23, .3) !important;
+    background: rgba(0, 5, 23, 0.3) !important;
     opacity: 0;
     z-index: 99;
-    margin-left: 15px;
-    margin-right: 25px;
+    margin-left: 10px;
+    margin-right: 100px;
 }
 
 .slider-season .slick-slider:hover {
@@ -41,4 +41,21 @@
 .slick-next:before,
 .slick-prev:before {
     content: "" !important;
+}
+
+@media screen and (max-width: 650px) {
+    .slider-season .slider-arrow {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .slider-season .slider-arrow {
+        margin-left: 15px;
+        margin-right: 20px;
+        width: 4svw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
