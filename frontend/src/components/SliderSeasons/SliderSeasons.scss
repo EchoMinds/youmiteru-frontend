@@ -57,7 +57,8 @@
             font-family: "Times New Roman", Times, serif;
             position: absolute;
             bottom: 0;
-            width: 80%;
+            width: 100%;
+            margin-left: 40px;
             text-align: left;
             font-size: 1.2svw;
             margin-bottom: 1.5svw;
@@ -97,35 +98,56 @@
     .slider-season {
         width: 100svw;
         margin-left: 0px;
-        margin-bottom: 70px;
+        margin-bottom: 90px;
 
         .slick-list {
             padding-left: 55px;
             margin-left: 10px;
-            
+            height: 140px;
+        }
+
+        .card_season_name {
+            font-weight: 400;
+            display: block;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: absolute;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            bottom: -15px;
+            margin-left: 1;
+            white-space: nowrap;
+            max-width: 170px;
         }
 
         &__card {
             height: auto;
+
             img {
                 border-radius: 15px;
                 width: 45svw;
                 height: 28svw;
             }
+
         }
 
         &__card:hover {
-            transform: scale(1.0);
+            transform: scale(1);
+
+            .slick-list {
+                padding-left: 55px;
+                margin-left: 10px;
+                height: 140px;
+            }
 
             img {
                 opacity: 1;
+                pointer-events: none;
             }
 
-            .card_season_description,
-            .card_season_name {
+            .card_season_name,
+            .card_season_description {
                 display: none;
             }
-            
         }
     }
 }
