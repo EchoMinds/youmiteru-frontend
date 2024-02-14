@@ -1,0 +1,7 @@
+version: 2
+authtoken: "Get your authtoken from here: https://dashboard.ngrok.com/get-started/your-authtoken"
+tunnels:
+  first:
+    addr: app:5173
+    proto: http
+    hostname: "Get your domain from here: https://dashboard.ngrok.com/cloud-edge/domains"
