@@ -11,7 +11,7 @@ function Home() {
     const banners = DashBoardQuery.data?.banners;
     const popular_seasons = DashBoardQuery.data?.popular_seasons;
     const announced_seasons = DashBoardQuery.data?.announced_seasons;
-    const released_seasons = DashBoardQuery.data?.released_seasons;
+    const released_seasons = DashBoardQuery.data?.recent_released_seasons;
 
     if (DashBoardQuery.isLoading) {
         <h1> Loading ....</h1>;
