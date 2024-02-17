@@ -48,7 +48,7 @@ function SliderSeasons({ sliderData, title }: SliderSeasonsProps) {
                             <Link
                                 className="slider-season__link"
                                 key={item.season_id}
-                                to={`${ROUTES.SEASON}/${item.season_id}`}>
+                                to={`${ROUTES.SEASON}?id=${item.season_id}`}>
                                 <div className="slider-season__card">
                                     <img
                                         src={item.season_image_url}
