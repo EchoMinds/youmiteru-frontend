@@ -10,14 +10,14 @@ interface SeasonDetailsProps {
     season_id: number;
     season_image_url: string;
     season_name: string;
-    total_episodes?: number;
-    released_episodes?: number;
+    bg_image_url: string;
 }
 
 function SeasonDetails({
     season_id,
     season_image_url,
     season_name,
+    bg_image_url,
     rating,
     release_date,
     short_description,
@@ -27,7 +27,9 @@ function SeasonDetails({
 }: SeasonDetailsProps) {
     return (
         <div className="season-details">
-            <h1>Season Details</h1>
+            <div className="season-details__img">
+                <img src={season_image_url} alt="season-image"/>
+            </div>
         </div>
     );
 }
