@@ -1,15 +1,15 @@
-version: "3.3"
+version: "3.8"
 
 services:
   app:
+    image: react-app
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    working_dir: "/home/node/app"
     volumes:
       # Comment this if you are running in production
       - ./frontend/:/home/node/app
-      - node_modules_volume:/home/node/app/node_modules
+      - /home/node/app/node_modules
 
     # Comment this if you are running in production
     command: ["npm", "run", "dev"]
@@ -19,7 +19,7 @@ services:
 
     stop_signal: SIGINT
 
-  # Comment this if you are use ngork and running in development
+  # Comment this if you are use ngrok and running in production
   ngrok:
     image: ngrok/ngrok:latest
     restart: unless-stopped
@@ -30,6 +30,17 @@ services:
     expose:
       - 443
 
-# Comment this if you are running in development
+  # Comment this if you are running in production
+  fake-api:
+    image: fake-api
+    build:
+      context: ./fake-api
+      dockerfile: Dockerfile
+    restart: always
+    command: ["npx", "json-server", "db.json"]
+    ports:
+      - "3000:3000"
+
+# Comment this if you are running in production
 volumes:
   node_modules_volume:
