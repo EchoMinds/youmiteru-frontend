@@ -1,4 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
 .discord-auth-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     background: #4a47d7;
     width: 100%;
+    border-radius: 18px;
+    height: 106px;
+    padding: 0 20px;
+}
+
+.discord-auth-btn img {
+    width: 14%;
+}
+
+.discord-auth-btn p {
+    font-size: 2rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 43.75px;
+    letter-spacing: 1px;
+    margin-left: 20px;
 }
