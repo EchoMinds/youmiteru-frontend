@@ -1,9 +1,11 @@
-import React from "react";
+import "./DiscordAuthButton.scss";
+
+import DiscordLogo from "./../../../assets/icons/discord-login-logo.svg";
 
 interface DiscordAuthButtonProps {}
 
-function DiscordAuthButton({}: PrDiscordAuthButtonPropsops): JSX.Element {
-    return <div className="discord-auth-btn"></div>;
+function DiscordAuthButton({}: DiscordAuthButtonProps): JSX.Element {
+    return <div className="discord-auth-btn">{DiscordLogo}</div>;
 }
 
 export default DiscordAuthButton;
