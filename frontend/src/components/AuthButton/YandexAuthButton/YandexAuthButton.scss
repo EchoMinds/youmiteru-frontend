@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+.yandex-auth-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    width: 100%;
+    border-radius: 18px;
+    height: 106px;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    border: none;
+    color: #4c4646;
+}
+
+.yandex-auth-btn img {
+    width: 14%;
+}
+
+.yandex-auth-btn p {
+    font-size: 2rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 43.75px;
+    letter-spacing: 1px;
+    margin-left: 20px;
+}
+
+.yandex-auth-btn:hover {
+    box-shadow: 0 0 60px #4947d788;
+}
