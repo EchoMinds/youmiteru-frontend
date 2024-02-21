@@ -10,6 +10,8 @@
     border-radius: 18px;
     height: 106px;
     padding: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
 .discord-auth-btn img {
@@ -24,4 +26,8 @@
     line-height: 43.75px;
     letter-spacing: 1px;
     margin-left: 20px;
+}
+
+.discord-auth-btn:hover {
+    box-shadow: 0 0 60px #4947d788;
 }
