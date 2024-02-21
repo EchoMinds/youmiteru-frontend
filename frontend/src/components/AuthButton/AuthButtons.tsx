@@ -5,7 +5,7 @@ interface AuthButtonProps {}
 
 function AuthButton({}: AuthButtonProps): JSX.Element {
     return (
-        <div>
+        <div className="auth-buttons">
             <DiscordAuthButton />
         </div>
     );
