@@ -1,4 +1,4 @@
-import "./AuthButton.scss";
+import "./AuthButtons.scss";
 
 interface AuthButtonProps {}
 
