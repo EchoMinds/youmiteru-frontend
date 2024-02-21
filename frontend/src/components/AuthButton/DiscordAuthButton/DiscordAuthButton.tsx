@@ -6,10 +6,10 @@ interface DiscordAuthButtonProps {}
 
 function DiscordAuthButton({}: DiscordAuthButtonProps): JSX.Element {
     return (
-        <div className="discord-auth-btn">
+        <button className="discord-auth-btn">
             <img src={DiscordLogo} alt="Discord Logo" />
             <p>Продолжить с Discord</p>
-        </div>
+        </button>
     );
 }
 
