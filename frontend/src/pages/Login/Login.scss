@@ -5,24 +5,12 @@
     flex-direction: column;
     background-image: url("../../assets/icons/login-page-bg.png");
     background-repeat: no-repeat;
-    background-size: 40%;
+    background-size: contain;
     background-position: right bottom;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-height: 550px) {
     .login-page {
-        background-size: 48%;
-    }
-}
-
-@media screen and (max-width: 850px) {
-    .login-page {
-        background-size: 66%;
-    }
-}
-
-@media screen and (max-width: 420px) {
-    .login-page {
-        background-size: 84%;
+        height: 100%;
     }
 }

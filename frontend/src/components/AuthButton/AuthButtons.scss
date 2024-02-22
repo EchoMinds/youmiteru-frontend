@@ -14,3 +14,9 @@
         align-items: center;
     }
 }
+
+@media screen and (max-height: 550px) {
+    .auth-buttons {
+        margin-bottom: 100px;
+    }
+}
