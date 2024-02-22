@@ -3,4 +3,14 @@
     display: flex;
     flex-direction: column;
     gap: 2svw;
+    margin-top: 10svw;
+    margin-left: 5svw;
+}
+
+@media screen and (max-width: 500px) {
+    .auth-buttons {
+        margin-left: 0;
+        width: 100%;
+        align-items: center;
+    }
 }
