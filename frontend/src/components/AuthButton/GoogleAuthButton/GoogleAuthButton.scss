@@ -34,6 +34,20 @@
     }
 }
 
+@media screen and (min-width: 2000px) {
+    .google-auth-btn {
+        height: 6svw;
+
+        & p {
+            font-size: 2svw;
+        }
+
+        &:hover {
+            box-shadow: 0 0 3svw #ffffff75;
+        }
+    }
+}
+
 @media screen and (max-width: 1420px) {
     .google-auth-btn p {
         font-size: 1.5rem;
