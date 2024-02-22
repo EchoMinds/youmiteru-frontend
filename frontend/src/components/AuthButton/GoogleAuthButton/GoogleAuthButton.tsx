@@ -8,7 +8,7 @@ function GooogleAuthButton({}: GoogleAuthButtonProps): JSX.Element {
     return (
         <button className="google-auth-btn">
             <img src={GoogleLogo} alt="Google Logo" />
-            <p>Продолжить с Vk</p>
+            <p>Продолжить с Google</p>
         </button>
     );
 }
