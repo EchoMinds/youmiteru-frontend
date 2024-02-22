@@ -14,22 +14,50 @@
     transition: 0.5s;
     border: none;
     color: #4c4646;
+
+    & p {
+        font-size: 2rem;
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        line-height: 43.75px;
+        letter-spacing: 1px;
+        margin-left: 20px;
+    }
+
+    & img {
+        width: 14%;
+    }
+
+    &:hover {
+        box-shadow: 0 0 60px #ffffff75;
+    }
 }
 
-.yandex-auth-btn img {
-    width: 14%;
+@media screen and (max-width: 1420px) {
+    .yandex-auth-btn p {
+        font-size: 1.5rem;
+    }
 }
 
-.yandex-auth-btn p {
-    font-size: 2rem;
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    line-height: 43.75px;
-    letter-spacing: 1px;
-    margin-left: 20px;
+@media screen and (max-width: 1130px) {
+    .yandex-auth-btn {
+        height: 80px;
+        width: 380px;
+
+        & p {
+            font-size: 1.2rem;
+        }
+    }
 }
 
-.yandex-auth-btn:hover {
-    box-shadow: 0 0 60px #ffffff75;
+@media screen and (max-width: 500px) {
+    .yandex-auth-btn {
+        height: 60px;
+        width: 260px;
+
+        & p {
+            font-size: 0.8rem;
+        }
+    }
 }
