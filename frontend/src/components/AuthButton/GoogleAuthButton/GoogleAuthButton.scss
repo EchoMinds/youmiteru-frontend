@@ -14,24 +14,24 @@
     transition: 0.5s;
     border: none;
     color: #4c4646;
-}
 
-.google-auth-btn img {
-    width: 14%;
-}
+    & img {
+        width: 14%;
+    }
 
-.google-auth-btn p {
-    font-size: 2rem;
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    line-height: 43.75px;
-    letter-spacing: 1px;
-    margin-left: 20px;
-}
+    & p {
+        font-size: 2rem;
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        line-height: 43.75px;
+        letter-spacing: 1px;
+        margin-left: 20px;
+    }
 
-.google-auth-btn:hover {
-    box-shadow: 0 0 60px #ffffff75;
+    &:hover {
+        box-shadow: 0 0 60px #ffffff75;
+    }
 }
 
 @media screen and (max-width: 1420px) {
