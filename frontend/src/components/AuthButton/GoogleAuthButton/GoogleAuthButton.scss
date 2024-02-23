@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+.google-auth-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background: #fff;
+    width: 100%;
+    border-radius: 18px;
+    height: 106px;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    border: none;
+    color: #4c4646;
+
+    & img {
+        width: 14%;
+    }
+
+    & p {
+        font-size: 2rem;
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        line-height: 43.75px;
+        letter-spacing: 1px;
+        margin-left: 20px;
+    }
+
+    &:hover {
+        box-shadow: 0 0 60px #ffffff75;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .google-auth-btn {
+        width: 647px;
+        height: 110px;
+
+        & p {
+            font-size: 2.5rem;
+        }
+
+        & img {
+            width: 100px;
+        }
+
+        &:hover {
+            box-shadow: 0 0 100px #ffffff75;
+        }
+    }
+}
+
+@media screen and (max-width: 1420px) {
+    .google-auth-btn p {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1130px) {
+    .google-auth-btn {
+        height: 80px;
+        width: 380px;
+
+        & p {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .google-auth-btn {
+        height: 60px;
+        width: 260px;
+
+        & p {
+            font-size: 0.8rem;
+        }
+    }
+}

@@ -3,11 +3,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ROUTES } from "./constants/routes";
 import Home from "./pages/Home/Home";
 import Catalog from "./pages/Catalog/Catalog";
-import WatchAnime from "./pages/WatchAnime/WatchAnime";
+
 
 
 function App() {
-
     return (
         <BrowserRouter>
             <Routes>
@@ -17,25 +16,27 @@ function App() {
                 />
 
                 <Route 
-                    path={ROUTES.CATALOG}
-                    element={<Catalog />}
+                    path={ROUTES.CATALOG} 
+                    element={<Catalog />} 
+                />
+
+                <Route 
+                    path={ROUTES.HELP} 
+                    element={<h1>Help Page</h1>} 
                 />
 
                 <Route
-                    path={ROUTES.SEASON}
-                    element={<WatchAnime />}
+                    path="*"
+                    element={
+                        <h1>!Undefined Page! please come back at main page</h1>
+                    }
                 />
 
-                <Route 
-                    path={ROUTES.HELP}
-                    element={<h1>Help Page</h1>} 
+                <Route
+                    path={ROUTES.LOGIN} 
+                    element={<Login />} 
                 />
-                
-                <Route 
-                    path="*" 
-                    element={<h1>!Undefined Page! please come back at main page</h1>} 
-                /> 
-            </Routes>  
+            </Routes>
         </BrowserRouter>
     );
 }
