@@ -79,16 +79,12 @@
 
 @media screen and (max-width: 900px) {
     .bg-banner {
-        &__season-text:nth-child(1) {
-            max-width: 50svw;
-
-            & p {
-                font-size: 2.5vw;
-            }
+        &__season-name {
+            max-width: 50%;
         }
 
-        &__season-text h1 {
-            font-size: 4vw;
+        &__season-description {
+            font-size: 18px;
         }
     }
 }
