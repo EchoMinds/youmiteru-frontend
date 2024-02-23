@@ -99,10 +99,6 @@
         width: 100svw;
         margin-left: 0px;
         margin-bottom: 110px;
-        
-        &__link {
-            
-        }
 
         .slick-list {
             padding-left: 55px;
@@ -115,12 +111,13 @@
             display: -webkit-box;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             position: absolute;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
             overflow: hidden;
-            // left: -5px;
             bottom: -35px;
             margin-right: -10px;
             white-space: normal;
-            max-width: 88px;
+            max-width: 20svw;
         }
 
         &__card {
