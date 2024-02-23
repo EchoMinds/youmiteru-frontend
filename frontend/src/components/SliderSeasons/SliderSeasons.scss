@@ -58,26 +58,26 @@
             position: absolute;
             bottom: 0;
             width: 100%;
+            left: -30px;
             margin-left: 40px;
             text-align: left;
-            font-size: 1.2svw;
-            margin-bottom: 1.5svw;
+            font-size: 15px;
+            margin-bottom: 10px;
             font-weight: $font-weight-bold;
         }
 
         .card_season_description {
-            display: flex;
+            display: -webkit-box;
             position: absolute;
-            white-space: normal;
-            word-break: break-word;
-            overflow-wrap: break-word;
-            width: 80%;
-            top: 2svw;
-            font-size: 1svw;
+            -webkit-line-clamp: 6; // How many lines do we need to show
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            top: 7px;
+            padding: 3px 10px;
+            font-size: 13px;
             font-weight: $font-weight-regular;
             font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
                 sans-serif;
-            text-align: left;
         }
     }
 }
@@ -98,34 +98,38 @@
     .slider-season {
         width: 100svw;
         margin-left: 0px;
-        margin-bottom: 90px;
+        margin-bottom: 110px;
+        
+        &__link {
+            
+        }
 
         .slick-list {
             padding-left: 55px;
             margin-left: 10px;
-            height: 140px;
+            height: 170px;
         }
 
         .card_season_name {
             font-weight: 400;
-            display: block;
+            display: -webkit-box;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             position: absolute;
             overflow: hidden;
-            text-overflow: ellipsis;
-            bottom: -15px;
-            margin-left: 1;
-            white-space: nowrap;
-            max-width: 170px;
+            // left: -5px;
+            bottom: -35px;
+            margin-right: -10px;
+            white-space: normal;
+            max-width: 88px;
         }
 
         &__card {
             height: auto;
 
             img {
-                border-radius: 15px;
-                width: 45svw;
-                height: 28svw;
+                border-radius: 10px;
+                width: 125px;
+                height: 125px;
             }
 
         }
