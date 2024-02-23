@@ -36,10 +36,15 @@
 
 @media screen and (min-width: 2000px) {
     .discord-auth-btn {
-        height: 6svw;
+        width: 647px;
+        height: 110px;
 
         & p {
-            font-size: 2svw;
+            font-size: 2.5rem;
+        }
+
+        & img {
+            width: 100px;
         }
 
         &:hover {
