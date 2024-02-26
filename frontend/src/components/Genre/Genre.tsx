@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./Genre.scss";
 import { CSSTransition } from "react-transition-group";
 
-
 interface GenreProps {}
 
 function Genre({}: GenreProps): JSX.Element {
@@ -23,7 +22,11 @@ function Genre({}: GenreProps): JSX.Element {
             >
                 <ul className="genre-list">
                     <li>Фантастика</li>
-                    {/* Додайте інші жанри */}
+                    <li>Драма</li>
+                    <li>Комедия</li>
+                    <li>Кодомо</li>
+                    <li>Сёнэн</li>
+                    <li>Киберпанк</li>
                 </ul>
             </CSSTransition>
         </div>
