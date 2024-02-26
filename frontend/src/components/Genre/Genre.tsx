@@ -1,14 +1,31 @@
+import { useState } from "react";
 import "./Genre.scss";
+import { CSSTransition } from "react-transition-group";
+
 
 interface GenreProps {}
 
 function Genre({}: GenreProps): JSX.Element {
+    const [isContentVisible, setIsContentVisible] = useState(false);
+
+    const toggleContentVisibility = () => {
+        setIsContentVisible(!isContentVisible);
+    };
+
     return (
         <div className="genre">
-            <button>Жанр</button>
-            <li>
-                <ul>Фантастика</ul>
-            </li>
+            <button onClick={toggleContentVisibility}>Жанр</button>
+            <CSSTransition
+                in={isContentVisible}
+                timeout={300}
+                classNames="fade"
+                unmountOnExit
+            >
+                <ul className="genre-list">
+                    <li>Фантастика</li>
+                    {/* Додайте інші жанри */}
+                </ul>
+            </CSSTransition>
         </div>
     );
 }

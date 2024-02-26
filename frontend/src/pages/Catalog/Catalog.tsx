@@ -1,14 +1,14 @@
 import "./Catalog.scss";
 import NavigationBar from "../../components/NavigationBar/NavigationBar";
 import { Footer } from "../../components/Footer/Footer";
+import Genre from "../../components/Genre/Genre";
 
-
-function Catalog () {
+function Catalog() {
     return (
         <div className="catalog">
             <NavigationBar />
             <div className="catalog__container">
-                <h1>Catalog</h1>
+                <Genre />
             </div>
             <Footer />
         </div>
