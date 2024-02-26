@@ -1,14 +1,14 @@
 import "./Catalog.scss";
 import NavigationBar from "../../components/NavigationBar/NavigationBar";
 import { Footer } from "../../components/Footer/Footer";
-import Genre from "../../components/Genre/Genre";
+import CatalogFilter from "../../components/CatalogFilter/CatalogFilter";
 
 function Catalog() {
     return (
         <div className="catalog">
             <NavigationBar />
             <div className="catalog__container">
-                <Genre />
+                <CatalogFilter />
             </div>
             <Footer />
         </div>
