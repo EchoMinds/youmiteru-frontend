@@ -36,7 +36,7 @@ function Genre({}: GenreProps): JSX.Element {
             <button onClick={toggleGenreMenu}>Жанры</button>
             {genreMenu && (
                 <div className="genre__menu">
-                    <ul>
+                    <ul className="genre__menu__list">
                         <li>
                             <input
                                 type="checkbox"
