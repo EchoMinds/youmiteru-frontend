@@ -7,7 +7,7 @@ import NavigationBar from "../../components/NavigationBar/NavigationBar";
 
 function WatchAnime () {
     const [searchParams] = useSearchParams();  
-    const seasonId = searchParams.get("id");
+    const seasonId = searchParams.get("id"); // We are going to use it for get data about specific season
     const SeasonDetailsQuery = useSeasonDetailsQuery();
 
     if (SeasonDetailsQuery.isLoading) {
