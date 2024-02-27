@@ -69,7 +69,7 @@ function SeasonDetails({
                 <li className="season-container__details__genres">
                     <ul className="genre-list">
                         <li>Жанр:</li>
-                        {genres.map((genre, index) => (
+                        {genres?.map((genre, index) => (
                             <li key={index} className="genre-item">
                                 {genre}
                             </li>
