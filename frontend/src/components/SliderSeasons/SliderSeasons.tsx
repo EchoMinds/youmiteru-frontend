@@ -18,9 +18,10 @@ function SliderSeasons({ sliderData, title }: SliderSeasonsProps) {
     const ResponsiveSliderSettings: ResponsiveSliderSettings = {
         infinite: true,
         focusOnSelect: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
+        slidesToShow: 3,
+        slidesToScroll: 2,
         arrows: false,
+        swipe: true,
     };
 
     const settings: SliderSettings = {
@@ -30,6 +31,8 @@ function SliderSeasons({ sliderData, title }: SliderSeasonsProps) {
         slidesToScroll: 2,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
+        swipe: false,
+        adaptiveHeight: false,
         responsive: [
             {
                 breakpoint: 600,

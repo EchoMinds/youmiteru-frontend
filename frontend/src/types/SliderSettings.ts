@@ -6,6 +6,7 @@ export interface ResponsiveSliderSettings {
     autoplay?: boolean;
     autoplaySpeed?: number;
     arrows?: boolean;
+    swipe?: boolean;
 }
 
 interface ResponsiveSettings {
@@ -24,4 +25,6 @@ export interface SliderSettings {
     nextArrow?: JSX.Element;
     prevArrow?: JSX.Element;
     responsive?: ResponsiveSettings[];
+    swipe?: boolean;
+    adaptiveHeight?: boolean;
 }
