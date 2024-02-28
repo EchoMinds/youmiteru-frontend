@@ -34,6 +34,7 @@ function SliderBanner({
         slidesToScroll: 1,
         centerMode: true,
         centerPadding: "0",
+        swipe: false,
         beforeChange: (_, next) => {
             setSlideIndex(next);
             if (onSlideChange) {
