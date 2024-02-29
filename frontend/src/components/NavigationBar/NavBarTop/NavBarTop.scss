@@ -132,15 +132,13 @@
     .nav-bar-top {
         display: flex;
         justify-content: space-between;
-        background: $nav-bar-bg-color;
+        background: $nav-bar-bg;
         background: $nav-bar-bg-gradient;
         border-bottom: 1.5px solid white;
 
         &__center-panel {
             display: none;
         }
-
-        
 
         &__left-panel {
             display: flex;
