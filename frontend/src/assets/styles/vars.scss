@@ -5,7 +5,8 @@ $font-weight-bold: 800;
 $theme-bg-color: #000;
 $theme-text-color: #fff;
 
-$nav-bar-bg-color: #757575;
+$nav-bar-bg-color: rgb(56, 0, 20);
+$nav-bar-bg-gradient: radial-gradient(circle, rgba(56, 0, 20, 1) 0%, rgba(82, 7, 35, 1) 35%, rgba(131, 30, 69, 1) 52%, rgba(60, 7, 27, 1) 65%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 1) 100%);
 $nav-bar-text-color: #fff;
 $nav-bar-font-size: 14px;
 $nav-bar-transition-duration: 0.25s;
