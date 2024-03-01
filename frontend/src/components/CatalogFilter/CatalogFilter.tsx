@@ -16,6 +16,7 @@ function CatalogFilter({}: CatalogFilterProps): JSX.Element {
     const handleResetFilter = () => {
         setSelectedAgeRatings([]);
         setSelectedGenres([]);
+        setSelectedSeasons([]);
     };
 
     return (
@@ -37,6 +38,7 @@ function CatalogFilter({}: CatalogFilterProps): JSX.Element {
                 <FetchAnimeButton
                     selectedGenres={selectedGenres}
                     selectedAgeRatings={selectedAgeRatings}
+                    selectedSeasons={selectedSeasons}
                 />
             </div>
         </div>

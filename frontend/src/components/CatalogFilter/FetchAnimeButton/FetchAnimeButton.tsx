@@ -3,6 +3,7 @@ import "./FetchAnimeButton.scss";
 interface FetchAnimeButtonProps {
     selectedGenres: string[];
     selectedAgeRatings: string[];
+    selectedSeasons: string[];
 }
 
 function FetchAnimeButton({
