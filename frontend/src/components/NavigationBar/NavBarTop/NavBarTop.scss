@@ -132,7 +132,8 @@
     .nav-bar-top {
         display: flex;
         justify-content: space-between;
-        background-color: $nav-bar-bg-color;
+        background: $nav-bar-bg;
+        background: $nav-bar-bg-gradient;
         border-bottom: 1.5px solid white;
 
         &__center-panel {
@@ -141,7 +142,7 @@
 
         &__left-panel {
             display: flex;
-            padding: 10px;
+            padding: 8px;
         }
 
         &__right-panel {
