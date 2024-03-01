@@ -7,4 +7,10 @@
     width: 400px;
     height: 500px;
     border-radius: 10px;
+
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
 }
