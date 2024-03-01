@@ -10,5 +10,5 @@ function CatalogFilter({}: CatalogFilterProps): JSX.Element {
         </div>
     );
 }
-
+// TODO: ГОД, РЕЙТИНГ, ВОЗРАСТ
 export default CatalogFilter;
