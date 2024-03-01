@@ -11,9 +11,8 @@
 }
 
 .slider-season {
-
     &__link {
-        cursor: default;
+        width: 290px !important;
     }
 
     margin-bottom: 30px;
@@ -23,16 +22,16 @@
 
     &__card {
         cursor: pointer;
-        width: 20svw;
-        height: 14svw;
+        width: 290px;
+        height: 200px;
         border-radius: 15px;
         display: flex;
         justify-content: center;
         align-items: center;
 
         img {
-            width: 20svw;
-            height: 14svw;
+            width: 290px;
+            height: 180px;
             border-radius: 15px;
             object-fit: cover;
         }
@@ -58,26 +57,26 @@
             position: absolute;
             bottom: 0;
             width: 100%;
+            left: -30px;
             margin-left: 40px;
             text-align: left;
-            font-size: 1.2svw;
-            margin-bottom: 1.5svw;
+            font-size: 15px;
+            margin-bottom: 15px;
             font-weight: $font-weight-bold;
         }
 
         .card_season_description {
-            display: flex;
+            display: -webkit-box;
             position: absolute;
-            white-space: normal;
-            word-break: break-word;
-            overflow-wrap: break-word;
-            width: 80%;
-            top: 2svw;
-            font-size: 1svw;
+            -webkit-line-clamp: 6; // How many lines do we need to show
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            top: 10px;
+            padding: 5px 15px;
+            font-size: 13px;
             font-weight: $font-weight-regular;
             font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
                 sans-serif;
-            text-align: left;
         }
     }
 }
@@ -98,53 +97,65 @@
     .slider-season {
         width: 100svw;
         margin-left: 0px;
-        margin-bottom: 90px;
+        margin-bottom: 80px;
 
         .slick-list {
-            padding-left: 55px;
-            margin-left: 10px;
-            height: 140px;
+            margin-left: -68px;
+            padding-left: 80px;
+            height: 130px;
         }
 
         .card_season_name {
+            display: flex;
             font-weight: 400;
-            display: block;
+            font-size: 14px;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             position: absolute;
             overflow: hidden;
-            text-overflow: ellipsis;
-            bottom: -15px;
-            margin-left: 1;
+            flex-direction: row;
+            bottom: -10px;
             white-space: nowrap;
-            max-width: 170px;
+            margin-right: 10px;
+            max-width: 120px;
+        }
+
+        &__link {
+            width: 173px !important;
+            height: 100px !important;
         }
 
         &__card {
-            height: auto;
+            width: 138px;
+            height: 90px;
 
             img {
-                border-radius: 15px;
-                width: 45svw;
-                height: 28svw;
+                border-radius: 10px;
+                width: 163px;
+                height: 90px;
             }
-
         }
 
         &__card:hover {
             transform: scale(1);
-
-            .slick-list {
-                padding-left: 55px;
-                margin-left: 10px;
-                height: 140px;
-            }
 
             img {
                 opacity: 1;
                 pointer-events: none;
             }
 
-            .card_season_name,
+            .card_season_name {
+                display: flex;
+                font-weight: 400;
+                font-size: 14px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                overflow: hidden;
+                flex-direction: row;
+                bottom: -35px;
+                white-space: nowrap;
+                margin-left: 34px;
+                max-width: 120px;
+            }
+
             .card_season_description {
                 display: none;
             }

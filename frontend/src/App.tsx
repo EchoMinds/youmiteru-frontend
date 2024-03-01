@@ -4,6 +4,7 @@ import { ROUTES } from "./constants/routes";
 import Home from "./pages/Home/Home";
 import Catalog from "./pages/Catalog/Catalog";
 import Login from "./pages/Login/Login";
+import WatchAnime from "./pages/WatchAnime/WatchAnime";
 
 function App() {
     return (
@@ -25,15 +26,20 @@ function App() {
                 />
 
                 <Route
+                    path={ROUTES.LOGIN} 
+                    element={<Login />} 
+                />
+
+                <Route 
+                    path={ROUTES.SEASON}
+                    element={<WatchAnime />}
+                />
+
+                <Route
                     path="*"
                     element={
                         <h1>!Undefined Page! please come back at main page</h1>
                     }
-                />
-
-                <Route
-                    path={ROUTES.LOGIN} 
-                    element={<Login />} 
                 />
             </Routes>
         </BrowserRouter>
