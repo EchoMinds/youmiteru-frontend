@@ -1,3 +1,4 @@
+import { useState } from "react";
 import AgeRating from "./AgeRating/AgeRating";
 import "./CatalogFilter.scss";
 import FetchAnimeButton from "./FetchAnimeButton/FetchAnimeButton";
@@ -7,10 +8,19 @@ import ResetButton from "./ResetButton/ResetButton";
 interface CatalogFilterProps {}
 
 function CatalogFilter({}: CatalogFilterProps): JSX.Element {
+    const [selectedAgeRatings, setSelectedAgeRatings] = useState<string[]>([]);
+
+    const handleAgeRatingUpdate = (selectedOptions: string[]) => {
+        setSelectedAgeRatings(selectedOptions);
+    };
+
     return (
         <div className="catalog-filter">
             <Genre />
-            <AgeRating />
+            <AgeRating
+                handleAgeRatingUpdate={handleAgeRatingUpdate}
+                selectedAgeRatings={selectedAgeRatings}
+            />
             <div className="catalog-filter__buttons">
                 <ResetButton />
                 <FetchAnimeButton />
