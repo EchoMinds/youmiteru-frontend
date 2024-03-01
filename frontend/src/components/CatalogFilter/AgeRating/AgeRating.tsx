@@ -4,7 +4,7 @@ interface AgeRatingProps {}
 
 function AgeRating({}: AgeRatingProps): JSX.Element {
     return (
-        <div className="age-raiting">
+        <div className="age-rating">
             <p>Возрастной рейтинг</p>
             <ul>
                 <li>
