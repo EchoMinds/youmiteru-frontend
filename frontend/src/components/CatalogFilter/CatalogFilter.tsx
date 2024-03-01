@@ -15,13 +15,13 @@ function CatalogFilter({}: CatalogFilterProps): JSX.Element {
         setSelectedGenres(selectedOptions);
     };
 
+    const handleAgeRatingUpdate = (selectedOptions: string[]) => {
+        setSelectedAgeRatings(selectedOptions);
+    };
+
     const handleResetFilter = () => {
         setSelectedAgeRatings([]);
         setSelectedGenres([]);
-    };
-
-    const handleAgeRatingUpdate = (selectedOptions: string[]) => {
-        setSelectedAgeRatings(selectedOptions);
     };
 
     return (
