@@ -1,8 +1,29 @@
 import "./AgeRating.scss";
 
-interface AgeRatingProps {}
+interface AgeRatingProps {
+    handleAgeRatingUpdate: (selectedOptions: string[]) => void;
+    selectedAgeRatings: string[];
+}
 
-function AgeRating({}: AgeRatingProps): JSX.Element {
+function AgeRating({
+    handleAgeRatingUpdate,
+    selectedAgeRatings,
+}: AgeRatingProps): JSX.Element {
+    const handleAgeCheckboxChange = (
+        e: React.ChangeEvent<HTMLInputElement>
+    ) => {
+        const value = e.target.value;
+        const isChecked = e.target.checked;
+
+        if (isChecked) {
+            handleAgeRatingUpdate([...selectedAgeRatings, value]);
+        } else {
+            handleAgeRatingUpdate(
+                selectedAgeRatings.filter((option) => option !== value)
+            );
+        }
+    };
+
     return (
         <div className="age-rating">
             <p>Возрастной рейтинг</p>
@@ -11,6 +32,7 @@ function AgeRating({}: AgeRatingProps): JSX.Element {
                     <input
                         type="checkbox"
                         value="Empty"
+                        onChange={handleAgeCheckboxChange}
                     />
                     Empty
                 </li>
@@ -18,6 +40,7 @@ function AgeRating({}: AgeRatingProps): JSX.Element {
                     <input
                         type="checkbox"
                         value="16+"
+                        onChange={handleAgeCheckboxChange}
                     />
                     16+
                 </li>
@@ -25,6 +48,7 @@ function AgeRating({}: AgeRatingProps): JSX.Element {
                     <input
                         type="checkbox"
                         value="18+"
+                        onChange={handleAgeCheckboxChange}
                     />
                     18+
                 </li>
