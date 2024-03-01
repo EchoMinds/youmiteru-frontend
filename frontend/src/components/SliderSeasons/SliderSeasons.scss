@@ -111,6 +111,8 @@
             font-size: 14px;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             position: absolute;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
             overflow: hidden;
             flex-direction: row;
             bottom: -10px;
