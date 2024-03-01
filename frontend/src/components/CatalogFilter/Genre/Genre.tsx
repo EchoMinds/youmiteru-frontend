@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import "./Genre.scss";
 
 interface GenreProps {
-    handleGenreUpdate: (selectedOptions: string[]) => void;
+    setSelectedGenres: (selectedOptions: string[]) => void;
     selectedGenres: string[];
 }
 
-function Genre({ handleGenreUpdate, selectedGenres }: GenreProps): JSX.Element {
+function Genre({ setSelectedGenres, selectedGenres }: GenreProps): JSX.Element {
     const [genreMenu, setGenreMenu] = useState<boolean>(false);
 
     useEffect(() => {
@@ -27,9 +27,9 @@ function Genre({ handleGenreUpdate, selectedGenres }: GenreProps): JSX.Element {
     ) => {
         const { value, checked } = event.target;
         if (checked) {
-            handleGenreUpdate([...selectedGenres, value]);
+            setSelectedGenres([...selectedGenres, value]);
         } else {
-            handleGenreUpdate(
+            setSelectedGenres(
                 selectedGenres.filter((genre) => genre !== value)
             );
         }

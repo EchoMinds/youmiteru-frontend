@@ -2,12 +2,12 @@ import { useEffect } from "react";
 import "./AgeRating.scss";
 
 interface AgeRatingProps {
-    handleAgeRatingUpdate: (selectedOptions: string[]) => void;
+    setSelectedAgeRatings: (selectedOptions: string[]) => void;
     selectedAgeRatings: string[];
 }
 
 function AgeRating({
-    handleAgeRatingUpdate,
+    setSelectedAgeRatings,
     selectedAgeRatings,
 }: AgeRatingProps): JSX.Element {
     useEffect(() => {
@@ -25,9 +25,9 @@ function AgeRating({
         const { value, checked } = e.target;
 
         if (checked) {
-            handleAgeRatingUpdate([...selectedAgeRatings, value]);
+            setSelectedAgeRatings([...selectedAgeRatings, value]);
         } else {
-            handleAgeRatingUpdate(
+            setSelectedAgeRatings(
                 selectedAgeRatings.filter((option) => option !== value)
             );
         }
