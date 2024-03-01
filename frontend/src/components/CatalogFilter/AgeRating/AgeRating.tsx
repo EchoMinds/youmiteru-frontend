@@ -12,10 +12,9 @@ function AgeRating({
     const handleAgeCheckboxChange = (
         e: React.ChangeEvent<HTMLInputElement>
     ) => {
-        const value = e.target.value;
-        const isChecked = e.target.checked;
+        const { value, checked } = e.target;
 
-        if (isChecked) {
+        if (checked) {
             handleAgeRatingUpdate([...selectedAgeRatings, value]);
         } else {
             handleAgeRatingUpdate(
