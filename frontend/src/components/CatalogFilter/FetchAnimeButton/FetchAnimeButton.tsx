@@ -9,9 +9,10 @@ interface FetchAnimeButtonProps {
 function FetchAnimeButton({
     selectedGenres,
     selectedAgeRatings,
+    selectedSeasons,
 }: FetchAnimeButtonProps) {
     const handleFilterData = () => {
-        console.log(selectedGenres, selectedAgeRatings);
+        console.log(selectedGenres, selectedAgeRatings, selectedSeasons);
     };
 
     return (
