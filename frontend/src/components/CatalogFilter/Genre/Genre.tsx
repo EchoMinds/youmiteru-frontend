@@ -11,7 +11,7 @@ function Genre({}: GenreProps): JSX.Element {
         setGenreMenu(!genreMenu);
     };
 
-    const handleCheckboxChange = (
+    const handleGenreCheckboxChange = (
         event: React.ChangeEvent<HTMLInputElement>
     ) => {
         const { value, checked } = event.target;
@@ -41,7 +41,7 @@ function Genre({}: GenreProps): JSX.Element {
                             <input
                                 type="checkbox"
                                 value="Фантастика"
-                                onChange={handleCheckboxChange}
+                                onChange={handleGenreCheckboxChange}
                             />{" "}
                             Фантастика
                         </li>
@@ -49,7 +49,7 @@ function Genre({}: GenreProps): JSX.Element {
                             <input
                                 type="checkbox"
                                 value="Драма"
-                                onChange={handleCheckboxChange}
+                                onChange={handleGenreCheckboxChange}
                             />{" "}
                             Драма
                         </li>
@@ -57,7 +57,7 @@ function Genre({}: GenreProps): JSX.Element {
                             <input
                                 type="checkbox"
                                 value="Комедия"
-                                onChange={handleCheckboxChange}
+                                onChange={handleGenreCheckboxChange}
                             />{" "}
                             Комедия
                         </li>
@@ -65,7 +65,7 @@ function Genre({}: GenreProps): JSX.Element {
                             <input
                                 type="checkbox"
                                 value="Кодомо"
-                                onChange={handleCheckboxChange}
+                                onChange={handleGenreCheckboxChange}
                             />{" "}
                             Кодомо
                         </li>
@@ -73,7 +73,7 @@ function Genre({}: GenreProps): JSX.Element {
                             <input
                                 type="checkbox"
                                 value="Сёнэн"
-                                onChange={handleCheckboxChange}
+                                onChange={handleGenreCheckboxChange}
                             />{" "}
                             Сёнэн
                         </li>
@@ -81,7 +81,7 @@ function Genre({}: GenreProps): JSX.Element {
                             <input
                                 type="checkbox"
                                 value="Киберпанк"
-                                onChange={handleCheckboxChange}
+                                onChange={handleGenreCheckboxChange}
                             />{" "}
                             Киберпанк
                         </li>
