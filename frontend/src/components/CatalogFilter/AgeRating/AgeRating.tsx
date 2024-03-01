@@ -40,10 +40,10 @@ function AgeRating({
                 <li>
                     <input
                         type="checkbox"
-                        value="Empty"
+                        value="6+"
                         onChange={handleAgeCheckboxChange}
                     />
-                    Empty
+                    6+
                 </li>
                 <li>
                     <input
