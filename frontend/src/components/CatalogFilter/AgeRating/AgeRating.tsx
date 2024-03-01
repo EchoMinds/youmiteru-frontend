@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./AgeRating.scss";
 
 interface AgeRatingProps {
@@ -9,6 +10,15 @@ function AgeRating({
     handleAgeRatingUpdate,
     selectedAgeRatings,
 }: AgeRatingProps): JSX.Element {
+    useEffect(() => {
+        const checkboxes = document.querySelectorAll<HTMLInputElement>(
+            ".age-rating input[type='checkbox']"
+        );
+        checkboxes.forEach((checkbox) => {
+            checkbox.checked = selectedAgeRatings.includes(checkbox.value);
+        });
+    }, [selectedAgeRatings]);
+
     const handleAgeCheckboxChange = (
         e: React.ChangeEvent<HTMLInputElement>
     ) => {

@@ -1,11 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Genre.scss";
 
-interface GenreProps {}
+interface GenreProps {
+    handleGenreUpdate: (selectedOptions: string[]) => void;
+    selectedGenres: string[];
+}
 
-function Genre({}: GenreProps): JSX.Element {
+function Genre({ handleGenreUpdate, selectedGenres }: GenreProps): JSX.Element {
     const [genreMenu, setGenreMenu] = useState<boolean>(false);
-    const [selectedGenres, setSelectedGenres] = useState<string[]>([]);
+
+    useEffect(() => {
+        const checkboxes = document.querySelectorAll<HTMLInputElement>(
+            ".genre__menu input[type='checkbox']"
+        );
+        checkboxes.forEach((checkbox) => {
+            checkbox.checked = selectedGenres.includes(checkbox.value);
+        });
+    }, [selectedGenres]);
 
     const toggleGenreMenu = () => {
         setGenreMenu(!genreMenu);
@@ -16,19 +27,12 @@ function Genre({}: GenreProps): JSX.Element {
     ) => {
         const { value, checked } = event.target;
         if (checked) {
-            setSelectedGenres((prevSelectedGenres) => [
-                ...prevSelectedGenres,
-                value,
-            ]);
+            handleGenreUpdate([...selectedGenres, value]);
         } else {
-            setSelectedGenres((prevSelectedGenres) =>
-                prevSelectedGenres.filter((genre) => genre !== value)
+            handleGenreUpdate(
+                selectedGenres.filter((genre) => genre !== value)
             );
         }
-    };
-
-    const handleApplySelection = () => {
-        console.log("Выбранные жанры:", selectedGenres);
     };
 
     return (
@@ -86,7 +90,6 @@ function Genre({}: GenreProps): JSX.Element {
                             Киберпанк
                         </li>
                     </ul>
-                    <button onClick={handleApplySelection}>Выбрать</button>
                 </div>
             )}
         </div>
