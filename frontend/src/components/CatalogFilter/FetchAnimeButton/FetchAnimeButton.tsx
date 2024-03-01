@@ -1,11 +1,21 @@
 import "./FetchAnimeButton.scss";
 
-interface FetchAnimeButtonProps {}
+interface FetchAnimeButtonProps {
+    selectedGenres: string[];
+    selectedAgeRatings: string[];
+}
 
-function FetchAnimeButton({}: FetchAnimeButtonProps) {
+function FetchAnimeButton({
+    selectedGenres,
+    selectedAgeRatings,
+}: FetchAnimeButtonProps) {
+    const handleFilterData = () => {
+        console.log(selectedGenres, selectedAgeRatings);
+    };
+
     return (
         <div className="fetch-anime-button">
-            <button>Submit</button>
+            <button onClick={handleFilterData}>Submit</button>
         </div>
     );
 }

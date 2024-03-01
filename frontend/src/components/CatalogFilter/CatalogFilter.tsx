@@ -34,16 +34,12 @@ function CatalogFilter({}: CatalogFilterProps): JSX.Element {
                 handleAgeRatingUpdate={handleAgeRatingUpdate}
                 selectedAgeRatings={selectedAgeRatings}
             />
-            <button
-                onClick={() => {
-                    console.log(selectedGenres, selectedAgeRatings);
-                }}
-            >
-                Test
-            </button>
             <div className="catalog-filter__buttons">
                 <ResetButton handleResetFilter={handleResetFilter} />
-                <FetchAnimeButton />
+                <FetchAnimeButton
+                    selectedGenres={selectedGenres}
+                    selectedAgeRatings={selectedAgeRatings}
+                />
             </div>
         </div>
     );
