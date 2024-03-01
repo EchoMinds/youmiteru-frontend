@@ -1,11 +1,13 @@
 import "./ResetButton.scss";
 
-interface ResetButtonProps {}
+interface ResetButtonProps {
+    handleResetFilter: () => void;
+}
 
-function ResetButton({}: ResetButtonProps) {
+function ResetButton({ handleResetFilter }: ResetButtonProps) {
     return (
         <div className="reset-button">
-            <button>Reset</button>
+            <button onClick={handleResetFilter}>Reset</button>
         </div>
     );
 }
