@@ -2,9 +2,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 94%;
 
     & button {
-        width: 94%;
+        width: 100%;
         font-size: 1rem;
         margin: 10px 0 10px 0;
         border: none;
@@ -24,10 +25,6 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        width: 94%;
-
-        & button {
-            width: 100%;
-        }
+        width: 100%;
     }
 }
