@@ -1,6 +1,33 @@
 .genre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     & button {
-        width: 100%;
+        width: 94%;
+        font-size: 1rem;
+        margin: 10px 0 10px 0;
+        border: none;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover {
+            background-color: #fff;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 94%;
+
+        & button {
+            width: 100%;
+        }
     }
 }
