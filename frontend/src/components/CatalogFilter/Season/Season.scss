@@ -21,6 +21,10 @@
         padding: 0.1rem;
         border: 2px solid #49435e;
         border-radius: 6px;
+
+        &:focus {
+            outline: none;
+        }
     }
 
     & input[type="checkbox"]::before {
