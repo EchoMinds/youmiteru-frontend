@@ -6,16 +6,41 @@
     font-family: "Comfortaa", sans-serif;
 
     & button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
+        height: 40px;
+        padding: 10px;
         font-size: 1rem;
         margin: 10px 0 10px 0;
         border: none;
         cursor: pointer;
         transition: 0.5s;
         font-family: "Comfortaa", sans-serif;
+        background-color: #49435e9d;
+        color: #fff;
+        border-radius: 10px;
+
+        &__btn-arrow {
+            font-size: 1.2rem;
+        }
+
+        & div {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            height: 100%;
+
+            & p {
+                font-size: 0.8rem;
+                color: #838383;
+            }
+        }
 
         &:hover {
             background-color: #fff;
+            color: #000;
         }
 
         &:focus {

@@ -38,7 +38,22 @@ function Genre({ setSelectedGenres, selectedGenres }: GenreProps): JSX.Element {
 
     return (
         <div className="genre">
-            <button onClick={toggleGenreMenu}>Жанры</button>
+            <button onClick={toggleGenreMenu}>
+                <p>Жанры</p>
+                <div>
+                    {genreMenu ? (
+                        <>
+                            <p className="genre__btn-arrow">&lt;</p>
+                            <p>Вернуться</p>
+                        </>
+                    ) : (
+                        <>
+                            <p>Больше</p>
+                            <p className="genre__btn-arrow">&gt;</p>
+                        </>
+                    )}
+                </div>
+            </button>
             <GenreList
                 handleGenreCheckboxChange={handleGenreCheckboxChange}
                 genreMenu={genreMenu}
