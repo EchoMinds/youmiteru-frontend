@@ -47,4 +47,8 @@
     & input[type="checkbox"]:checked::before {
         transform: scale(1.3);
     }
+
+    & input[type="checkbox"]:checked {
+        background-color: #49435e;
+    }
 }
