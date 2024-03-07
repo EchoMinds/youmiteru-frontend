@@ -52,6 +52,7 @@ function CatalogFilter({}: CatalogFilterProps): JSX.Element {
                     selectedAgeRatings={selectedAgeRatings}
                     selectedSeasons={selectedSeasons}
                     selectedFormat={selectedFormat}
+                    selectedState={selectedState}
                 />
             </div>
         </div>
