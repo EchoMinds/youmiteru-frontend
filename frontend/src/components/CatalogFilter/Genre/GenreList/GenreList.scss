@@ -7,11 +7,12 @@
     position: absolute;
     margin-top: 14%;
     left: 100%;
-    height: 92%;
-    overflow: hidden;
+    height: 74%;
+    overflow-x: hidden;
     transition: 0.5s ease-in-out;
 
     & ul li {
+        margin: 4px 0;
         display: flex;
         flex-direction: row;
         align-items: center;
