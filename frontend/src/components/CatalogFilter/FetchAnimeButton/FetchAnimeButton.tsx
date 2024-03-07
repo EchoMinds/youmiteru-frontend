@@ -1,11 +1,13 @@
+import { CatalogParams } from "../../../types/Catalog";
 import "./FetchAnimeButton.scss";
 
 interface FetchAnimeButtonProps {
-    selectedGenres: string[];
-    selectedAgeRatings: string[];
-    selectedSeasons: string[];
-    selectedFormat: string[];
-    selectedState: string[];
+    handleFilterAnime: (params: CatalogParams) => void;
+    selectedGenres?: string[];
+    selectedAgeRatings?: string[];
+    selectedSeasons?: string[];
+    selectedFormat?: string[];
+    selectedState?: string[];
 }
 
 function FetchAnimeButton({
@@ -14,15 +16,18 @@ function FetchAnimeButton({
     selectedSeasons,
     selectedFormat,
     selectedState,
+    handleFilterAnime,
 }: FetchAnimeButtonProps) {
     const handleFilterData = () => {
-        console.log(
-            selectedGenres,
-            selectedAgeRatings,
-            selectedSeasons,
-            selectedFormat,
-            selectedState
-        );
+        const params: CatalogParams = {
+            genres: selectedGenres,
+            format: selectedFormat,
+            state: selectedState,
+            ageRestriction: selectedAgeRatings,
+            yearSeason: selectedSeasons,
+        };
+
+        handleFilterAnime(params);
     };
 
     return (
