@@ -6,7 +6,10 @@ interface SeasonProps {
     selectedSeasons: string[];
 }
 
-function Season({ setSelectedSeasons, selectedSeasons }: SeasonProps) {
+function Season({
+    setSelectedSeasons,
+    selectedSeasons,
+}: SeasonProps): JSX.Element {
     useEffect(() => {
         const checkboxes = document.querySelectorAll<HTMLInputElement>(
             ".season-filter input[type='checkbox']"
