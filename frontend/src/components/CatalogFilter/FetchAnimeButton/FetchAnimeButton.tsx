@@ -17,7 +17,7 @@ function FetchAnimeButton({
     selectedFormat,
     selectedState,
     handleFilterAnime,
-}: FetchAnimeButtonProps) {
+}: FetchAnimeButtonProps): JSX.Element {
     const handleFilterData = () => {
         const params: CatalogParams = {
             genres: selectedGenres,
