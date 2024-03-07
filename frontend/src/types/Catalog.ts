@@ -1,6 +1,6 @@
 export interface CatalogData {
-    name: string;
-    url_image: string;
+    title_name: string;
+    title_image_url: string;
 }
 
 export interface CatalogParams {
