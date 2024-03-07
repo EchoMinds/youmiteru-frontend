@@ -5,6 +5,7 @@ import CatalogFilter from "../../components/CatalogFilter/CatalogFilter";
 import { useCatalogQuery } from "../../hooks/useCatalogQuery";
 import { CatalogParams } from "../../types/Catalog";
 import { useEffect, useState } from "react";
+import AnimeList from "../../components/AnimeList/AnimeList";
 
 function Catalog() {
     const [filterParams, setFilterParams] = useState<Partial<CatalogParams>>(
@@ -17,7 +18,7 @@ function Catalog() {
         void CatalogQuery.refetch();
     }, [filterParams]);
 
-    const anime_data = CatalogQuery.data;
+    const anime_data = CatalogQuery?.data;
 
     if (CatalogQuery.isLoading) {
         <h1> Loading ....</h1>;
@@ -29,14 +30,16 @@ function Catalog() {
 
     const handleFilterAnime = (params: CatalogParams) => {
         setFilterParams(params);
-        console.log(params);
     };
 
     return (
         <div className="catalog">
             <NavigationBar />
-            <div className="catalog__container">
+            <div className="catalog__filter">
                 <CatalogFilter handleFilterAnime={handleFilterAnime} />
+            </div>
+            <div className="catalog__data">
+                <AnimeList anime_data={anime_data} />
             </div>
             <Footer />
         </div>

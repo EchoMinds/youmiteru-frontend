@@ -16,7 +16,7 @@ export const useCatalogQuery = (params?: CatalogParams) => {
                 }
             );
             console.log(result);
-            return result.data as CatalogData;
+            return result.data as CatalogData[];
         },
         enabled: false,
     });
