@@ -21,6 +21,8 @@ function CatalogFilter({}: CatalogFilterProps): JSX.Element {
         setSelectedAgeRatings([]);
         setSelectedGenres([]);
         setSelectedSeasons([]);
+        setSelectedFormat([]);
+        setSelectedState([]);
     };
 
     return (

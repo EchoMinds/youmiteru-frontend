@@ -39,7 +39,7 @@ function Season({
                 <li>
                     <input
                         type="checkbox"
-                        value="Весна"
+                        value="SPRING"
                         onChange={handleSeasonCheckboxChange}
                     />
                     Весна
@@ -47,7 +47,7 @@ function Season({
                 <li>
                     <input
                         type="checkbox"
-                        value="Лето"
+                        value="SUMMER"
                         onChange={handleSeasonCheckboxChange}
                     />
                     Лето
@@ -55,7 +55,7 @@ function Season({
                 <li>
                     <input
                         type="checkbox"
-                        value="Осень"
+                        value="AUTUMN"
                         onChange={handleSeasonCheckboxChange}
                     />
                     Осень
@@ -63,7 +63,7 @@ function Season({
                 <li>
                     <input
                         type="checkbox"
-                        value="Зима"
+                        value="WINTER"
                         onChange={handleSeasonCheckboxChange}
                     />
                     Зима

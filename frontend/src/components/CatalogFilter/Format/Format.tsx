@@ -59,7 +59,7 @@ function Format({
                         value="MOVIE"
                         onChange={handleFormatCheckboxChange}
                     />
-                    MOVIE
+                    Фильм
                 </li>
             </ul>
         </div>
