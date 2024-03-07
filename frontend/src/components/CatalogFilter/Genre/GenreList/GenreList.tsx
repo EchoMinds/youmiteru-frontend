@@ -8,7 +8,10 @@ interface GenreListProps {
     genreMenu: boolean;
 }
 
-function GenreList({ handleGenreCheckboxChange, genreMenu }: GenreListProps) {
+function GenreList({
+    handleGenreCheckboxChange,
+    genreMenu,
+}: GenreListProps): JSX.Element {
     return (
         <div className={`genre__menu ${genreMenu ? "show" : ""}`}>
             <ul className="genre__menu__list">

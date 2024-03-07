@@ -1,8 +1,14 @@
 .age-rating {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     width: 94%;
+
+    & ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        gap: 20px;
+    }
 
     & ul li {
         display: flex;
