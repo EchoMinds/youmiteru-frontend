@@ -7,6 +7,6 @@ export interface CatalogParams {
     genres?: string[];
     format?: string[];
     state?: string[];
-    ageRestriction?: string[];
+    AgeRestriction?: string[];
     yearSeason?: string[];
 }

@@ -23,7 +23,7 @@ function FetchAnimeButton({
             genres: selectedGenres,
             format: selectedFormat,
             state: selectedState,
-            ageRestriction: selectedAgeRatings,
+            AgeRestriction: selectedAgeRatings,
             yearSeason: selectedSeasons,
         };
 
