@@ -1,0 +1,19 @@
+.anime-list {
+    display: flex;
+    padding: 20px 0 0 40px;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    font-family: "Comfortaa", sans-serif;
+
+    &__element {
+        width: 220px;
+        border-radius: 6px;
+
+        & img {
+            width: 220px;
+            border-radius: 6px;
+        }
+    }
+}
