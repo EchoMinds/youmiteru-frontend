@@ -35,11 +35,13 @@ function Catalog() {
     return (
         <div className="catalog">
             <NavigationBar />
-            <div className="catalog__filter">
-                <CatalogFilter handleFilterAnime={handleFilterAnime} />
-            </div>
-            <div className="catalog__data">
-                <AnimeList anime_data={anime_data} />
+            <div className="catalog__main">
+                <div className="catalog__main__filter">
+                    <CatalogFilter handleFilterAnime={handleFilterAnime} />
+                </div>
+                <div className="catalog__main__data">
+                    <AnimeList anime_data={anime_data} />
+                </div>
             </div>
             <Footer />
         </div>
