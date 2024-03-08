@@ -7,8 +7,6 @@ interface AnimeListProps {
 }
 
 function AnimeList({ anime_data }: AnimeListProps): JSX.Element {
-    console.log(anime_data);
-
     return (
         <div className="anime-list">
             {anime_data?.map((value, index) => (
