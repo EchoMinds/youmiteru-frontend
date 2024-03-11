@@ -1,24 +1,23 @@
-import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
+import { useInfiniteQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { CatalogData, CatalogParams } from "../types/Catalog";
+import { CatalogPages, CatalogParams } from "../types/Catalog";
 
 export const useCatalogQuery = (params?: CatalogParams) => {
     return useInfiniteQuery({
         queryKey: ["catalog"],
-        queryFn: async () => {
+        queryFn: async ({ pageParam }: { pageParam: number }) => {
             const result = await axios.get("http://localhost:8080/api/title", {
                 params: {
                     ...params,
-                    offset: 0,
+                    offset: pageParam,
                 },
                 paramsSerializer: {
                     indexes: null,
                 },
             });
-            console.log(result);
-            return result.data as CatalogData[];
+            return result.data as CatalogPages;
         },
         initialPageParam: 0,
-        getNextPageParam: (lastPage) => lastPage,
+        getNextPageParam: (lastPage) => lastPage.currentPage + 1,
     });
 };

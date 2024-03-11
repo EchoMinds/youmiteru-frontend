@@ -42,9 +42,6 @@ function Catalog() {
                 <div className="catalog__main__data">
                     <AnimeList anime_data={catalogData} />
                 </div>
-                {/* <button onClick={() => CatalogQuery.fetchNextPage()}>
-                    More
-                </button> */}
             </div>
             <Footer />
         </div>
