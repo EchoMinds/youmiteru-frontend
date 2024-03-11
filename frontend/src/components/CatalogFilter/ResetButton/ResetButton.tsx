@@ -7,7 +7,7 @@ interface ResetButtonProps {
 function ResetButton({ handleResetFilter }: ResetButtonProps): JSX.Element {
     return (
         <div className="reset-button">
-            <button onClick={handleResetFilter}>Reset</button>
+            <button onClick={handleResetFilter}>Сбросить</button>
         </div>
     );
 }

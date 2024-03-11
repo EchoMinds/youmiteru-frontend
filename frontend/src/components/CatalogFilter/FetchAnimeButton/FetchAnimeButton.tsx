@@ -35,7 +35,7 @@ function FetchAnimeButton({
 
     return (
         <div className="fetch-anime-button">
-            <button onClick={handleFilterData}>Submit</button>
+            <button onClick={handleFilterData}>Поиск</button>
         </div>
     );
 }
