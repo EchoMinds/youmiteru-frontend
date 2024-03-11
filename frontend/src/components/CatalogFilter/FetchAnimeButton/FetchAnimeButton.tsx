@@ -8,6 +8,7 @@ interface FetchAnimeButtonProps {
     selectedSeasons?: string[];
     selectedFormat?: string[];
     selectedState?: string[];
+    selectedYear?: number | string;
 }
 
 function FetchAnimeButton({
@@ -16,6 +17,7 @@ function FetchAnimeButton({
     selectedSeasons,
     selectedFormat,
     selectedState,
+    selectedYear,
     handleFilterAnime,
 }: FetchAnimeButtonProps): JSX.Element {
     const handleFilterData = () => {
@@ -25,6 +27,7 @@ function FetchAnimeButton({
             state: selectedState,
             AgeRestriction: selectedAgeRatings,
             yearSeason: selectedSeasons,
+            dates: selectedYear,
         };
 
         handleFilterAnime(params);

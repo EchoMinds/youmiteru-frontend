@@ -8,6 +8,7 @@ import Season from "./Season/Season";
 import Format from "./Format/Format";
 import State from "./State/State";
 import { CatalogParams } from "../../types/Catalog";
+import Year from "./Year/Year";
 
 interface CatalogFilterProps {
     handleFilterAnime: (params: CatalogParams) => void;
@@ -19,6 +20,7 @@ function CatalogFilter({ handleFilterAnime }: CatalogFilterProps): JSX.Element {
     const [selectedSeasons, setSelectedSeasons] = useState<string[]>([]);
     const [selectedFormat, setSelectedFormat] = useState<string[]>([]);
     const [selectedState, setSelectedState] = useState<string[]>([]);
+    const [selectedYear, setSelectedYear] = useState<number | string>();
 
     const handleResetFilter = () => {
         setSelectedAgeRatings([]);
@@ -26,6 +28,7 @@ function CatalogFilter({ handleFilterAnime }: CatalogFilterProps): JSX.Element {
         setSelectedSeasons([]);
         setSelectedFormat([]);
         setSelectedState([]);
+        setSelectedYear("");
     };
 
     return (
@@ -50,6 +53,10 @@ function CatalogFilter({ handleFilterAnime }: CatalogFilterProps): JSX.Element {
                 setSelectedState={setSelectedState}
                 selectedState={selectedState}
             />
+            <Year
+                setSelectedYear={setSelectedYear}
+                selectedYear={selectedYear}
+            />
             <div className="catalog-filter__buttons">
                 <ResetButton handleResetFilter={handleResetFilter} />
                 <FetchAnimeButton
@@ -59,10 +66,11 @@ function CatalogFilter({ handleFilterAnime }: CatalogFilterProps): JSX.Element {
                     selectedSeasons={selectedSeasons}
                     selectedFormat={selectedFormat}
                     selectedState={selectedState}
+                    selectedYear={selectedYear}
                 />
             </div>
         </div>
     );
 }
-// TODO: ГОД
+
 export default CatalogFilter;
