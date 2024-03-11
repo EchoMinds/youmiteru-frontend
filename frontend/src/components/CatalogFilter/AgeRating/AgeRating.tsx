@@ -48,7 +48,7 @@ function AgeRating({
                 <li>
                     <input
                         type="checkbox"
-                        value="16+"
+                        value="12+"
                         onChange={handleAgeCheckboxChange}
                     />
                     16+

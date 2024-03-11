@@ -18,7 +18,7 @@ function Catalog() {
         void CatalogQuery.refetch();
     }, [filterParams]);
 
-    const anime_data = CatalogQuery?.data;
+    const catalogData = CatalogQuery.data?.pages;
 
     if (CatalogQuery.isLoading) {
         <h1> Loading ....</h1>;
@@ -40,8 +40,11 @@ function Catalog() {
                     <CatalogFilter handleFilterAnime={handleFilterAnime} />
                 </div>
                 <div className="catalog__main__data">
-                    <AnimeList anime_data={anime_data} />
+                    <AnimeList anime_data={catalogData} />
                 </div>
+                {/* <button onClick={() => CatalogQuery.fetchNextPage()}>
+                    More
+                </button> */}
             </div>
             <Footer />
         </div>
