@@ -11,6 +11,20 @@
     border-radius: 10px;
     font-family: "Comfortaa", sans-serif;
     gap: 16px;
+    scrollbar-width: auto;
+    scrollbar-color: #49435e #ffffff;
+    &::-webkit-scrollbar {
+        width: 16px;
+    }
+    &::-webkit-scrollbar-track {
+        background: #ffffff;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #49435e;
+        border-radius: 10px;
+        border: 3px solid #ffffff;
+    }
 
     &__buttons {
         display: flex;
