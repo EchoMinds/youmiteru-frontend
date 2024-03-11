@@ -18,9 +18,10 @@ function SliderSeasons({ sliderData, title }: SliderSeasonsProps) {
     const ResponsiveSliderSettings: ResponsiveSliderSettings = {
         infinite: true,
         focusOnSelect: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
+        slidesToShow: 3,
+        slidesToScroll: 2,
         arrows: false,
+        swipe: true,
     };
 
     const settings: SliderSettings = {
@@ -30,6 +31,8 @@ function SliderSeasons({ sliderData, title }: SliderSeasonsProps) {
         slidesToScroll: 2,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
+        swipe: false,
+        adaptiveHeight: false,
         responsive: [
             {
                 breakpoint: 600,
@@ -48,7 +51,7 @@ function SliderSeasons({ sliderData, title }: SliderSeasonsProps) {
                             <Link
                                 className="slider-season__link"
                                 key={item.season_id}
-                                to={`${ROUTES.SEASON}/${item.season_id}`}>
+                                to={`${ROUTES.SEASON}?id=${item.season_id}`}>
                                 <div className="slider-season__card">
                                     <img
                                         src={item.season_image_url}
