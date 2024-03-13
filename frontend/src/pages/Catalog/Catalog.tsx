@@ -6,25 +6,42 @@ import { useCatalogQuery } from "../../hooks/useCatalogQuery";
 import { CatalogParams } from "../../types/Catalog";
 import { useEffect, useState } from "react";
 import AnimeList from "../../components/AnimeList/AnimeList";
+import { useInView } from "react-intersection-observer";
 
 function Catalog() {
+    const { ref, inView } = useInView();
+
     const [filterParams, setFilterParams] = useState<Partial<CatalogParams>>(
         {}
     );
+    const {
+        data,
+        refetch,
+        fetchNextPage,
+        hasNextPage,
+        isLoading,
+        isError,
+        isFetchingNextPage,
+    } = useCatalogQuery(filterParams);
 
-    const CatalogQuery = useCatalogQuery(filterParams);
+    const totalPages = data?.pages[0].totalPages;
 
     useEffect(() => {
-        void CatalogQuery.refetch();
+        void refetch();
     }, [filterParams]);
-    console.log(CatalogQuery.data);
-    const catalogData = CatalogQuery.data?.pages;
+    console.log(data);
+    useEffect(() => {
+        console.log(totalPages);
+        if (inView && hasNextPage && data?.pages.length !== totalPages) {
+            void fetchNextPage();
+        }
+    }, [inView, hasNextPage, fetchNextPage]);
 
-    if (CatalogQuery.isLoading) {
+    if (isLoading) {
         <h1> Loading ....</h1>;
     }
 
-    if (CatalogQuery.isError) {
+    if (isError) {
         <h1> Error ....</h1>;
     }
 
@@ -40,10 +57,14 @@ function Catalog() {
                     <CatalogFilter handleFilterAnime={handleFilterAnime} />
                 </div>
                 <div className="catalog__main__data">
-                    <AnimeList anime_data={catalogData} />
+                    <AnimeList anime_data={data?.pages} />
                 </div>
             </div>
-            <button onClick={() => void CatalogQuery.fetchNextPage()}>
+            <button
+                ref={ref}
+                disabled={!hasNextPage || isFetchingNextPage}
+                onClick={() => void fetchNextPage()}
+            >
                 More
             </button>
             <Footer />

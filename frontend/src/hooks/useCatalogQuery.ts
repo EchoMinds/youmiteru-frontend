@@ -19,7 +19,13 @@ export const useCatalogQuery = (params?: CatalogParams) => {
             return result.data as CatalogPages;
         },
         initialPageParam: 0,
-        getNextPageParam: (lastPage) => lastPage.currentPage + 1,
+        getNextPageParam: (lastPage, allPages) => {
+            const nextPage =
+                allPages.length == lastPage.totalPages
+                    ? undefined
+                    : +(lastPage.currentPage + 1);
+            return nextPage;
+        },
         getPreviousPageParam: () => 0,
     });
 };
