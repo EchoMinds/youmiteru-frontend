@@ -4,7 +4,7 @@ import { CatalogPages, CatalogParams } from "../types/Catalog";
 
 export const useCatalogQuery = (params?: CatalogParams) => {
     return useInfiniteQuery({
-        queryKey: ["catalog"],
+        queryKey: ["catalog", params],
         queryFn: async ({ pageParam }: { pageParam: number }) => {
             const result = await axios.get("http://localhost:8080/api/title", {
                 params: {
@@ -20,5 +20,6 @@ export const useCatalogQuery = (params?: CatalogParams) => {
         },
         initialPageParam: 0,
         getNextPageParam: (lastPage) => lastPage.currentPage + 1,
+        getPreviousPageParam: () => 0,
     });
 };

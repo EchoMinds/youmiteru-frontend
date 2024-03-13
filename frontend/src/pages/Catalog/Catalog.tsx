@@ -17,7 +17,7 @@ function Catalog() {
     useEffect(() => {
         void CatalogQuery.refetch();
     }, [filterParams]);
-
+    console.log(CatalogQuery.data);
     const catalogData = CatalogQuery.data?.pages;
 
     if (CatalogQuery.isLoading) {
@@ -43,6 +43,9 @@ function Catalog() {
                     <AnimeList anime_data={catalogData} />
                 </div>
             </div>
+            <button onClick={() => void CatalogQuery.fetchNextPage()}>
+                More
+            </button>
             <Footer />
         </div>
     );

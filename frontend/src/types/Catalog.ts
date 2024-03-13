@@ -14,5 +14,5 @@ export interface CatalogParams {
     state?: string[];
     AgeRestriction?: string[];
     yearSeason?: string[];
-    dates?: number | string;
+    dates?: string[];
 }

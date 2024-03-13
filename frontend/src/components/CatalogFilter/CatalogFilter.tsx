@@ -20,7 +20,7 @@ function CatalogFilter({ handleFilterAnime }: CatalogFilterProps): JSX.Element {
     const [selectedSeasons, setSelectedSeasons] = useState<string[]>([]);
     const [selectedFormat, setSelectedFormat] = useState<string[]>([]);
     const [selectedState, setSelectedState] = useState<string[]>([]);
-    const [selectedYear, setSelectedYear] = useState<number | string>();
+    const [selectedYear, setSelectedYear] = useState<string[]>();
 
     const handleResetFilter = () => {
         setSelectedAgeRatings([]);
@@ -28,7 +28,7 @@ function CatalogFilter({ handleFilterAnime }: CatalogFilterProps): JSX.Element {
         setSelectedSeasons([]);
         setSelectedFormat([]);
         setSelectedState([]);
-        setSelectedYear("");
+        setSelectedYear([]);
     };
 
     return (

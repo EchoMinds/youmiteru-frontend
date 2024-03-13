@@ -1,23 +1,22 @@
 import "./Year.scss";
 
 interface YearProps {
-    setSelectedYear: (selectedOptions: number) => void;
-    selectedYear?: number | string;
+    setSelectedYear: (selectedOptions: string[]) => void;
+    selectedYear?: string[];
 }
 
 function Year({ setSelectedYear, selectedYear }: YearProps) {
     const handleYearNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { value } = e.target;
-        setSelectedYear(+value);
+        setSelectedYear([value]);
     };
 
     return (
         <div className="year-filter">
             <p>Год выпуска</p>
             <input
-                type="number"
+                type="text"
                 value={selectedYear}
-                maxLength={4}
                 onChange={handleYearNumberChange}
             />
         </div>

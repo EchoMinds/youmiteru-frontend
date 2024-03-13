@@ -8,7 +8,7 @@ interface FetchAnimeButtonProps {
     selectedSeasons?: string[];
     selectedFormat?: string[];
     selectedState?: string[];
-    selectedYear?: number | string;
+    selectedYear?: string[];
 }
 
 function FetchAnimeButton({
