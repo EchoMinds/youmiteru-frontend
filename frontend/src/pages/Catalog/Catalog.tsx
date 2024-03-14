@@ -14,15 +14,9 @@ function Catalog() {
     const [filterParams, setFilterParams] = useState<Partial<CatalogParams>>(
         {}
     );
-    const {
-        data,
-        refetch,
-        fetchNextPage,
-        hasNextPage,
-        isLoading,
-        isError,
-        isFetchingNextPage,
-    } = useCatalogQuery(filterParams);
+
+    const { data, refetch, fetchNextPage, hasNextPage, isLoading, isError } =
+        useCatalogQuery(filterParams);
 
     useEffect(() => {
         void refetch();
@@ -57,13 +51,11 @@ function Catalog() {
                     <AnimeList anime_data={data?.pages} />
                 </div>
             </div>
-            <button
-                ref={ref}
-                disabled={!hasNextPage || isFetchingNextPage}
-                onClick={() => void fetchNextPage()}
-            >
-                More
-            </button>
+            {hasNextPage && (
+                <div className="catalog__loading-text" ref={ref}>
+                    Loading...
+                </div>
+            )}
             <Footer />
         </div>
     );

@@ -1,4 +1,5 @@
 export interface CatalogElement {
+    title_id: number;
     title_name: string;
     title_image_url: string;
 }
@@ -6,7 +7,7 @@ export interface CatalogElement {
 export interface CatalogPages {
     currentPage: number;
     titlesForCatalog: CatalogElement[];
-    totalPages: number;
+    totalPage: number;
 }
 export interface CatalogParams {
     genres?: string[];

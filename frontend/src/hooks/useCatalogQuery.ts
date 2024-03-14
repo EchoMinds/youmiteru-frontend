@@ -20,7 +20,7 @@ export const useCatalogQuery = (params?: CatalogParams) => {
         initialPageParam: 0,
         getNextPageParam: (lastPage, allPages) => {
             const nextPage =
-                allPages.length == lastPage.totalPages
+                allPages.length == lastPage.totalPage
                     ? undefined
                     : +(lastPage.currentPage + 1);
             return nextPage;
