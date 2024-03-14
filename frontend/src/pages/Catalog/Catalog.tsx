@@ -24,15 +24,12 @@ function Catalog() {
         isFetchingNextPage,
     } = useCatalogQuery(filterParams);
 
-    const totalPages = data?.pages[0].totalPages;
-
     useEffect(() => {
         void refetch();
     }, [filterParams]);
-    console.log(data);
+
     useEffect(() => {
-        console.log(totalPages);
-        if (inView && hasNextPage && data?.pages.length !== totalPages) {
+        if (inView && hasNextPage) {
             void fetchNextPage();
         }
     }, [inView, hasNextPage, fetchNextPage]);

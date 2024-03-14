@@ -15,7 +15,6 @@ export const useCatalogQuery = (params?: CatalogParams) => {
                     indexes: null,
                 },
             });
-            console.log(result);
             return result.data as CatalogPages;
         },
         initialPageParam: 0,
