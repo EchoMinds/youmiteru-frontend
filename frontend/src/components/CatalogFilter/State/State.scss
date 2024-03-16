@@ -66,6 +66,8 @@
 
 @media screen and (max-width: 465px) {
     .state {
+        margin-left: 2px;
+
         & ul {
             row-gap: 4px;
             column-gap: 10px;
