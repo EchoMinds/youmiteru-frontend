@@ -11,6 +11,7 @@ import { useInView } from "react-intersection-observer";
 function Catalog() {
     const { ref, inView } = useInView();
 
+    const [filterVisible, setFilterVisible] = useState<boolean>(false);
     const [filterParams, setFilterParams] = useState<Partial<CatalogParams>>(
         {}
     );
@@ -44,12 +45,21 @@ function Catalog() {
         <div className="catalog">
             <NavigationBar />
             <div className="catalog__main">
-                <div className="catalog__main__filter">
+                <div
+                    className={`catalog__main__filter ${
+                        filterVisible ? "filter-visible" : ""
+                    }`}
+                >
                     <CatalogFilter handleFilterAnime={handleFilterAnime} />
                 </div>
                 <div className="catalog__main__data">
                     <AnimeList anime_data={data?.pages} />
                 </div>
+            </div>
+            <div className="catalog__filter-btn">
+                <button onClick={() => setFilterVisible(!filterVisible)}>
+                    {filterVisible ? "Назад" : "Фильтры"}
+                </button>
             </div>
             {hasNextPage && (
                 <div className="catalog__loading-text" ref={ref}>

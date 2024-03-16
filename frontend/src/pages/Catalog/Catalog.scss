@@ -4,21 +4,92 @@
         flex-direction: row-reverse;
 
         &__data {
-            width: 100%;
+            width: 80%;
         }
 
         &__filter {
             margin-top: 20px;
-            width: 760px;
-            height: 600px;
+            width: 860px;
+            height: 500px;
             display: flex;
             flex-direction: row-reverse;
         }
     }
+
+    &__filter-btn {
+        display: none;
+        justify-content: center;
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        top: 94%;
+
+        button {
+            width: 90%;
+            padding: 5px;
+            font-size: 1.2rem;
+            border: 2px solid #49435e;
+            background-color: #16151d;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 6px;
+            font-family: "Comfortaa", sans-serif;
+            transition: 0.7s;
+
+            &:hover {
+                background-color: #fff;
+                color: #000;
+            }
+        }
+    }
+
     &__loading-text {
         padding: 10px;
         font-size: 2rem;
         width: 64%;
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    .catalog {
+        flex-direction: column;
+
+        &__filter-btn {
+            display: flex;
+        }
+
+        &__main {
+            &__data {
+                width: 100%;
+                padding: 0 10px;
+            }
+            &__filter {
+                z-index: 9;
+                position: fixed;
+                transition: 0.8s ease-in;
+                justify-content: center;
+                align-items: center;
+                top: -10%;
+                left: 100%;
+                height: 130vh;
+                width: 100vw;
+                background-color: #8a8a8ac0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .catalog {
+        &__filter-btn {
+            top: 85%;
+        }
+
+        &__main {
+            &__filter {
+                top: -20%;
+            }
+        }
     }
 }

@@ -60,3 +60,18 @@
         background-color: #49435e;
     }
 }
+
+@media screen and (max-width: 465px) {
+    .season-filter {
+        & ul {
+            row-gap: 10px;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            column-gap: 50px;
+        }
+
+        & ul li {
+            gap: 4px;
+        }
+    }
+}

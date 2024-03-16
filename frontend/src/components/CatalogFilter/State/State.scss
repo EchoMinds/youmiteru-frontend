@@ -63,3 +63,20 @@
         background-color: #49435e;
     }
 }
+
+@media screen and (max-width: 465px) {
+    .state {
+        & ul {
+            row-gap: 4px;
+            column-gap: 10px;
+        }
+
+        & ul li {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 4px;
+            margin: 4px 0;
+        }
+    }
+}

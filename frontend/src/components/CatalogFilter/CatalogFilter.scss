@@ -13,9 +13,11 @@
     gap: 16px;
     scrollbar-width: auto;
     scrollbar-color: #49435e #ffffff;
+
     &::-webkit-scrollbar {
         width: 16px;
     }
+
     &::-webkit-scrollbar-track {
         background: #ffffff;
     }
@@ -31,5 +33,24 @@
         flex-direction: row;
         gap: 20px;
         z-index: 99;
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    .catalog-filter {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 465px) {
+    .catalog-filter {
+        width: 320px;
+        height: 500px;
+        gap: 10px;
+
+        &__buttons {
+            gap: 20px;
+            z-index: 99;
+        }
     }
 }
