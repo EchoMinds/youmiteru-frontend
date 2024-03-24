@@ -5,35 +5,23 @@ import Home from "./pages/Home/Home";
 import Catalog from "./pages/Catalog/Catalog";
 import Login from "./pages/Login/Login";
 import WatchAnime from "./pages/WatchAnime/WatchAnime";
+import { Title } from "./pages/Title/Title";
 
 function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route 
-                    path={ROUTES.HOME} 
-                    element={<Home />} 
-                />
+                <Route path={ROUTES.HOME} element={<Home />} />
 
-                <Route 
-                    path={ROUTES.CATALOG} 
-                    element={<Catalog />} 
-                />
+                <Route path={ROUTES.TITLE} element={<Title />} />
 
-                <Route 
-                    path={ROUTES.HELP} 
-                    element={<h1>Help Page</h1>} 
-                />
+                <Route path={ROUTES.CATALOG} element={<Catalog />} />
 
-                <Route
-                    path={ROUTES.LOGIN} 
-                    element={<Login />} 
-                />
+                <Route path={ROUTES.HELP} element={<h1>Help Page</h1>} />
 
-                <Route 
-                    path={ROUTES.SEASON}
-                    element={<WatchAnime />}
-                />
+                <Route path={ROUTES.LOGIN} element={<Login />} />
+
+                <Route path={ROUTES.SEASON} element={<WatchAnime />} />
 
                 <Route
                     path="*"

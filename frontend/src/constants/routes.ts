@@ -16,4 +16,5 @@ export const ROUTES = {
     USER_AGREEMENT: "/user-agreement",
     PRIVACY_POLICY: "/privacy-policy",
     COMPLAINT: "/complaint",
+    TITLE: "/title",
 };
