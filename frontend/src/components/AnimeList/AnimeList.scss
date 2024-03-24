@@ -12,9 +12,21 @@
         width: 220px;
         border-radius: 6px;
 
+        p {
+            transition: 0.5s;
+        }
+
         & img {
+            margin-bottom: 4px;
             width: 220px;
             border-radius: 6px;
+        }
+
+        &:hover {
+            p {
+                color: rgb(0, 255, 213);
+                text-shadow: 2px 2px 20px rgba(0, 255, 213, 0.5);
+            }
         }
     }
 }

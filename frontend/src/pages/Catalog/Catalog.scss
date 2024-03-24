@@ -85,11 +85,11 @@
         &__filter-btn {
             top: 85%;
         }
+    }
+}
 
-        &__main {
-            &__filter {
-                top: -20%;
-            }
-        }
+@media screen and (max-height: 750px) {
+    .catalog__main__filter {
+        top: -20%;
     }
 }
