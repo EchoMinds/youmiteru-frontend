@@ -47,10 +47,26 @@
         width: 320px;
         height: 500px;
         gap: 10px;
-        
+
         &__buttons {
             gap: 20px;
             z-index: 99;
+        }
+    }
+}
+
+@media only screen and (min-width: 1800px) and (max-width: 2600px) {
+    .catalog-filter {
+        p {
+            font-size: 16px;
+        }
+
+        input {
+            font-size: 16px;
+        }
+
+        li {
+            font-size: 16px;
         }
     }
 }
