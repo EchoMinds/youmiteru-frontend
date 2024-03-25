@@ -1,7 +1,14 @@
+import { useParams } from "react-router-dom";
 import styles from "./Title.module.scss";
+import { useTitleQuery } from "@/hooks/useTitleQuery";
 
-interface ITitleProps {}
+export function Title(): JSX.Element {
+    const { titleId } = useParams<{ titleId: string }>();
+    const updatedTitleId = titleId ? parseInt(titleId) : undefined;
 
-export function Title({}: ITitleProps): JSX.Element {
-    return <div className={styles.title}>Test</div>;
+    const TitleQuery = useTitleQuery(updatedTitleId);
+    console.log(TitleQuery);
+    return <div className={styles.title}>
+        
+    </div>;
 }
