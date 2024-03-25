@@ -18,7 +18,7 @@ function Catalog() {
 
     const { data, refetch, fetchNextPage, hasNextPage, isLoading, isError } =
         useCatalogQuery(filterParams);
-    console.log(data);
+
     useEffect(() => {
         void refetch();
     }, [filterParams]);
