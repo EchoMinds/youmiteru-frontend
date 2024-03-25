@@ -1,0 +1,25 @@
+.titleInfo {
+    @apply w-full p-3 flex flex-row;
+
+    img {
+        @apply w-[400px] object-cover rounded-xl;
+    }
+}
+
+.name_desc {
+    p {
+        @apply text-xl;
+    }
+}
+
+.genres {
+    @apply flex flex-row gap-2;
+
+    p {
+        @apply text-xl;
+    }
+}
+
+.info {
+    @apply flex flex-col p-4;
+}
