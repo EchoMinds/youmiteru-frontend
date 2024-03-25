@@ -1,7 +1,7 @@
 export interface CatalogElement {
-    title_id: number;
-    title_name: string;
-    title_image_url: string;
+    titleId: number;
+    titleName: string;
+    titleImageUrl: string;
 }
 
 export interface CatalogPages {
