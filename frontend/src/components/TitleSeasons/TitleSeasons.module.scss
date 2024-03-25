@@ -1,0 +1,11 @@
+.seasonContainer {
+    @apply flex flex-row flex-wrap;
+}
+
+.season {
+    @apply w-[220px] m-4;
+
+    img {
+        @apply h-80 w-[220px] rounded-md;
+    }
+}

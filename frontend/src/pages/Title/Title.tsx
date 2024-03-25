@@ -10,18 +10,12 @@ export function Title(): JSX.Element {
 
     const TitleQuery = useTitleQuery(updatedTitleId);
 
-    const titleInfo = {
-        name: TitleQuery.data?.titleName,
-        genres: TitleQuery.data?.genreName,
-        image: TitleQuery.data?.titleImage,
-        description: TitleQuery.data?.titleDescription,
-    };
     console.log(TitleQuery);
     return (
         <>
             <NavigationBar />
             <div className={styles.title}>
-                <TitleInfo titleInfo={titleInfo} />
+                <TitleInfo titleInfo={TitleQuery.data} />
             </div>
         </>
     );

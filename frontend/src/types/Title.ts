@@ -7,7 +7,7 @@ export interface ITitle {
     seasonList: Season[];
 }
 
-interface Season {
+export interface Season {
     seasonId: number;
     seasonName: string;
     description: string;
