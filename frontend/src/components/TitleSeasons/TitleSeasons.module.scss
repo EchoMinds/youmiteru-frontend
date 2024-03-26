@@ -1,11 +1,11 @@
 .seasonContainer {
-    @apply flex flex-row flex-wrap;
+    @apply flex flex-row flex-wrap justify-center;
 }
 
 .season {
-    @apply w-[220px] m-4;
+    @apply w-[110px] lg:w-[220px] m-2 lg:m-4;
 
     img {
-        @apply h-80 w-[220px] rounded-md;
+        @apply h-40 w-[110px] lg:h-80 lg:w-[220px] rounded-md;
     }
 }

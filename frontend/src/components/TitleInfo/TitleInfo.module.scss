@@ -2,30 +2,40 @@
     @apply p-3 flex flex-row;
 
     img {
-        @apply w-[400px] h-[500px] rounded-xl;
+        @apply object-cover rounded-xl lg:w-[350px] lg:max-h-[500px];
+    }
+}
+
+.name_image {
+    @apply flex flex-row gap-2 text-base lg:text-xl lg:pl-2;
+    font-family: "Comfortaa", sans-serif;
+
+    img {
+        @apply w-28 max-h-36 object-cover rounded-xl lg:w-[350px] lg:max-h-[500px];
     }
 }
 
 .name_desc {
-    p {
-        @apply text-xl pl-2 pb-2;
-        font-family: "Comfortaa", sans-serif;
+    @apply flex flex-col lg:text-xl lg:pl-2 lg:gap-2 lg:w-[500px];
 
-        &:last-of-type {
-            @apply text-base w-[600px];
-        }
+    p:last-of-type {
+        @apply text-lg;
     }
+
+    font-family: "Comfortaa", sans-serif;
+}
+
+.genres_desc {
+    @apply flex flex-col text-sm gap-2 p-1 mt-2 lg:p-2;
+    font-family: "Comfortaa", sans-serif;
 }
 
 .genres {
-    @apply flex flex-row gap-1 p-2;
+    @apply flex flex-row gap-1 text-sm lg:text-base lg:text-lg lg:p-2;
 
-    p {
-        @apply text-base;
-        font-family: "Comfortaa", sans-serif;
-    }
+    font-family: "Comfortaa", sans-serif;
 }
 
 .info {
-    @apply flex flex-col pl-4;
+    @apply flex flex-col pl-4 lg:flex-col;
 }
