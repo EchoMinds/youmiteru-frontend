@@ -9,7 +9,6 @@ export const useTitleQuery = (titleId?: number) => {
             const result = await axios.get(
                 `http://localhost:8080/api/title/${titleId}`
             );
-            console.log(result);
             return result.data as ITitle;
         },
     });

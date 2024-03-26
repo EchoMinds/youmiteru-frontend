@@ -11,7 +11,6 @@ export function Title(): JSX.Element {
 
     const TitleQuery = useTitleQuery(updatedTitleId);
 
-    console.log(TitleQuery);
     return (
         <>
             <NavigationBar />
