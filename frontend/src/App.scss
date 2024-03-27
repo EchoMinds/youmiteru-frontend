@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -16,8 +16,6 @@ body {
     color: $theme-text-color;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
 }
 
 #root {
