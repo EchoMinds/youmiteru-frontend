@@ -28,3 +28,5 @@ package-lock.json
 ngrok.yml
 ngrok-api.yml
 
+# Prettier
+.prettierrc
