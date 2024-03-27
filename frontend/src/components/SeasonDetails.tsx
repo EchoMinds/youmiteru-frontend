@@ -1,4 +1,4 @@
-import StarIcon from "../../assets/icons/glowing-star.svg";
+import StarIcon from "../assets/icons/glowing-star.svg";
 
 interface SeasonDetailsProps {
     rating: number;
