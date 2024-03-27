@@ -1,4 +1,6 @@
 import StarIcon from "../assets/icons/glowing-star.svg";
+import BookmarkIcon from "./BookmarkIcon";
+import { Button, IconButton } from "@mui/material";
 
 interface SeasonDetailsProps {
     rating: number;
@@ -75,7 +77,7 @@ function SeasonDetails({
                             </li>
                         ))}
                     </ul>
-                    
+
                     <div className="hidden lg:flex flex-row gap-2">
                         <p className="font-medium">Дата выхода:</p>
                         <p className="text-white">{release_date}</p>
@@ -114,6 +116,13 @@ function SeasonDetails({
                         <p className="text-white line-clamp-3">
                             {short_description}
                         </p>
+                    </div>
+
+                    <div className="flex gap-10 relative">
+                        <Button variant="contained" size="small">Trailer</Button>
+                        <Button aria-label="add to favorite anime" size="medium" className="bg-[#4e343b]" color="primary">
+                            <BookmarkIcon />
+                        </Button>
                     </div>
                 </div>
             </div>
