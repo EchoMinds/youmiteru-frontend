@@ -27,7 +27,7 @@ function SeasonDetails({
     genres,
 }: SeasonDetailsProps) {
     return (
-        <div className="season-container">
+        <div className="flex flex-col h-[300px] overflow-hidden">
             <div className="season-container__bg-img">
                 <img src={bg_image_url} alt="background-image" />
             </div>
