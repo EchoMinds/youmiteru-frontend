@@ -18,7 +18,7 @@ function BgBanner({ bannerData }: BgBannerProps): JSX.Element {
     const currentBanner = bannerData?.[currentSlideIndex];
 
     const bgBannerStyles = {
-        backgroundImage: `url(${currentBanner?.season_image_url})`,
+        backgroundImage: `url(${currentBanner?.imageUrl})`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
     };
@@ -28,19 +28,19 @@ function BgBanner({ bannerData }: BgBannerProps): JSX.Element {
             {currentBanner && (
                 <div className="bg-banner" style={bgBannerStyles}>
                     <div className="bg-banner__season-name">
-                        <h1>{currentBanner?.season_name}</h1>
+                        <h1>{currentBanner?.seasonName}</h1>
                     </div>
                     <div className="bg-banner__season-description">
-                        <p>{currentBanner?.season_description}</p>
+                        <p>{currentBanner?.description}</p>
                     </div>
                     <div className="bg-banner__watch-buttons">
                         <WatchButton
                             isWatchNow={true}
-                            season_id={currentBanner.season_id}
+                            season_id={currentBanner.seasonId}
                         />
                         <WatchButton
                             isWatchTrailer={true}
-                            season_id={currentBanner.season_id}
+                            season_id={currentBanner.seasonId}
                         />
                     </div>
                     <div className="bg-banner__slider">

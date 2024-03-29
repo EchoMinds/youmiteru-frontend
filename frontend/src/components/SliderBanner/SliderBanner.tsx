@@ -66,7 +66,7 @@ function SliderBanner({
                             key={index}
                         >
                             <img
-                                src={img.season_image_url}
+                                src={img.imageUrl}
                                 alt="slider picture"
                             />
                         </div>
