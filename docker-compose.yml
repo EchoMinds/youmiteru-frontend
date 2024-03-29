@@ -28,17 +28,6 @@ services:
     expose:
       - 443
 
-  # Comment this if you are running in production
-  fake-api:
-    image: fake-api
-    build:
-      context: ./fake-api
-      dockerfile: Dockerfile
-    restart: always
-    command: ["npx", "json-server", "db.json"]
-    ports:
-      - "3000:3000"
-
 # Comment this if you are running in production
 volumes:
   node_modules_volume:
