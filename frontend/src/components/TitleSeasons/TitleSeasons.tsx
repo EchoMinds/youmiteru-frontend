@@ -1,7 +1,7 @@
-import { Season } from "@/types/Title";
 import styles from "./TitleSeasons.module.scss";
 import { Link } from "react-router-dom";
 import { ROUTES } from "@/constants/routes";
+import { Season } from "@/types/Season";
 
 interface ITitleSeasonsProps {
     seasonList?: Season[];
@@ -12,7 +12,7 @@ export function TitleSeasons({ seasonList }: ITitleSeasonsProps): JSX.Element {
         <div className={styles.seasonContainer}>
             {seasonList?.map((item, index) => (
                 <Link
-                    to={`${ROUTES.SEASON}/${item.seasonId}`}
+                    to={`${ROUTES.SEASON}?id=${item.seasonId}`}
                     className={styles.season}
                     key={index}
                 >

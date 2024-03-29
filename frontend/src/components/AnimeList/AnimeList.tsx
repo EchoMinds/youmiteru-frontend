@@ -15,7 +15,7 @@ function AnimeList({ anime_data }: AnimeListProps): JSX.Element {
                     <React.Fragment key={index}>
                         {group.titlesForCatalog.map((value, index) => (
                             <Link
-                                to={`title/${value.titleId}`}
+                                to={`/title/${value.titleId}`}
                                 key={index}
                                 className="anime-list__element"
                             >

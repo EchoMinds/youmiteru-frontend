@@ -1,3 +1,5 @@
+import { Season } from "./Season";
+
 export interface ITitle {
     titleId: number;
     titleName: string;
@@ -5,11 +7,4 @@ export interface ITitle {
     titleDescription: string;
     genreName: string[];
     seasonList: Season[];
-}
-
-export interface Season {
-    seasonId: number;
-    seasonName: string;
-    description: string;
-    imageUrl: string;
 }
