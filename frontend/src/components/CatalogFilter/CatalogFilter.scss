@@ -40,13 +40,18 @@
 @media screen and (max-width: 1090px) {
     .catalog-filter {
         margin-right: 0;
+        margin-bottom: 100px;
     }
 }
-
+@media screen and (max-width: 550px) {
+    .catalog-filter {
+        margin-bottom: 200px;
+    }
+}
 @media screen and (max-width: 465px) {
     .catalog-filter {
         width: 320px;
-        height: 500px;
+        height: 604px;
         gap: 10px;
 
         &__buttons {
