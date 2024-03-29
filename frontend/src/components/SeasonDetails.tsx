@@ -120,9 +120,10 @@ function SeasonDetails({
 
                     <div className="flex gap-10 relative">
                         <Button variant="contained" size="small">Trailer</Button>
-                        <Button aria-label="add to favorite anime" size="medium" className="bg-[#4e343b]" color="primary">
+
+                        <IconButton aria-label="add to favorite anime" size="medium" className="bg-[#4e343b]" color="primary">
                             <BookmarkIcon />
-                        </Button>
+                        </IconButton>
                     </div>
                 </div>
             </div>
