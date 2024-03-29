@@ -35,32 +35,54 @@ function SeasonDetails({
                 className="opacity-20 h-[550px] w-full"
             />
 
-            <div className="flex absolute p-3 lg:p-5">
-                <div className="z-10">
+            <div className="z-10 absolute flex lg:hidden p-5">
+                <img
+                    src={season_image_url}
+                    className="rounded-md w-[200px] h-[310px]"
+                />
+            </div>
+
+            <div className="flex absolute p-5 ml-[180px] lg:ml-0 lg:p-5">
+                <div className="z-10 hidden lg:flex">
                     <img
                         src={season_image_url}
                         alt="season-image"
-                        className="h-[320px] w-[250px] rounded-md lg:"
+                        className="h-[220px] w-[250px] rounded-md lg:w-[270px] lg:h-[380px]"
                     />
                 </div>
 
-                <div className="flex flex-col items-center justify-center gap-5 ml-2 lg:gap-2 lg:ml-3 lg:items-start lg:pb-[110px]">
-                    <p className="font-semibold text-[18px] lg:text-[24px] lg:">
+                <div className="flex flex-col items-center justify-center gap-3 ml-2 lg:gap-2 lg:ml-7 lg:items-start lg:pb-[110px]">
+                    <p className="font-semibold max-w-[100px] text-[18px] lg:max-w-[800px] lg:text-[24px]">
                         {season_name}
                     </p>
 
-                    <div className="flex flex-row gap-2 lg:hidden">
+                    <ul className="flex gap-5 ml-5 lg:hidden">
+                        <li className="flex bg-gray-500 rounded-sm justify-center items-center max-h-[40px] w-[40px]">
+                            <p>{rating}</p>
+                            <img src={StarIcon} alt="star-icon"></img>
+                        </li>
+
+                        <li className="flex bg-gray-500 justify-center items-center max-w-[140px] max-h-[40px] rounded-sm">
+                            <p>{year_season}</p>
+                        </li>
+                    </ul>
+
+                    <p className="flex rounded-sm bg-gray-500 justify-center items-center h-[20px] w-[30px] lg:hidden">
+                        {age_restriction}+
+                    </p>
+
+                    <div className="flex flex-col mr-2 items-center gap-2 lg:hidden">
                         <p className="font-medium">Дата выхода:</p>
                         <p className="text-white">{release_date}</p>
                     </div>
 
-                    <ul className="hidden lg:flex gap-5">
+                    <ul className="hidden lg:flex gap-5 lg:justify-center lg:items-center">
                         <li className="flex bg-gray-500 rounded-sm justify-center items-center h-[20px] w-[40px]">
                             <p>{rating}</p>
                             <img src={StarIcon} alt="star-icon"></img>
                         </li>
 
-                        <li className="flex bg-gray-500 justify-center items-center w-[40px] h-[20px] rounded-sm">
+                        <li className="flex bg-gray-500 max-w-[150px] max-h-[40px] rounded-sm">
                             <p>{year_season}</p>
                         </li>
 
@@ -72,7 +94,9 @@ function SeasonDetails({
                     <ul className="hidden lg:flex gap-3">
                         <p className="font-medium">Жанр:</p>
                         {genres?.map((genre, index) => (
-                            <li key={index} className="ml-1">
+                            <li
+                                key={index}
+                                className="underline underline-offset-4 decoration-[#5cd3a1]">
                                 {genre}
                             </li>
                         ))}
@@ -83,17 +107,20 @@ function SeasonDetails({
                         <p className="text-white">{release_date}</p>
                     </div>
 
-                    <div className="flex flex-row gap-16 items-center lg:hidden">
+                    <div className="flex mr-7 flex-row gap-16 lg:hidden">
                         <ul className="flex flex-col">
-                            <p className="font-medium">Жанр:</p>
+                            <p className="font-medium pb-[2px]">Жанр:</p>
                             {genres?.map((genre, index) => (
-                                <li key={index} className="ml-1">
+                                <li
+                                    key={index}
+                                    className="underline underline-offset-4 decoration-[#5cd3a1]">
                                     {genre}
                                 </li>
                             ))}
                         </ul>
 
-                        <ul className="flex flex-col gap-5">
+                        {/* 
+                        <ul className="flex flex-col gap-1">
                             <li className="flex bg-gray-500 rounded-sm justify-center items-center h-[20px] w-[40px]">
                                 <p>{rating}</p>
                                 <img src={StarIcon} alt="star-icon"></img>
@@ -106,26 +133,44 @@ function SeasonDetails({
                             <li className="flex rounded-sm bg-gray-500 justify-center items-center h-[20px] w-[30px] ">
                                 <p>{age_restriction}+</p>
                             </li>
-                        </ul>
+                        </ul> */}
                     </div>
 
-                    <div className="flex flex-col ml-5 lg:ml-0 lg:mt-5">
+                    <div className="hidden flex-col ml-5 lg:flex lg:ml-0 lg:mt-5">
                         <p className="font-medium lg:text-[20px]">
                             Краткое описание:
                         </p>
-                        <p className="text-white line-clamp-3">
+
+                        <p className="text-white line-clamp-3 lg:line-clamp-3 lg:max-w-[500px]">
                             {short_description}
                         </p>
                     </div>
 
-                    <div className="flex gap-10 relative">
-                        <Button variant="contained" size="small">Trailer</Button>
+                    <div className="flex gap-5 ml-8 items-center lg:ml-0">
+                        <Button
+                            variant="contained"
+                            size="small"
+                            className="w-10 h-[40px]">
+                            Trailer
+                        </Button>
 
-                        <IconButton aria-label="add to favorite anime" size="medium" className="bg-[#4e343b]" color="primary">
+                        <IconButton
+                            aria-label="add to favorite anime"
+                            size="large"
+                            className="bg-[#4e343b]"
+                            color="primary">
                             <BookmarkIcon />
                         </IconButton>
                     </div>
                 </div>
+            </div>
+
+            <div className="flex flex-col p-5 absolute bottom-[260px] max-w-[250px] lg:hidden">
+                <p className="font-medium lg:text-[20px]">Краткое описание:</p>
+
+                <p className="text-white line-clamp-6 lg:line-clamp-3 lg:max-w-[500px]">
+                    {short_description}
+                </p>
             </div>
         </main>
     );

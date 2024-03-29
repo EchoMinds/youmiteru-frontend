@@ -5,6 +5,7 @@ export default function BookmarkIcon() {
         <img
             src={BookmarkLogo}
             alt="bookmark-icon"
+            width={40}
         />
     );
 }
