@@ -1,0 +1,17 @@
+.year-filter {
+    display: flex;
+    flex-direction: column;
+    width: 94%;
+    gap: 6px;
+
+    & input {
+        background-color: #49435e9d;
+        color: #fff;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        font-size: 1rem;
+        padding: 10px;
+        font-family: "Comfortaa", sans-serif;
+    }
+}
