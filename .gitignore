@@ -25,3 +25,11 @@ dist-ssr
 
 package-lock.json
 .env
+<<<<<<< HEAD
+=======
+ngrok.yml
+ngrok-api.yml
+
+# Prettier
+.prettierrc
+>>>>>>> a65bfd8f26205b6d914f35cfebb1c24704da0f06

@@ -2,6 +2,7 @@ import "./App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ROUTES } from "./constants/routes";
 import Home from "./pages/Home/Home";
+import User from "./pages/User/User";
 
 function App() {
 
@@ -19,8 +20,8 @@ function App() {
                 />
                 
                 <Route 
-                    path="*" 
-                    element={<h1>!Undefined Page! please come back at main page</h1>} 
+                    path={ROUTES.PROFILE}
+                    element={<User />} 
                 /> 
             </Routes>  
         </BrowserRouter>
