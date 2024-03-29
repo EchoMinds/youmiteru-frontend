@@ -12,7 +12,7 @@ export function TitleSeasons({ seasonList }: ITitleSeasonsProps): JSX.Element {
         <div className={styles.seasonContainer}>
             {seasonList?.map((item, index) => (
                 <Link
-                    to={`${ROUTES.SEASON}/${item.seasonId}`}
+                    to={`${ROUTES.SEASON}?id=${item.seasonId}`}
                     className={styles.season}
                     key={index}
                 >
