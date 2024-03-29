@@ -1,13 +1,14 @@
 .catalog-filter {
     display: flex;
+    padding: 5px;
     flex-direction: column;
     align-items: center;
     position: fixed;
     background-color: #16151d;
     width: 400px;
-    margin-right: 100px;
+    margin-right: 60px;
     overflow-x: hidden;
-    height: 500px;
+    height: 550px;
     border-radius: 10px;
     font-family: "Comfortaa", sans-serif;
     gap: 16px;

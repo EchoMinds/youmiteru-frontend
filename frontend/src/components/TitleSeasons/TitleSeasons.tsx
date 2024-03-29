@@ -1,7 +1,7 @@
-import { Season } from "@/types/Title";
 import styles from "./TitleSeasons.module.scss";
 import { Link } from "react-router-dom";
 import { ROUTES } from "@/constants/routes";
+import { Season } from "@/types/Season";
 
 interface ITitleSeasonsProps {
     seasonList?: Season[];
