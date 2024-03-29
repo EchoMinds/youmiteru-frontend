@@ -16,7 +16,6 @@ services:
 
     # Uncomment this if you are running in production
     # command: [ "npm", "run", "build" ]
-
     stop_signal: SIGINT
 
   ngrok:
@@ -26,17 +25,6 @@ services:
       - NGROK_CONFIG=/etc/ngrok.yml
     volumes:
       - ./ngrok.yml:/etc/ngrok.yml
-    expose:
-      - 443
-
-  # Comment this if you are use ngrok and running in production
-  ngrok-api:
-    image: ngrok/ngrok:latest
-    restart: unless-stopped
-    environment:
-      - NGROK_CONFIG=/etc/ngrok-api.yml
-    volumes:
-      - ./ngrok-api.yml:/etc/ngrok-api.yml
     expose:
       - 443
 
