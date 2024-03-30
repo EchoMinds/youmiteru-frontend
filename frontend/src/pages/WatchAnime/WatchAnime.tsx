@@ -4,6 +4,7 @@ import { useSeasonDetailsQuery } from "../../hooks/useSeasonDetailsQuery";
 import SeasonDetails from "../../components/SeasonDetails";
 import { Footer } from "../../components/Footer/Footer";
 import NavigationBar from "../../components/NavigationBar/NavigationBar";
+import RateSeason from "@/components/RateSeason";
 
 function WatchAnime () {
     const [searchParams] = useSearchParams();  
@@ -34,6 +35,7 @@ function WatchAnime () {
                 year_season={SeasonDetailsQuery.data?.yearSeason}
                 genres={SeasonDetailsQuery.data?.genres}
             />
+            <RateSeason />
             <Footer />
         </>
     );
