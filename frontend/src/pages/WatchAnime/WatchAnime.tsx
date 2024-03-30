@@ -23,7 +23,7 @@ function WatchAnime() {
     }
 
     return (
-        <>
+        <main>
             <NavigationBar />
             <SeasonDetails
                 season_id={seasonData?.seasonId}
@@ -38,10 +38,12 @@ function WatchAnime() {
                 genres={seasonData?.genres}
             />
 
-            <AnimeDetailsTabs description={seasonData?.description} relatedSeasons={seasonData?.relatedSeasons}/>
-            <RateSeason />
+            <div className="pl-5 pt-3">
+                <RateSeason />
+                <AnimeDetailsTabs description={seasonData?.description} relatedSeasons={seasonData?.relatedSeasons}/>
+            </div>
             <Footer />
-        </>
+        </main>
     );
 }
 
