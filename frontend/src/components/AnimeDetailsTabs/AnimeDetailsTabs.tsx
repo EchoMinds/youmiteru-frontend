@@ -12,25 +12,33 @@ interface ChronologySeason {
 }
 
 interface AnimeDetailsTabsProps {
-    fullDescription: string;
+    description: string;
     relatedSeasons: ChronologySeason[];
 }
 
 const ContentTabs = styled(Box)(({ theme }) => ({
-    maxHeight: 500,
+    maxHeight: 300,
     paddingLeft: 16,
     display: "flex",
     gap: 30,
     maxWidth: 1200,
+    paddingBottom: 16,
     [theme.breakpoints.down("sm")]: {
         display: "flex",
-        flexDirection: "column",
         gap: 16,
+        flexWrap: "wrap",
+        justifyContent: "space-around",
+        maxWidth: 380,
+        maxHeight: 800,
+        "& > a": { // Targeting child links, assuming they directly contain the images
+            width: "calc(50% - 8px)", // Subtract the gap from 50% to align two items per row
+            margin: "4px", // Adjust margin to match the gap
+        },
     },
 }));
 
 export default function AnimeDetailsTabs({
-    fullDescription,
+    description,
     relatedSeasons, 
 }: AnimeDetailsTabsProps) {
     const [tabValue, setTabValue] = React.useState(0);
@@ -39,19 +47,8 @@ export default function AnimeDetailsTabs({
         setTabValue(newValue);
     };
 
-    const tabContent = (index: number) => {
-        switch (index) {
-        case 0:
-            return fullDescription;
-        case 1:
-            return relatedSeasons;
-        default:
-            return null;
-        }
-    };
-
     return (
-        <Box sx={{ width: "100%", borderRadius: 1 }}>
+        <Box sx={{ width: "100%", borderRadius: 1, overflow: "hidden" }}>
             <Tabs
                 value={tabValue}
                 onChange={handleTabChange}
@@ -67,7 +64,7 @@ export default function AnimeDetailsTabs({
 
             <ContentTabs >
                 {tabValue === 0 ? (
-                    <ScrollableDescription description={tabContent(tabValue)} />
+                    <ScrollableDescription description={description} />
                 ) : (
                     relatedSeasons.map((season) => (
                         <ChronologySeason

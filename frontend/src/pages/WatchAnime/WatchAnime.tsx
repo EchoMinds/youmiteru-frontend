@@ -37,7 +37,7 @@ function WatchAnime() {
                 genres={seasonData?.genres}
             />
 
-            <AnimeDetailsTabs fullDescription={seasonData?.description} relatedSeasons={seasonData?.relatedSeasons}/>
+            <AnimeDetailsTabs description={seasonData?.description} relatedSeasons={seasonData?.relatedSeasons}/>
             <Footer />
         </>
     );
