@@ -2,8 +2,8 @@ import React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
-import ScrollableDescription from "./ScrorrableText";
-import ChronologySeason from "./Chronology";
+import ScrollableDescription from "./ScrollableDescription";
+import ChronologySeason from "./ChronologySeason";
 import { styled } from "@mui/material/styles";
 
 interface ChronologySeason {
