@@ -1,10 +1,18 @@
-import { styled } from "@mui/material/styles";
-import { Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import Link from "@mui/material/Link";
+import { ROUTES } from "@/constants/routes";
 
-export default function ChronologySeasons() {
+interface ChronologySeasonProps {
+    seasonId: number;
+    imageUrl: string;
+}
+
+export default function ChronologySeason({ seasonId, imageUrl }: ChronologySeasonProps) {
     return (
-        <div>
-
-        </div>
+        <Box sx={{}}>
+            <Link href={`${ROUTES.SEASON}?id=${seasonId}`}>
+                <img src={imageUrl} alt="season-image" className="w-[180px] h-[180px] rounded-md lg:hover:opacity-70 ease-in-out duration-300"/>
+            </Link>
+        </Box>
     );
 }
