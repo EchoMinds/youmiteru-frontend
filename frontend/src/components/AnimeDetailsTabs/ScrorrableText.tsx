@@ -1,7 +1,7 @@
 import { styled } from "@mui/material/styles";
 import { Typography } from "@mui/material";
 
-export const ScrollableText = styled(Typography)(({ theme }) => ({
+const ScrollableText = styled(Typography)(({ theme }) => ({
     maxWidth: 500,
     maxHeight: 180,
     overflow: "auto",
