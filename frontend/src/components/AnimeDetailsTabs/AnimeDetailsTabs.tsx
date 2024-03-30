@@ -29,7 +29,7 @@ const ContentTabs = styled(Box)(({ theme }) => ({
         flexWrap: "wrap",
         justifyContent: "space-around",
         maxWidth: 380,
-        maxHeight: 800,
+        maxHeight: 1000,
         "& > a": { // Targeting child links, assuming they directly contain the images
             width: "calc(50% - 8px)", // Subtract the gap from 50% to align two items per row
             margin: "4px", // Adjust margin to match the gap
