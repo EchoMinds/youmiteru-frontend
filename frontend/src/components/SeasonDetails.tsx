@@ -3,16 +3,16 @@ import BookmarkIcon from "./BookmarkIcon";
 import { Button, IconButton } from "@mui/material";
 
 interface SeasonDetailsProps {
-    rating: number;
-    release_date: string;
-    short_description: string;
-    age_restriction: string;
-    year_season: number;
-    genres: string[];
-    season_id: number;
-    season_image_url: string;
-    season_name: string;
-    bg_image_url: string;
+    rating?: number;
+    release_date?: string;
+    short_description?: string;
+    age_restriction?: string;
+    year_season?: number;
+    genres?: string[];
+    season_id?: number;
+    season_image_url?: string;
+    season_name?: string;
+    bg_image_url?: string;
 }
 
 function SeasonDetails({
@@ -32,7 +32,7 @@ function SeasonDetails({
             <img
                 src={bg_image_url}
                 alt="background-image"
-                className="opacity-20 h-[550px] w-full"
+                className="opacity-20 h-[450px] w-full lg:w-[550px]"
             />
 
             <div className="z-10 absolute flex lg:hidden p-5">

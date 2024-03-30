@@ -4,6 +4,7 @@ import { useSeasonDetailsQuery } from "../../hooks/useSeasonDetailsQuery";
 import SeasonDetails from "../../components/SeasonDetails";
 import { Footer } from "../../components/Footer/Footer";
 import NavigationBar from "../../components/NavigationBar/NavigationBar";
+import RateSeason from "@/components/RateSeason";
 import AnimeDetailsTabs from "@/components/AnimeDetailsTabs/AnimeDetailsTabs";
 
 function WatchAnime() {
@@ -38,6 +39,7 @@ function WatchAnime() {
             />
 
             <AnimeDetailsTabs description={seasonData?.description} relatedSeasons={seasonData?.relatedSeasons}/>
+            <RateSeason />
             <Footer />
         </>
     );
