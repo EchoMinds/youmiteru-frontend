@@ -9,8 +9,8 @@ export default function CustomizedRating() {
         <Box
             sx={{
                 bgcolor: "#6a4e57",
-                width: 370,
-                height: 120,
+                width: 350,
+                height: 150,
                 padding: 3,
                 borderRadius: 3,
             }}>

@@ -35,15 +35,24 @@ function SeasonDetails({
                 className="opacity-20 h-[450px] w-full lg:w-[550px]"
             />
 
-            <div className="z-10 absolute flex lg:hidden p-5">
+
+            <div className="z-10 absolute flex-col gap-2 flex lg:hidden p-5">
                 <img
                     src={season_image_url}
                     className="rounded-md w-[200px] h-[310px]"
                 />
+
+                <div className="flex flex-col max-w-[210px] lg:hidden">
+                    <p className="font-bold pb-1">Краткое описание:</p>
+
+                    <p className="text-white overflow-auto h-[70px]">
+                        {short_description}
+                    </p>
+                </div>
             </div>
 
             <div className="flex absolute p-5 ml-[180px] lg:ml-0 lg:p-5">
-                <div className="z-10 hidden lg:flex">
+                <div className="z-10 hidden h-[300px] lg:flex">
                     <img
                         src={season_image_url}
                         alt="season-image"
@@ -141,7 +150,7 @@ function SeasonDetails({
                             Краткое описание:
                         </p>
 
-                        <p className="text-white line-clamp-3 lg:line-clamp-3 lg:max-w-[500px]">
+                        <p className="text-white line-clamp-3 lg:line-clamp-4 lg:max-w-[500px]">
                             {short_description}
                         </p>
                     </div>
@@ -165,13 +174,13 @@ function SeasonDetails({
                 </div>
             </div>
 
-            <div className="flex flex-col p-5 absolute bottom-[260px] max-w-[250px] lg:hidden">
-                <p className="font-medium lg:text-[20px]">Краткое описание:</p>
+            {/* <div className="flex flex-col p-5 absolute bottom-[170px] max-w-[250px] lg:hidden">
+                <p className="font-bold pb-1">Краткое описание:</p>
 
-                <p className="text-white line-clamp-6 lg:line-clamp-3 lg:max-w-[500px]">
+                <p className="text-white overflow-auto h-[70px]">
                     {short_description}
                 </p>
-            </div>
+            </div> */}
         </main>
     );
 }
