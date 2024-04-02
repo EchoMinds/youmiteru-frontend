@@ -6,6 +6,7 @@ import { Footer } from "../../components/Footer/Footer";
 import NavigationBar from "../../components/NavigationBar/NavigationBar";
 import RateSeason from "@/components/RateSeason";
 import AnimeDetailsTabs from "@/components/AnimeDetailsTabs/AnimeDetailsTabs";
+import PlayBackSeason from "@/components/PlayBackSeason";
 
 function WatchAnime() {
     const [searchParams] = useSearchParams();
@@ -38,13 +39,15 @@ function WatchAnime() {
                 genres={seasonData?.genres}
             />
 
-            <div className="pl-5 pt-3">
+            <div className="pl-5 pt-3 pb-10">
                 <RateSeason />
                 <AnimeDetailsTabs
                     description={seasonData?.description}
                     relatedSeasons={seasonData?.relatedSeasons}
                 />
             </div>
+
+            <PlayBackSeason video_url={seasonData?.codeVideoPlayer || ""} />
             <Footer />
         </main>
     );
