@@ -10,7 +10,7 @@ export interface SeasonDetails {
     yearSeason: number;
     genres: string[];
     link_to_playback: string;
-    bg_image_url: string;
+    animeBannerUrl: string;
     titleState: string;
     relatedSeasons: string[];
 }

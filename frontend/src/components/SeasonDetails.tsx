@@ -32,9 +32,8 @@ function SeasonDetails({
             <img
                 src={bg_image_url}
                 alt="background-image"
-                className="opacity-20 h-[450px] w-full lg:w-[550px]"
+                className="opacity-20 h-[460px] w-full lg:h-[500px]"
             />
-
 
             <div className="z-10 absolute flex-col gap-2 flex lg:hidden p-5">
                 <img

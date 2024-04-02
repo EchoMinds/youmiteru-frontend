@@ -29,7 +29,7 @@ function WatchAnime() {
                 season_id={seasonData?.seasonId}
                 season_image_url={seasonData?.imageUrl}
                 season_name={seasonData?.seasonName}
-                bg_image_url={seasonData?.bg_image_url}
+                bg_image_url={seasonData?.animeBannerUrl || "https://cdn.wallpapersafari.com/75/35/c5bYw1.png"}
                 rating={seasonData?.rating}
                 release_date={seasonData?.releaseDate}
                 short_description={seasonData?.reducedDescription}
@@ -40,7 +40,10 @@ function WatchAnime() {
 
             <div className="pl-5 pt-3">
                 <RateSeason />
-                <AnimeDetailsTabs description={seasonData?.description} relatedSeasons={seasonData?.relatedSeasons}/>
+                <AnimeDetailsTabs
+                    description={seasonData?.description}
+                    relatedSeasons={seasonData?.relatedSeasons}
+                />
             </div>
             <Footer />
         </main>
