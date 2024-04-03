@@ -1,6 +1,11 @@
 import { BASE_API_URL } from "@/constants/api";
 import axios from "axios";
-import { DataProvider } from "react-admin";
+import {
+    CreateParams,
+    DataProvider,
+    DeleteParams,
+    UpdateParams,
+} from "react-admin";
 
 class AdminDataProvider implements DataProvider {
     getList(resource: string): Promise<any> {
@@ -18,19 +23,20 @@ class AdminDataProvider implements DataProvider {
             });
     }
 
-    getOne(resource: string, id: number) {
-        console.log(id);
+    getOne(resource: string, params: any): Promise<any> {
+        const { id } = params;
         return axios
-            .get(`${BASE_API_URL}/admin/${resource}/${id.id}`)
+            .get(`${BASE_API_URL}/admin/${resource}/${id}`)
             .then((response) => {
                 console.log(response);
                 return {
                     data: {
-                        id: response.titleId,
-                        name: response.titleName,
-                        image: response.titleImage,
-                        description: response.titleDescription,
-                        genre: response.genreName,
+                        id: response.data.titleId,
+                        name: response.data.titleName,
+                        picture: response.data.titleImage,
+                        description: response.data.titleDescription,
+                        genre: response.data.genreName,
+                        season: response.data.seasonList,
                     },
                 };
             })
@@ -43,13 +49,50 @@ class AdminDataProvider implements DataProvider {
 
     getManyReference(): Promise<any> {}
 
-    create(): Promise<any> {}
+    async create(resource: string, params: CreateParams): Promise<any> {
+        console.log(params);
+        try {
+            const response = await axios.post(
+                `${BASE_API_URL}/admin/${resource}`,
+                params.data
+            );
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.error(error);
+            throw new Error("Failed to create resource");
+        }
+    }
 
-    update(): Promise<any> {}
+    async update(resource: string, params: UpdateParams): Promise<any> {
+        console.log(params);
+        try {
+            const response = await axios.post(
+                `${BASE_API_URL}/admin/${resource}/${params.id}`,
+                params.data
+            );
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.error(error);
+            throw new Error("Failed to create resource");
+        }
+    }
 
     updateMany(): Promise<any> {}
 
-    delete(): Promise<any> {}
+    async delete(resource: string, params: DeleteParams): Promise<any> {
+        try {
+            const response = await axios.delete(
+                `${BASE_API_URL}/admin/${resource}/${params.id}`
+            );
+            console.log(response);
+            return response;
+        } catch (error) {
+            console.error(error);
+            throw new Error("Failed to delete resource");
+        }
+    }
 
     deleteMany(): Promise<any> {}
 }
