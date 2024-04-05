@@ -9,7 +9,7 @@ export interface SeasonDetails {
     ageRestriction: string;
     yearSeason: number;
     genres: string[];
-    link_to_playback: string;
+    codeVideoPlayer: string;
     animeBannerUrl: string;
     titleState: string;
     relatedSeasons: string[];
