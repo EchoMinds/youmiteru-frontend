@@ -47,19 +47,21 @@ function SliderSeasons({ sliderData, title }: SliderSeasonsProps) {
                         sliderData.map((item) => (
                             <Link
                                 className="slider-season__link"
-                                key={item.season_id}
-                                to={`${ROUTES.SEASON}/${item.season_id}`}>
+
+                                key={item.seasonId}
+                                to={`${ROUTES.SEASON}?id=${item.seasonId}`}>
+
                                 <div className="slider-season__card">
                                     <img
-                                        src={item.season_image_url}
-                                        alt={item.season_name}
+                                        src={item.imageUrl}
+                                        alt={item.seasonName}
                                     />
                                     <div className="card_season_name">
-                                        {item.season_name}
+                                        {item.seasonName}
                                     </div>
 
                                     <div className="card_season_description">
-                                        {item.season_description}
+                                        {item.description}
                                     </div>
                                 </div>
                             </Link>

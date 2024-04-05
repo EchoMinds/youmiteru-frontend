@@ -85,7 +85,12 @@
         }
     }
 
-    .home {
+
+    .home,
+    .sponsor-project,
+    .help,
+    .catalog-nav,
+    .login {
         font-size: 1.5svw;
     }
 
@@ -103,7 +108,12 @@
 }
 
 @media only screen and (min-width: 1800px) and (max-width: 2600px) {
-    .home {
+
+    .home,
+    .sponsor-project,
+    .help,
+    .catalog-nav,
+    .login {
         font-size: 1svw;
     }
 

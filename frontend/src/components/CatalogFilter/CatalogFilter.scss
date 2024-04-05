@@ -1,0 +1,78 @@
+.catalog-filter {
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    background-color: #16151d;
+    width: 400px;
+    margin-right: 60px;
+    overflow-x: hidden;
+    height: 550px;
+    border-radius: 10px;
+    font-family: "Comfortaa", sans-serif;
+    gap: 16px;
+    scrollbar-width: auto;
+    scrollbar-color: #49435e #ffffff;
+
+    &::-webkit-scrollbar {
+        width: 16px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #ffffff;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #49435e;
+        border-radius: 10px;
+        border: 3px solid #ffffff;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        z-index: 99;
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    .catalog-filter {
+        margin-right: 0;
+        margin-bottom: 100px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .catalog-filter {
+        margin-bottom: 200px;
+    }
+}
+@media screen and (max-width: 465px) {
+    .catalog-filter {
+        width: 320px;
+        height: 604px;
+        gap: 10px;
+
+        &__buttons {
+            gap: 20px;
+            z-index: 99;
+        }
+    }
+}
+
+@media only screen and (min-width: 1800px) and (max-width: 2600px) {
+    .catalog-filter {
+        p {
+            font-size: 16px;
+        }
+
+        input {
+            font-size: 16px;
+        }
+
+        li {
+            font-size: 16px;
+        }
+    }
+}

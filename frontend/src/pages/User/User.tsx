@@ -3,27 +3,26 @@ import NavigationBar from '../../components/NavigationBar/NavigationBar';
 import UserProfile from '../../components/UserProfile/UserProfile';
 import UserDetails from '../../components/UserDetails/UserDetails';
 import FavoriteAnime from '../../components/FavoriteAnime/FavoriteAnime';
-import { useDashBoardQuery } from '../../hooks/useDashBoardQuery';
+import { useUserProfileQuery } from '../../hooks/useUserProfileQuery'; 
 
 const User = () => {
-  const dashBoardQuery = useDashBoardQuery();
+  const userId = 1; 
+  const userProfileQuery = useUserProfileQuery(userId); 
 
-  if (dashBoardQuery.isLoading) {
+  if (userProfileQuery.isLoading) {
     return <h1>Loading ....</h1>;
   }
 
-  if (dashBoardQuery.isError) {
+  if (userProfileQuery.isError) {
     return <h1>Error ....</h1>;
   }
 
-  const userData = dashBoardQuery.data.user;
-
-  console.log(userData)
+  const userData = userProfileQuery.data; 
 
   return (
     <div>
       <NavigationBar />
-      {userData && (
+      {userData && ( 
         <div>
           <UserProfile user={userData} />
           <UserDetails user={userData} />

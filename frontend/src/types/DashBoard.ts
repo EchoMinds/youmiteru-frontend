@@ -5,7 +5,7 @@ import { User } from "./User";
 export interface DashBoard {
     user: User[];
     banners: Banner[];
-    announced_seasons: Season[];
-    released_seasons: Season[];
-    popular_seasons: Season[];
+    announcedSeasons: Season[];
+    recentReleasedSeasons: Season[];
+    popularSeasons: Season[];
 }
