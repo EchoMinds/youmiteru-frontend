@@ -25,6 +25,7 @@ function SliderBanner({
         autoplay: true,
         autoplaySpeed: 10000,
         arrows: false,
+        swipe: true,
     };
 
     const settings: SliderSettings = {
@@ -34,6 +35,7 @@ function SliderBanner({
         slidesToScroll: 1,
         centerMode: true,
         centerPadding: "0",
+        swipe: false,
         beforeChange: (_, next) => {
             setSlideIndex(next);
             if (onSlideChange) {
@@ -64,7 +66,7 @@ function SliderBanner({
                             key={index}
                         >
                             <img
-                                src={img.season_image_url}
+                                src={img.imageUrl}
                                 alt="slider picture"
                             />
                         </div>

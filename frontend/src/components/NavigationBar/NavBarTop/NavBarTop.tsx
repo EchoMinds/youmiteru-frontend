@@ -25,7 +25,7 @@ function NavBarTop(): JSX.Element {
                 </li>
                 <li>
                     <Link to={ROUTES.CATALOG}>
-                        <div className="catalog">Каталог</div>
+                        <div className="catalog-nav">Каталог</div>
                     </Link>
                 </li>
 
@@ -49,7 +49,11 @@ function NavBarTop(): JSX.Element {
 
                 <Link to={ROUTES.PROFILE}>
                     <button className="user-profile">
-                        <img src={UserProfileIcon} className="user-icon" alt="User Profile" />
+                        <img
+                            src={UserProfileIcon}
+                            className="user-icon"
+                            alt="User Profile"
+                        />
                     </button>
                 </Link>
 

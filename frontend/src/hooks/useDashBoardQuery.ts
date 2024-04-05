@@ -7,9 +7,8 @@ export const useDashBoardQuery = () => {
     return useQuery({
         queryKey: ["dash-board-data"],
         queryFn: async() => {
-            const result = await axios.get(`${BASE_API_URL}/db`);
+            const result = await axios.get(`${BASE_API_URL}/season/homepage`);
             return result.data as DashBoard;
         },
     });
-    
 };

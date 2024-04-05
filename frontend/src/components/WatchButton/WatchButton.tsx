@@ -17,7 +17,7 @@ function WatchButton({
         <>
             {isWatchNow && (
                 <Link
-                    to={`${ROUTES.SEASON}/${season_id}`}
+                    to={`${ROUTES.SEASON}?id=${season_id}`}
                     className="watch-button-now">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ function WatchButton({
 
             {isWatchTrailer && (
                 <Link
-                    to={`${ROUTES.TRAILER}/${season_id}`}
+                    to={`${ROUTES.TRAILER}?id=${season_id}`}
                     className="watch-button-trailer">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
