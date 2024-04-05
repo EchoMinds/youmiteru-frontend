@@ -33,10 +33,8 @@ class AdminDataProvider implements DataProvider {
                     data: {
                         id: response.data.titleId,
                         name: response.data.titleName,
-                        picture: response.data.titleImage,
+                        titleImageUrl: response.data.titleImage,
                         description: response.data.titleDescription,
-                        genre: response.data.genreName,
-                        season: response.data.seasonList,
                     },
                 };
             })
@@ -67,7 +65,7 @@ class AdminDataProvider implements DataProvider {
     async update(resource: string, params: UpdateParams): Promise<any> {
         console.log(params);
         try {
-            const response = await axios.post(
+            const response = await axios.put(
                 `${BASE_API_URL}/admin/${resource}/${params.id}`,
                 params.data
             );

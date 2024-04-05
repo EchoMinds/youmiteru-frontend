@@ -19,6 +19,7 @@ import { TitleEdit } from "./components/AdminTitle/TItleEdit";
 import { SeasonList } from "./components/AdminSeason/SeasonList";
 import { TitleCreate } from "./components/AdminTitle/TitleCreate";
 import { VoiceActorsList } from "./components/AdminVoiceActors/VoiceActorsList";
+import GenreList from "./components/CatalogFilter/Genre/GenreList/GenreList";
 
 function App() {
     return (
@@ -34,7 +35,7 @@ function App() {
                             theme={houseLightTheme}
                             darkTheme={houseDarkTheme}
                         >
-                            <Resource
+                            <Resource    
                                 name="title"
                                 list={TitleList}
                                 edit={TitleEdit}
