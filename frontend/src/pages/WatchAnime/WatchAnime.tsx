@@ -48,6 +48,7 @@ function WatchAnime() {
             </div>
 
             <PlayBackSeason video_url={seasonData?.codeVideoPlayer || ""} />
+  
             <Footer />
         </main>
     );
