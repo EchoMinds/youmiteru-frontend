@@ -26,6 +26,7 @@ const ContentTabs = styled(Box)(({ theme }) => ({
     [theme.breakpoints.down("sm")]: {
         display: "flex",
         gap: 16,
+        paddingRight: 16,
         flexWrap: "wrap",
         justifyContent: "space-around",
         maxWidth: 380,
@@ -48,7 +49,7 @@ export default function AnimeDetailsTabs({
     };
 
     return (
-        <Box sx={{ width: "100%", borderRadius: 1, overflow: "hidden" }}>
+        <Box sx={{ width: "100%", overflow: "hidden" }}>
             <Tabs
                 value={tabValue}
                 onChange={handleTabChange}
