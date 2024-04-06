@@ -7,6 +7,7 @@ import NavigationBar from "../../components/NavigationBar/NavigationBar";
 import RateSeason from "@/components/RateSeason";
 import AnimeDetailsTabs from "@/components/AnimeDetailsTabs/AnimeDetailsTabs";
 import PlayBackSeason from "@/components/PlayBackSeason";
+import CommentsSection from "@/components/CommentsSection";
 
 function WatchAnime() {
     const [searchParams] = useSearchParams();
@@ -48,7 +49,9 @@ function WatchAnime() {
             </div>
 
             <PlayBackSeason video_url={seasonData?.codeVideoPlayer || ""} />
-  
+
+            <CommentsSection comments={[]} profile_avatar_url="https://th.bing.com/th/id/R.0605bf51a35b7acc361bf192fba4f115?rik=mR7%2bEmv9jsZEAA&pid=ImgRaw&r=0" />
+
             <Footer />
         </main>
     );
