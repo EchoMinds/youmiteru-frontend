@@ -6,6 +6,7 @@ import Catalog from "./pages/Catalog/Catalog";
 import Login from "./pages/Login/Login";
 import WatchAnime from "./pages/WatchAnime/WatchAnime";
 import { Title } from "./pages/Title/Title";
+import { Help } from "./pages/Help";
 
 function App() {
     return (
@@ -17,7 +18,7 @@ function App() {
 
                 <Route path={ROUTES.CATALOG} element={<Catalog />} />
 
-                <Route path={ROUTES.HELP} element={<h1>Help Page</h1>} />
+                <Route path={ROUTES.HELP} element={<Help />} />
 
                 <Route path={ROUTES.LOGIN} element={<Login />} />
 
