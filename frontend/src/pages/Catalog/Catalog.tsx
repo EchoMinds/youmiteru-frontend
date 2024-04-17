@@ -7,6 +7,7 @@ import { CatalogParams } from "../../types/Catalog";
 import { useEffect, useState } from "react";
 import AnimeList from "../../components/AnimeList/AnimeList";
 import { useInView } from "react-intersection-observer";
+import { HandleError } from "@/components/HandleError/HandleError";
 
 function Catalog() {
     const { ref, inView } = useInView();
@@ -16,7 +17,7 @@ function Catalog() {
         {}
     );
 
-    const { data, refetch, fetchNextPage, hasNextPage, isLoading, isError } =
+    const { data, refetch, fetchNextPage, hasNextPage, isLoading, onError } =
         useCatalogQuery(filterParams);
 
     useEffect(() => {
@@ -33,8 +34,8 @@ function Catalog() {
         <h1> Loading ....</h1>;
     }
 
-    if (isError) {
-        <h1> Error ....</h1>;
+    if (onError) {
+        return <HandleError />;
     }
 
     const handleFilterAnime = (params: CatalogParams) => {
