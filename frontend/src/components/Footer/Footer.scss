@@ -11,6 +11,8 @@
     gap: 10px;
     justify-content: flex-start;
     border-top: 6px solid #000;
+    align-self: flex-end;
+    justify-self: flex-end;
 
     & h1 {
         color: rgba(255, 255, 255, 0.96);

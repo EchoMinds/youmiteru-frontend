@@ -1,13 +1,14 @@
 import "./Catalog.scss";
 import NavigationBar from "../../components/NavigationBar/NavigationBar";
-import { Footer } from "../../components/Footer/Footer";
+import { Footer } from "@/components/Footer/Footer";
 import CatalogFilter from "../../components/CatalogFilter/CatalogFilter";
-import { useCatalogQuery } from "../../hooks/useCatalogQuery";
-import { CatalogParams } from "../../types/Catalog";
+import { useCatalogQuery } from "@/hooks/useCatalogQuery";
+import { CatalogParams } from "@/types/Catalog";
 import { useEffect, useState } from "react";
 import AnimeList from "../../components/AnimeList/AnimeList";
 import { useInView } from "react-intersection-observer";
 import { HandleError } from "@/components/HandleError/HandleError";
+import { Loader } from "@/components/Loader";
 
 function Catalog() {
     const { ref, inView } = useInView();
@@ -17,8 +18,19 @@ function Catalog() {
         {}
     );
 
-    const { data, refetch, fetchNextPage, hasNextPage, isLoading, onError } =
-        useCatalogQuery(filterParams);
+    const {
+        data,
+        error,
+        refetch,
+        fetchNextPage,
+        hasNextPage,
+        isLoading,
+        isError,
+    } = useCatalogQuery(filterParams);
+
+    const handleFilterAnime = (params: CatalogParams) => {
+        setFilterParams(params);
+    };
 
     useEffect(() => {
         void refetch();
@@ -29,18 +41,9 @@ function Catalog() {
             void fetchNextPage();
         }
     }, [inView, hasNextPage, fetchNextPage]);
-
-    if (isLoading) {
-        <h1> Loading ....</h1>;
+    if (isError) {
+        console.log(error);
     }
-
-    if (onError) {
-        return <HandleError />;
-    }
-
-    const handleFilterAnime = (params: CatalogParams) => {
-        setFilterParams(params);
-    };
 
     return (
         <div className="catalog">
@@ -53,9 +56,17 @@ function Catalog() {
                 >
                     <CatalogFilter handleFilterAnime={handleFilterAnime} />
                 </div>
-                <div className="catalog__main__data">
-                    <AnimeList anime_data={data?.pages} />
-                </div>
+                {isError ? (
+                    <HandleError error={error} />
+                ) : (
+                    <div className="catalog__main__data">
+                        {isLoading ? (
+                            <Loader />
+                        ) : (
+                            <AnimeList anime_data={data?.pages} />
+                        )}
+                    </div>
+                )}
             </div>
             <div className="catalog__filter-btn">
                 <button onClick={() => setFilterVisible(!filterVisible)}>
